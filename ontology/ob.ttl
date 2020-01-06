@@ -658,6 +658,7 @@ dcterms:modified rdf:type owl:AnnotationProperty .
                                owl:onProperty :hasEnvironmentParameter ;
                                owl:allValuesFrom :EnvironmentParameter
                              ] ;
+             rdfs:comment "Class to represent the environmental physical conditions that could be causing the occupant behavior."@en ;
              rdfs:label "Environment"@en .
 
 
@@ -982,6 +983,7 @@ dcterms:modified rdf:type owl:AnnotationProperty .
                                   owl:onProperty :minRangeValue ;
                                   owl:someValuesFrom xsd:float
                                 ] ;
+                rdfs:comment "N-ary class to represent the minimum and maximm comfort values for an occupant."@en ;
                 rdfs:label "Parameter Range"@en .
 
 
