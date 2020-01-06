@@ -1,0 +1,44 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:TemperatureParameter" "base:Inaction" "base:IlluminanceParameter" "base:PhysicalNeed" "base:Weibull1DFormula" "base:RelativeHumidityParameter" "base:Linear2DFormula" "base:ThermalComfortEnvelop" "base:Need" "base:RainingParameter" "base:Action" "base:EnvironmentParameter" "base:Quadratic1DFormula" "base:System" "base:Logit4DLinearFormula" "base:Thermostat" "base:Logit3DLinearFormula" "base:StandardThermalEnvelop" "base:GlareParameter" "base:EventSpecification" "base:Logit2DLinearFormula" "base:MovementSpecification" "base:Movement" "base:IAQNeed" "base:Equipment" "base:SpaceOccupancySpecification" "base:VisualNeed" "base:NonPhysicalNeed" "base:Window" "base:Light" "base:SolarIrradianceParameter" "base:Interaction" "base:AccousticNeed" "base:IAQParameter" "base:Linear3DFormula" "base:NonStandardThermalEnvelop" "base:ThermalNeed" "base:DaylightFactorParameter" "base:ConstantValueFormula" "base:Shade" "base:NoiseParameter" "base:Linear1DFormula" "base:HVAC" "base:Report" "base:InteractionFormula" ; /*classes style*/
+	"base:NoiseParameter" -> "base:EnvironmentParameter" [ label = "rdfs:subClassOf" ];
+	"base:ConstantValueFormula" -> "base:InteractionFormula" [ label = "rdfs:subClassOf" ];
+	"base:AccousticNeed" -> "base:PhysicalNeed" [ label = "rdfs:subClassOf" ];
+	"base:Linear1DFormula" -> "base:InteractionFormula" [ label = "rdfs:subClassOf" ];
+	"base:Logit2DLinearFormula" -> "base:InteractionFormula" [ label = "rdfs:subClassOf" ];
+	"base:GlareParameter" -> "base:EnvironmentParameter" [ label = "rdfs:subClassOf" ];
+	"base:IAQParameter" -> "base:EnvironmentParameter" [ label = "rdfs:subClassOf" ];
+	"base:Interaction" -> "base:Action" [ label = "rdfs:subClassOf" ];
+	"base:Weibull1DFormula" -> "base:InteractionFormula" [ label = "rdfs:subClassOf" ];
+	"base:DaylightFactorParameter" -> "base:EnvironmentParameter" [ label = "rdfs:subClassOf" ];
+	"base:TemperatureParameter" -> "base:EnvironmentParameter" [ label = "rdfs:subClassOf" ];
+	"base:NonStandardThermalEnvelop" -> "base:ThermalComfortEnvelop" [ label = "rdfs:subClassOf" ];
+	"base:HVAC" -> "base:System" [ label = "rdfs:subClassOf" ];
+	"base:IAQNeed" -> "base:PhysicalNeed" [ label = "rdfs:subClassOf" ];
+	"base:IlluminanceParameter" -> "base:EnvironmentParameter" [ label = "rdfs:subClassOf" ];
+	"base:VisualNeed" -> "base:PhysicalNeed" [ label = "rdfs:subClassOf" ];
+	"base:RelativeHumidityParameter" -> "base:EnvironmentParameter" [ label = "rdfs:subClassOf" ];
+	"base:Linear3DFormula" -> "base:InteractionFormula" [ label = "rdfs:subClassOf" ];
+	"base:Light" -> "base:System" [ label = "rdfs:subClassOf" ];
+	"base:EventSpecification" -> "base:MovementSpecification" [ label = "rdfs:subClassOf" ];
+	"base:Logit4DLinearFormula" -> "base:InteractionFormula" [ label = "rdfs:subClassOf" ];
+	"base:StandardThermalEnvelop" -> "base:ThermalComfortEnvelop" [ label = "rdfs:subClassOf" ];
+	"base:SpaceOccupancySpecification" -> "base:MovementSpecification" [ label = "rdfs:subClassOf" ];
+	"base:Linear2DFormula" -> "base:InteractionFormula" [ label = "rdfs:subClassOf" ];
+	"base:Equipment" -> "base:System" [ label = "rdfs:subClassOf" ];
+	"base:Report" -> "base:Action" [ label = "rdfs:subClassOf" ];
+	"base:Movement" -> "base:Action" [ label = "rdfs:subClassOf" ];
+	"base:Inaction" -> "base:Action" [ label = "rdfs:subClassOf" ];
+	"base:Window" -> "base:System" [ label = "rdfs:subClassOf" ];
+	"base:Thermostat" -> "base:System" [ label = "rdfs:subClassOf" ];
+	"base:ThermalNeed" -> "base:PhysicalNeed" [ label = "rdfs:subClassOf" ];
+	"base:PhysicalNeed" -> "base:Need" [ label = "rdfs:subClassOf" ];
+	"base:NonPhysicalNeed" -> "base:Need" [ label = "rdfs:subClassOf" ];
+	"base:RainingParameter" -> "base:EnvironmentParameter" [ label = "rdfs:subClassOf" ];
+	"base:SolarIrradianceParameter" -> "base:EnvironmentParameter" [ label = "rdfs:subClassOf" ];
+	"base:Logit3DLinearFormula" -> "base:InteractionFormula" [ label = "rdfs:subClassOf" ];
+	"base:Quadratic1DFormula" -> "base:InteractionFormula" [ label = "rdfs:subClassOf" ];
+	"base:Shade" -> "base:System" [ label = "rdfs:subClassOf" ];
+
+}
