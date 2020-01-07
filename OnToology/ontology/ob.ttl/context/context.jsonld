@@ -1,0 +1,413 @@
+{
+  "@context" : {
+    "maxNumberOccupants" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#maxNumberOccupants",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "VisualNeed" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#VisualNeed"
+    },
+    "hasEnvironment" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#hasEnvironment",
+      "@type" : "@id"
+    },
+    "Space" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Space"
+    },
+    "NonStandardThermalEnvelop" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#NonStandardThermalEnvelop"
+    },
+    "influencedByHabit" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#influencedByHabit",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "standardType" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#standardType"
+    },
+    "occupantAge" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#occupantAge",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "hasSpace" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#hasSpace",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "hasOccupant" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#hasOccupant",
+      "@type" : "@id"
+    },
+    "ThermalComfortEnvelop" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#ThermalComfortEnvelop"
+    },
+    "specifiedBy" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#specifiedBy",
+      "@type" : "@id"
+    },
+    "Weibull1DFormula" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Weibull1DFormula"
+    },
+    "relatedTo" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#relatedTo",
+      "@type" : "@id"
+    },
+    "dayOfWeek" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#dayOfWeek"
+    },
+    "modeledByFormula" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#modeledByFormula",
+      "@type" : "@id"
+    },
+    "Shade" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Shade"
+    },
+    "Linear1DFormula" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Linear1DFormula"
+    },
+    "Equipment" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Equipment"
+    },
+    "definedByParameterRange" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#definedByParameterRange",
+      "@type" : "@id"
+    },
+    "PhysicalNeed" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#PhysicalNeed"
+    },
+    "SolarIrradianceParameter" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#SolarIrradianceParameter"
+    },
+    "Behavior" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Behavior"
+    },
+    "interactionType" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#interactionType",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "hasAction" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#hasAction",
+      "@type" : "@id"
+    },
+    "IlluminanceParameter" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#IlluminanceParameter"
+    },
+    "hasSystem" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#hasSystem",
+      "@type" : "@id"
+    },
+    "hasDriver" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#hasDriver",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "hasThermalComfortEnvelop" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#hasThermalComfortEnvelop",
+      "@type" : "@id"
+    },
+    "occupantName" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#occupantName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Quadratic1DFormula" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Quadratic1DFormula"
+    },
+    "occupantLifestyle" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#occupantLifestyle",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "definedByEvent" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#definedByEvent",
+      "@type" : "@id"
+    },
+    "coefficientName" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#coefficientName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "occursWithinSpace" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#occursWithinSpace",
+      "@type" : "@id"
+    },
+    "ConstantValueFormula" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#ConstantValueFormula"
+    },
+    "Movement" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Movement"
+    },
+    "coefficientValue" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#coefficientValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Occupant" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Occupant"
+    },
+    "Light" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Light"
+    },
+    "Logit2DLinearFormula" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Logit2DLinearFormula"
+    },
+    "IAQParameter" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#IAQParameter"
+    },
+    "spaceType" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#spaceType"
+    },
+    "AccousticNeed" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#AccousticNeed"
+    },
+    "Linear2DFormula" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Linear2DFormula"
+    },
+    "hasMeeting" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#hasMeeting",
+      "@type" : "@id"
+    },
+    "hasDriverTime" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#hasDriverTime",
+      "@type" : "@id"
+    },
+    "seasonTime" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#seasonTime"
+    },
+    "DriverEvent" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#DriverEvent"
+    },
+    "Report" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Report"
+    },
+    "HVAC" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#HVAC"
+    },
+    "percentTimePresence" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#percentTimePresence",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "SpaceOccupancySpecification" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#SpaceOccupancySpecification"
+    },
+    "GlareParameter" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#GlareParameter"
+    },
+    "Thermostat" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Thermostat"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "Building" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Building"
+    },
+    "hasNeed" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#hasNeed",
+      "@type" : "@id"
+    },
+    "InteractionFormula" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#InteractionFormula"
+    },
+    "startTime" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#startTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Need" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Need"
+    },
+    "controlType" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#controlType"
+    },
+    "modeledByModel" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#modeledByModel",
+      "@type" : "@id"
+    },
+    "triggeredByEvent" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#triggeredByEvent",
+      "@type" : "@id"
+    },
+    "IAQNeed" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#IAQNeed"
+    },
+    "Linear3DFormula" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Linear3DFormula"
+    },
+    "hasEnvironmentParameter" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#hasEnvironmentParameter",
+      "@type" : "@id"
+    },
+    "identifier" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#identifier"
+    },
+    "definedBySpace" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#definedBySpace",
+      "@type" : "@id"
+    },
+    "parameterUnit" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#parameterUnit",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "DriverTime" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#DriverTime"
+    },
+    "NonPhysicalNeed" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#NonPhysicalNeed"
+    },
+    "Window" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Window"
+    },
+    "ParameterRange" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#ParameterRange"
+    },
+    "minNumberOccupants" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#minNumberOccupants",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "minRangeValue" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#minRangeValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Environment" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Environment"
+    },
+    "duration" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#duration",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/elements/1.1publisher"
+    },
+    "RelativeHumidityParameter" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#RelativeHumidityParameter"
+    },
+    "Meeting" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Meeting"
+    },
+    "RainingParameter" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#RainingParameter"
+    },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
+    "parameterName" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#parameterName",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "maxRangeValue" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#maxRangeValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "Driver" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Driver"
+    },
+    "Habit" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Habit"
+    },
+    "StandardThermalEnvelop" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#StandardThermalEnvelop"
+    },
+    "buildingAddress" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#buildingAddress",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "meetingProbability" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#meetingProbability"
+    },
+    "timeOfDay" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#timeOfDay"
+    },
+    "endTime" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#endTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Logit3DLinearFormula" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Logit3DLinearFormula"
+    },
+    "MovementModel" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#MovementModel"
+    },
+    "TemperatureParameter" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#TemperatureParameter"
+    },
+    "hasCoefficient" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#hasCoefficient",
+      "@type" : "@id"
+    },
+    "Logit4DLinearFormula" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Logit4DLinearFormula"
+    },
+    "hasSchedule" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#hasSchedule",
+      "@type" : "@id"
+    },
+    "Schedule" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Schedule"
+    },
+    "Interaction" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Interaction"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "DaylightFactorParameter" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#DaylightFactorParameter"
+    },
+    "hasIndependentVariable" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#hasIndependentVariable",
+      "@type" : "@id"
+    },
+    "interactWith" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#interactWith",
+      "@type" : "@id"
+    },
+    "MovementSpecification" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#MovementSpecification"
+    },
+    "System" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#System"
+    },
+    "hasBehavior" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#hasBehavior",
+      "@type" : "@id"
+    },
+    "CoefficientSchema" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#CoefficientSchema"
+    },
+    "Action" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Action"
+    },
+    "Inaction" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#Inaction"
+    },
+    "description" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#description",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "occupantGender" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#occupantGender",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "occupantJobtype" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#occupantJobtype",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "ThermalNeed" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#ThermalNeed"
+    },
+    "NoiseParameter" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#NoiseParameter"
+    },
+    "EnvironmentParameter" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"
+    },
+    "EventSpecification" : {
+      "@id" : "http://www.semanticweb.org/bimmer/ob#EventSpecification"
+    }
+  }
+}
