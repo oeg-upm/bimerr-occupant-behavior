@@ -7,10 +7,11 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:elements="http://purl.org/dc/elements/1.1">
     <owl:Ontology rdf:about="http://www.semanticweb.org/bimmer/ob#">
-        <dc:publisher rdf:resource="http://www.oeg-upm.net/"/>
-        <dc:title xml:lang="en">Ontology model for Occupancy Behavior</dc:title>
+        <elements:publisher rdf:resource="http://www.oeg-upm.net/"/>
+        <elements:title xml:lang="en">Ontology model for Occupancy Behavior</elements:title>
         <terms:creator rdf:resource="http://www.semanticweb.org/bimmer/ob"/>
         <terms:license xml:lang="en"></terms:license>
         <rdfs:comment xml:lang="en">This ontology aims to model the Occupancy Behavior domain according to the obXML schema (https://behavior.lbl.gov/?q=obXML)</rdfs:comment>
@@ -28,6 +29,20 @@
      -->
 
 
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1title"/>
     
 
 
@@ -131,6 +146,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#hasCoefficient">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#InteractionFormula"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#CoefficientSchema"/>
     </owl:ObjectProperty>
     
@@ -303,6 +319,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#occursWithinSpace">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#Driver"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#Space"/>
     </owl:ObjectProperty>
     
@@ -313,6 +330,8 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/bimmer/ob#relatedTo">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#ParameterRange"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"/>
     </owl:ObjectProperty>
     
 
@@ -366,6 +385,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bimmer/ob#coefficientName">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#CoefficientSchema"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -375,6 +395,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bimmer/ob#coefficientValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#CoefficientSchema"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
     </owl:DatatypeProperty>
     
@@ -385,6 +406,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bimmer/ob#controlType">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#System"/>
     </owl:DatatypeProperty>
     
 
@@ -470,6 +492,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bimmer/ob#endTime">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#Schedule"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
@@ -499,6 +522,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bimmer/ob#maxNumberOccupants">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#Space"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
@@ -530,6 +554,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bimmer/ob#minNumberOccupants">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#Space"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
     
@@ -681,6 +706,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bimmer/ob#spaceType">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#Space"/>
         <rdfs:range>
             <rdfs:Datatype>
                 <owl:oneOf>
@@ -759,6 +785,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/bimmer/ob#startTime">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/bimmer/ob#Schedule"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </owl:DatatypeProperty>
     
@@ -846,7 +873,7 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Behaviour of the Occupant.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Class that represent the behaviour of the occupant.</rdfs:comment>
         <rdfs:label xml:lang="en">Behavior</rdfs:label>
     </owl:Class>
     
@@ -908,7 +935,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">N-ary class to represent the value and the names of coefficients inside mathematical formulas</rdfs:comment>
+        <rdfs:comment xml:lang="en">N-ary class to represent the value and the names of coefficients inside mathematical formulas.</rdfs:comment>
         <rdfs:label xml:lang="en">Coefficient Schema</rdfs:label>
     </owl:Class>
     
@@ -929,6 +956,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#DaylightFactorParameter">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"/>
+        <rdfs:comment xml:lang="en">Parameter to represent the indoor daylight.</rdfs:comment>
         <rdfs:label xml:lang="en">Daylight Factor Parameter</rdfs:label>
     </owl:Class>
     
@@ -1113,6 +1141,7 @@
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">N-ary class to define the time, day and season when a specific driver occurs.</rdfs:comment>
         <rdfs:label xml:lang="en">Driver Time</rdfs:label>
     </owl:Class>
     
@@ -1134,6 +1163,7 @@
                 <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Class to represent the environmental physical conditions that could be causing the occupant behavior.</rdfs:comment>
         <rdfs:label xml:lang="en">Environment</rdfs:label>
     </owl:Class>
     
@@ -1167,6 +1197,7 @@
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Class that represent a physical variable of the environment where the driver occurs. It could represent variables that impact directly on the comfort levels of the occupant.</rdfs:comment>
         <rdfs:label xml:lang="en">Environment Parameter</rdfs:label>
     </owl:Class>
     
@@ -1216,6 +1247,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#GlareParameter">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"/>
+        <rdfs:comment xml:lang="en">Parameter to represent the glare inside a space.</rdfs:comment>
         <rdfs:label xml:lang="en">Glare Parameter</rdfs:label>
     </owl:Class>
     
@@ -1263,6 +1295,7 @@
 
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Habit">
+        <rdfs:comment xml:lang="en">Class to represent occupant habits.</rdfs:comment>
         <rdfs:label xml:lang="en">Habit</rdfs:label>
     </owl:Class>
     
@@ -1289,6 +1322,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#IAQParameter">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"/>
+        <rdfs:comment xml:lang="en">Parameter to represent the indoor air quality.</rdfs:comment>
         <rdfs:label xml:lang="en">IAQ Parameter</rdfs:label>
     </owl:Class>
     
@@ -1299,6 +1333,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#IlluminanceParameter">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"/>
+        <rdfs:comment xml:lang="en">Parameter to represent the amount of illumination inside a space.</rdfs:comment>
         <rdfs:label xml:lang="en">Illuminance Parameter</rdfs:label>
     </owl:Class>
     
@@ -1491,6 +1526,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Class to represent a meeting inside a communal space.</rdfs:comment>
         <rdfs:label xml:lang="en">Meeting</rdfs:label>
     </owl:Class>
     
@@ -1507,6 +1543,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/bimmer/ob#MovementModel"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The Movement class is used to represent the occupants movements inside a space.</rdfs:comment>
         <rdfs:label xml:lang="en">Movement</rdfs:label>
     </owl:Class>
     
@@ -1550,6 +1587,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#NoiseParameter">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"/>
+        <rdfs:comment xml:lang="en">Parameter to represent the amount of indoor and outdoor noise</rdfs:comment>
         <rdfs:label xml:lang="en">Noise Parameter</rdfs:label>
     </owl:Class>
     
@@ -1663,6 +1701,7 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">N-ary class to represent the minimum and maximm comfort values for an occupant.</rdfs:comment>
         <rdfs:label xml:lang="en">Parameter Range</rdfs:label>
     </owl:Class>
     
@@ -1693,6 +1732,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#RainingParameter">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"/>
+        <rdfs:comment xml:lang="en">Parameter to represent raining outdoors.</rdfs:comment>
         <rdfs:label xml:lang="en">Raining Parameter</rdfs:label>
     </owl:Class>
     
@@ -1703,6 +1743,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#RelativeHumidityParameter">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"/>
+        <rdfs:comment xml:lang="en">Parameter to represent indoor and outdoor relative humidity.</rdfs:comment>
         <rdfs:label xml:lang="en">Relative Humidity Parameter</rdfs:label>
     </owl:Class>
     
@@ -1713,9 +1754,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#Report">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#Action"/>
-        <rdfs:comment xml:lang="en">The Report class indicates that an occupant seeks assistance or
-files a complaint about their personal discomfort, but does not take
-direct action to satisfy their needs.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Report class indicates that an occupant seeks assistance or files a complaint about their personal discomfort, but does not take direct action to satisfy their needs.</rdfs:comment>
         <rdfs:label xml:lang="en">Report</rdfs:label>
     </owl:Class>
     
@@ -1785,6 +1824,7 @@ direct action to satisfy their needs.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#SolarIrradianceParameter">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"/>
+        <rdfs:comment xml:lang="en">Parameter to represent solar irradiance indoors and outdoors.</rdfs:comment>
         <rdfs:label xml:lang="en">Solar Irradiance Parameter</rdfs:label>
     </owl:Class>
     
@@ -2084,6 +2124,7 @@ direct action to satisfy their needs.</rdfs:comment>
 
     <owl:Class rdf:about="http://www.semanticweb.org/bimmer/ob#TemperatureParameter">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"/>
+        <rdfs:comment xml:lang="en">Parameter to represent indoor and outdoor temperature.</rdfs:comment>
         <rdfs:label xml:lang="en">Temperature Parameter</rdfs:label>
     </owl:Class>
     

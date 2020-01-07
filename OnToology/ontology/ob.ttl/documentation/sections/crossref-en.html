@@ -268,7 +268,7 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Behavior</p>
       <div class="comment">
-         <span class="markdown">Behaviour of the Occupant.</span>
+         <span class="markdown">Class that represent the behaviour of the occupant.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -319,11 +319,19 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#CoefficientSchema</p>
       <div class="comment">
-         <span class="markdown">N-ary class to represent the value and the names of coefficients inside mathematical formulas</span>
+         <span class="markdown">N-ary class to represent the value and the names of coefficients inside mathematical formulas.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#coefficientName"
+               title="http://www.semanticweb.org/bimmer/ob#coefficientName">coefficient name</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#coefficientValue"
+               title="http://www.semanticweb.org/bimmer/ob#coefficientValue">coefficient value</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasCoefficient"
@@ -355,6 +363,9 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#DaylightFactorParameter</p>
+      <div class="comment">
+         <span class="markdown">Parameter to represent the indoor daylight.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -405,6 +416,8 @@ This section provides details for each class and property defined by Ontology mo
                title="http://www.semanticweb.org/bimmer/ob#hasEnvironment">has environment</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#influencedByHabit"
                title="http://www.semanticweb.org/bimmer/ob#influencedByHabit">influenced by habit</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#occursWithinSpace"
+               title="http://www.semanticweb.org/bimmer/ob#occursWithinSpace">occurs within space</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#triggeredByEvent"
                title="http://www.semanticweb.org/bimmer/ob#triggeredByEvent">triggered by event</a>
             <sup class="type-op" title="object property">op</sup>
@@ -441,6 +454,9 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#DriverTime</p>
+      <div class="comment">
+         <span class="markdown">N-ary class to define the time, day and season when a specific driver occurs.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
@@ -466,6 +482,9 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Environment</p>
+      <div class="comment">
+         <span class="markdown">Class to represent the environmental physical conditions that could be causing the occupant behavior.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
@@ -490,6 +509,9 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#EnvironmentParameter</p>
+      <div class="comment">
+         <span class="markdown">Class that represent a physical variable of the environment where the driver occurs. It could represent variables that impact directly on the comfort levels of the occupant.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
@@ -529,6 +551,7 @@ This section provides details for each class and property defined by Ontology mo
                title="http://www.semanticweb.org/bimmer/ob#hasEnvironmentParameter">has environment parameter</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasIndependentVariable"
                title="http://www.semanticweb.org/bimmer/ob#hasIndependentVariable">has independent variable</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#relatedTo" title="http://www.semanticweb.org/bimmer/ob#relatedTo">related to</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -589,6 +612,9 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#GlareParameter</p>
+      <div class="comment">
+         <span class="markdown">Parameter to represent the glare inside a space.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -625,6 +651,9 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Habit</p>
+      <div class="comment">
+         <span class="markdown">Class to represent occupant habits.</span>
+      </div>
       <dl class="description">
          <dt>is in range of</dt>
          <dd>
@@ -681,6 +710,9 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#IAQParameter</p>
+      <div class="comment">
+         <span class="markdown">Parameter to represent the indoor air quality.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -717,6 +749,9 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#IlluminanceParameter</p>
+      <div class="comment">
+         <span class="markdown">Parameter to represent the amount of illumination inside a space.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -824,7 +859,9 @@ This section provides details for each class and property defined by Ontology mo
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#hasIndependentVariable"
+            <a href="#hasCoefficient"
+               title="http://www.semanticweb.org/bimmer/ob#hasCoefficient">has coefficient</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasIndependentVariable"
                title="http://www.semanticweb.org/bimmer/ob#hasIndependentVariable">has independent variable</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -963,6 +1000,9 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Meeting</p>
+      <div class="comment">
+         <span class="markdown">Class to represent a meeting inside a communal space.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
@@ -986,6 +1026,9 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Movement</p>
+      <div class="comment">
+         <span class="markdown">The Movement class is used to represent the occupants movements inside a space.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -1076,6 +1119,9 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#NoiseParameter</p>
+      <div class="comment">
+         <span class="markdown">Parameter to represent the amount of indoor and outdoor noise</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -1189,6 +1235,9 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#ParameterRange</p>
+      <div class="comment">
+         <span class="markdown">N-ary class to represent the minimum and maximm comfort values for an occupant.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
@@ -1198,7 +1247,8 @@ This section provides details for each class and property defined by Ontology mo
                title="http://www.semanticweb.org/bimmer/ob#maxRangeValue">max range value</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#minRangeValue"
                title="http://www.semanticweb.org/bimmer/ob#minRangeValue">min range value</a>
-            <sup class="type-dp" title="data property">dp</sup>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#relatedTo" title="http://www.semanticweb.org/bimmer/ob#relatedTo">related to</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -1262,6 +1312,9 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#RainingParameter</p>
+      <div class="comment">
+         <span class="markdown">Parameter to represent raining outdoors.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -1298,6 +1351,9 @@ This section provides details for each class and property defined by Ontology mo
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#RelativeHumidityParameter</p>
+      <div class="comment">
+         <span class="markdown">Parameter to represent indoor and outdoor relative humidity.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -1335,9 +1391,7 @@ This section provides details for each class and property defined by Ontology mo
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#Report</p>
       <div class="comment">
-         <span class="markdown">The Report class indicates that an occupant seeks assistance or
-files a complaint about their personal discomfort, but does not take
-direct action to satisfy their needs.</span>
+         <span class="markdown">The Report class indicates that an occupant seeks assistance or files a complaint about their personal discomfort, but does not take direct action to satisfy their needs.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -1357,6 +1411,12 @@ direct action to satisfy their needs.</span>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#endTime" title="http://www.semanticweb.org/bimmer/ob#endTime">end time</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#startTime" title="http://www.semanticweb.org/bimmer/ob#startTime">start time</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasSchedule" title="http://www.semanticweb.org/bimmer/ob#hasSchedule">has schedule</a>
@@ -1395,6 +1455,9 @@ direct action to satisfy their needs.</span>
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#SolarIrradianceParameter</p>
+      <div class="comment">
+         <span class="markdown">Parameter to represent solar irradiance indoors and outdoors.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -1442,7 +1505,12 @@ direct action to satisfy their needs.</span>
             <a href="#hasMeeting" title="http://www.semanticweb.org/bimmer/ob#hasMeeting">has meeting</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasOccupant" title="http://www.semanticweb.org/bimmer/ob#hasOccupant">has occupant</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasSystem" title="http://www.semanticweb.org/bimmer/ob#hasSystem">has system</a>
-            <sup class="type-op" title="object property">op</sup>
+            <sup class="type-op" title="object property">op</sup>, <a href="#maxNumberOccupants"
+               title="http://www.semanticweb.org/bimmer/ob#maxNumberOccupants">max number occupants</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#minNumberOccupants"
+               title="http://www.semanticweb.org/bimmer/ob#minNumberOccupants">min number occupants</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#spaceType" title="http://www.semanticweb.org/bimmer/ob#spaceType">space type</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -1527,6 +1595,11 @@ direct action to satisfy their needs.</span>
             <sup class="type-c" title="class">c</sup>, <a href="#Window" title="http://www.semanticweb.org/bimmer/ob#Window">Window</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#controlType" title="http://www.semanticweb.org/bimmer/ob#controlType">control type</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasSystem" title="http://www.semanticweb.org/bimmer/ob#hasSystem">has system</a>
@@ -1543,6 +1616,9 @@ direct action to satisfy their needs.</span>
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#TemperatureParameter</p>
+      <div class="comment">
+         <span class="markdown">Parameter to represent indoor and outdoor temperature.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -1965,6 +2041,12 @@ direct action to satisfy their needs.</span>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#hasCoefficient</p>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#InteractionFormula"
+                  title="http://www.semanticweb.org/bimmer/ob#InteractionFormula">Interaction Formula</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#CoefficientSchema"
@@ -2348,6 +2430,11 @@ direct action to satisfy their needs.</span>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#occursWithinSpace</p>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Driver" title="http://www.semanticweb.org/bimmer/ob#Driver">Driver</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#Space" title="http://www.semanticweb.org/bimmer/ob#Space">Space</a>
@@ -2363,6 +2450,24 @@ direct action to satisfy their needs.</span>
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#relatedTo</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ParameterRange"
+                  title="http://www.semanticweb.org/bimmer/ob#ParameterRange">Parameter Range</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#EnvironmentParameter"
+                  title="http://www.semanticweb.org/bimmer/ob#EnvironmentParameter">Environment Parameter</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="specifiedBy">
       <h3>specified by<sup class="type-op" title="object property">op</sup>
@@ -2608,6 +2713,12 @@ direct action to satisfy their needs.</span>
          <p>
             <strong>has characteristics:</strong> functional</p>
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#CoefficientSchema"
+                  title="http://www.semanticweb.org/bimmer/ob#CoefficientSchema">Coefficient Schema</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
@@ -2624,6 +2735,12 @@ direct action to satisfy their needs.</span>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#coefficientValue</p>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#CoefficientSchema"
+                  title="http://www.semanticweb.org/bimmer/ob#CoefficientSchema">Coefficient Schema</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
@@ -2638,6 +2755,17 @@ direct action to satisfy their needs.</span>
       </h3>
       <p>
          <strong>IRI:</strong> http://www.semanticweb.org/bimmer/ob#controlType</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#System" title="http://www.semanticweb.org/bimmer/ob#System">System</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="dayOfWeek">
       <h3>day of week<sup class="type-dp" title="data property">dp</sup>
@@ -2705,6 +2833,11 @@ direct action to satisfy their needs.</span>
          <p>
             <strong>has characteristics:</strong> functional</p>
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Schedule" title="http://www.semanticweb.org/bimmer/ob#Schedule">Schedule</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>
@@ -2753,6 +2886,11 @@ direct action to satisfy their needs.</span>
          <p>
             <strong>has characteristics:</strong> functional</p>
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Space" title="http://www.semanticweb.org/bimmer/ob#Space">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
@@ -2814,6 +2952,11 @@ direct action to satisfy their needs.</span>
          <p>
             <strong>has characteristics:</strong> functional</p>
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Space" title="http://www.semanticweb.org/bimmer/ob#Space">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
@@ -3058,6 +3201,11 @@ direct action to satisfy their needs.</span>
          <p>
             <strong>has characteristics:</strong> functional</p>
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Space" title="http://www.semanticweb.org/bimmer/ob#Space">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>{ "Corridor" , "MeetingRoom" , "Office" , "OfficePrivate" , "OfficeShared" , "Other" , "Outdoor" , "ResidentialOwn" , "ResidentialRent" }</dd>
          </dl>
@@ -3094,6 +3242,11 @@ direct action to satisfy their needs.</span>
          <p>
             <strong>has characteristics:</strong> functional</p>
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Schedule" title="http://www.semanticweb.org/bimmer/ob#Schedule">Schedule</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#dateTime">date time</span>

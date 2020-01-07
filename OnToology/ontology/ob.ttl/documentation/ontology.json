@@ -977,6 +977,12 @@
   "@id" : "http://purl.org/dc/elements/1.1/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/elements/1.1publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -988,10 +994,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://purl.org/dc/elements/1.1/publisher" : [ {
+  "http://purl.org/dc/elements/1.1publisher" : [ {
     "@id" : "http://www.oeg-upm.net/"
   } ],
-  "http://purl.org/dc/elements/1.1/title" : [ {
+  "http://purl.org/dc/elements/1.1title" : [ {
     "@language" : "en",
     "@value" : "Ontology model for Occupancy Behavior"
   } ],
@@ -1037,7 +1043,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Behaviour of the Occupant."
+    "@value" : "Class that represent the behaviour of the occupant."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1081,7 +1087,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "N-ary class to represent the value and the names of coefficients inside mathematical formulas"
+    "@value" : "N-ary class to represent the value and the names of coefficients inside mathematical formulas."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1105,6 +1111,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#DaylightFactorParameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Parameter to represent the indoor daylight."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Daylight Factor Parameter"
@@ -1144,6 +1154,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#DriverTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "N-ary class to define the time, day and season when a specific driver occurs."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Driver Time"
@@ -1158,6 +1172,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Environment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent the environmental physical conditions that could be causing the occupant behavior."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Environment"
@@ -1170,6 +1188,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#EnvironmentParameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class that represent a physical variable of the environment where the driver occurs. It could represent variables that impact directly on the comfort levels of the occupant."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Environment Parameter"
@@ -1215,6 +1237,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#GlareParameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Parameter to represent the glare inside a space."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Glare Parameter"
@@ -1237,6 +1263,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Habit",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent occupant habits."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Habit"
@@ -1256,6 +1286,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#IAQParameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Parameter to represent the indoor air quality."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "IAQ Parameter"
@@ -1266,6 +1300,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#IlluminanceParameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Parameter to represent the amount of illumination inside a space."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Illuminance Parameter"
@@ -1396,6 +1434,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Meeting",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Class to represent a meeting inside a communal space."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Meeting"
@@ -1408,6 +1450,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#Movement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The Movement class is used to represent the occupants movements inside a space."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Movement"
@@ -1444,6 +1490,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#NoiseParameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Parameter to represent the amount of indoor and outdoor noise"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Noise Parameter"
@@ -1508,6 +1558,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#ParameterRange",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "N-ary class to represent the minimum and maximm comfort values for an occupant."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Parameter Range"
@@ -1544,6 +1598,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#RainingParameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Parameter to represent raining outdoors."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Raining Parameter"
@@ -1554,6 +1612,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#RelativeHumidityParameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Parameter to represent indoor and outdoor relative humidity."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Relative Humidity Parameter"
@@ -1566,7 +1628,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The Report class indicates that an occupant seeks assistance or\nfiles a complaint about their personal discomfort, but does not take\ndirect action to satisfy their needs."
+    "@value" : "The Report class indicates that an occupant seeks assistance or files a complaint about their personal discomfort, but does not take direct action to satisfy their needs."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1604,6 +1666,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#SolarIrradianceParameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Parameter to represent solar irradiance indoors and outdoors."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Solar Irradiance Parameter"
@@ -1683,6 +1749,10 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#TemperatureParameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Parameter to represent indoor and outdoor temperature."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Temperature Parameter"
@@ -1767,18 +1837,27 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#coefficientName",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#CoefficientSchema"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#coefficientValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#CoefficientSchema"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#controlType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#System"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#dayOfWeek",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
@@ -1827,6 +1906,9 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#endTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Schedule"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
@@ -1851,6 +1933,9 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#hasCoefficient",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#InteractionFormula"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#CoefficientSchema"
   } ]
@@ -1992,6 +2077,9 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#maxNumberOccupants",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Space"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
@@ -2013,6 +2101,9 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#minNumberOccupants",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Space"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
@@ -2091,6 +2182,9 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#occursWithinSpace",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Driver"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.semanticweb.org/bimmer/ob#Space"
   } ]
@@ -2123,7 +2217,13 @@
   } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#relatedTo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#ParameterRange"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#EnvironmentParameter"
+  } ]
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#seasonTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
@@ -2136,6 +2236,9 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#spaceType",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Space"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid15"
   } ]
@@ -2157,6 +2260,9 @@
 }, {
   "@id" : "http://www.semanticweb.org/bimmer/ob#startTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/bimmer/ob#Schedule"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
