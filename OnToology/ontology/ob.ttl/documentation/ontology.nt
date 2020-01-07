@@ -1,6 +1,6 @@
 <http://www.semanticweb.org/bimmer/ob#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://www.semanticweb.org/bimmer/ob#> <http://purl.org/dc/elements/1.1/publisher> <http://www.oeg-upm.net/> .
-<http://www.semanticweb.org/bimmer/ob#> <http://purl.org/dc/elements/1.1/title> "Ontology model for Occupancy Behavior"@en .
+<http://www.semanticweb.org/bimmer/ob#> <http://purl.org/dc/elements/1.1publisher> <http://www.oeg-upm.net/> .
+<http://www.semanticweb.org/bimmer/ob#> <http://purl.org/dc/elements/1.1title> "Ontology model for Occupancy Behavior"@en .
 <http://www.semanticweb.org/bimmer/ob#> <http://purl.org/dc/terms/creator> <http://www.semanticweb.org/bimmer/ob> .
 <http://www.semanticweb.org/bimmer/ob#> <http://purl.org/dc/terms/license> ""@en .
 <http://www.semanticweb.org/bimmer/ob#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology aims to model the Occupancy Behavior domain according to the obXML schema (https://behavior.lbl.gov/?q=obXML)"@en .
@@ -13,6 +13,12 @@
 # #
 # #################################################################
 # 
+# 
+# http://purl.org/dc/elements/1.1publisher
+<http://purl.org/dc/elements/1.1publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1title
+<http://purl.org/dc/elements/1.1title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/elements/1.1/publisher
 <http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -64,6 +70,7 @@
 # 
 # http://www.semanticweb.org/bimmer/ob#hasCoefficient
 <http://www.semanticweb.org/bimmer/ob#hasCoefficient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/bimmer/ob#hasCoefficient> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/bimmer/ob#InteractionFormula> .
 <http://www.semanticweb.org/bimmer/ob#hasCoefficient> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/bimmer/ob#CoefficientSchema> .
 # 
 # http://www.semanticweb.org/bimmer/ob#hasDriver
@@ -151,11 +158,14 @@
 # 
 # http://www.semanticweb.org/bimmer/ob#occursWithinSpace
 <http://www.semanticweb.org/bimmer/ob#occursWithinSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/bimmer/ob#occursWithinSpace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/bimmer/ob#Driver> .
 <http://www.semanticweb.org/bimmer/ob#occursWithinSpace> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/bimmer/ob#Space> .
 # 
 # http://www.semanticweb.org/bimmer/ob#relatedTo
 <http://www.semanticweb.org/bimmer/ob#relatedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.semanticweb.org/bimmer/ob#relatedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/bimmer/ob#relatedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/bimmer/ob#ParameterRange> .
+<http://www.semanticweb.org/bimmer/ob#relatedTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/bimmer/ob#EnvironmentParameter> .
 # 
 # http://www.semanticweb.org/bimmer/ob#specifiedBy
 <http://www.semanticweb.org/bimmer/ob#specifiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -186,15 +196,18 @@
 # http://www.semanticweb.org/bimmer/ob#coefficientName
 <http://www.semanticweb.org/bimmer/ob#coefficientName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.semanticweb.org/bimmer/ob#coefficientName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/bimmer/ob#coefficientName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/bimmer/ob#CoefficientSchema> .
 <http://www.semanticweb.org/bimmer/ob#coefficientName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 # 
 # http://www.semanticweb.org/bimmer/ob#coefficientValue
 <http://www.semanticweb.org/bimmer/ob#coefficientValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.semanticweb.org/bimmer/ob#coefficientValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/bimmer/ob#CoefficientSchema> .
 <http://www.semanticweb.org/bimmer/ob#coefficientValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
 # 
 # http://www.semanticweb.org/bimmer/ob#controlType
 <http://www.semanticweb.org/bimmer/ob#controlType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.semanticweb.org/bimmer/ob#controlType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/bimmer/ob#controlType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/bimmer/ob#System> .
 # 
 # http://www.semanticweb.org/bimmer/ob#dayOfWeek
 <http://www.semanticweb.org/bimmer/ob#dayOfWeek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -237,6 +250,7 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # http://www.semanticweb.org/bimmer/ob#endTime
 <http://www.semanticweb.org/bimmer/ob#endTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.semanticweb.org/bimmer/ob#endTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/bimmer/ob#endTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/bimmer/ob#Schedule> .
 <http://www.semanticweb.org/bimmer/ob#endTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
 # 
 # http://www.semanticweb.org/bimmer/ob#identifier
@@ -251,6 +265,7 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # http://www.semanticweb.org/bimmer/ob#maxNumberOccupants
 <http://www.semanticweb.org/bimmer/ob#maxNumberOccupants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.semanticweb.org/bimmer/ob#maxNumberOccupants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/bimmer/ob#maxNumberOccupants> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/bimmer/ob#Space> .
 <http://www.semanticweb.org/bimmer/ob#maxNumberOccupants> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 # 
 # http://www.semanticweb.org/bimmer/ob#maxRangeValue
@@ -267,6 +282,7 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/19
 # http://www.semanticweb.org/bimmer/ob#minNumberOccupants
 <http://www.semanticweb.org/bimmer/ob#minNumberOccupants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.semanticweb.org/bimmer/ob#minNumberOccupants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/bimmer/ob#minNumberOccupants> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/bimmer/ob#Space> .
 <http://www.semanticweb.org/bimmer/ob#minNumberOccupants> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
 # 
 # http://www.semanticweb.org/bimmer/ob#minRangeValue
@@ -346,6 +362,7 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # http://www.semanticweb.org/bimmer/ob#spaceType
 <http://www.semanticweb.org/bimmer/ob#spaceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.semanticweb.org/bimmer/ob#spaceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/bimmer/ob#spaceType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/bimmer/ob#Space> .
 <http://www.semanticweb.org/bimmer/ob#spaceType> <http://www.w3.org/2000/01/rdf-schema#range> _:genid15 .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
 _:genid15 <http://www.w3.org/2002/07/owl#oneOf> _:genid24 .
@@ -385,6 +402,7 @@ _:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # http://www.semanticweb.org/bimmer/ob#startTime
 <http://www.semanticweb.org/bimmer/ob#startTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.semanticweb.org/bimmer/ob#startTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.semanticweb.org/bimmer/ob#startTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/bimmer/ob#Schedule> .
 <http://www.semanticweb.org/bimmer/ob#startTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
 # 
 # http://www.semanticweb.org/bimmer/ob#timeOfDay
@@ -437,7 +455,7 @@ _:genid29 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/bimmer/ob#description> .
 _:genid30 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-<http://www.semanticweb.org/bimmer/ob#Behavior> <http://www.w3.org/2000/01/rdf-schema#comment> "Behaviour of the Occupant."@en .
+<http://www.semanticweb.org/bimmer/ob#Behavior> <http://www.w3.org/2000/01/rdf-schema#comment> "Class that represent the behaviour of the occupant."@en .
 <http://www.semanticweb.org/bimmer/ob#Behavior> <http://www.w3.org/2000/01/rdf-schema#label> "Behavior"@en .
 # 
 # http://www.semanticweb.org/bimmer/ob#Building
@@ -475,7 +493,7 @@ _:genid36 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001
 _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/bimmer/ob#coefficientValue> .
 _:genid37 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
-<http://www.semanticweb.org/bimmer/ob#CoefficientSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "N-ary class to represent the value and the names of coefficients inside mathematical formulas"@en .
+<http://www.semanticweb.org/bimmer/ob#CoefficientSchema> <http://www.w3.org/2000/01/rdf-schema#comment> "N-ary class to represent the value and the names of coefficients inside mathematical formulas."@en .
 <http://www.semanticweb.org/bimmer/ob#CoefficientSchema> <http://www.w3.org/2000/01/rdf-schema#label> "Coefficient Schema"@en .
 # 
 # http://www.semanticweb.org/bimmer/ob#ConstantValueFormula
@@ -486,6 +504,7 @@ _:genid37 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001
 # http://www.semanticweb.org/bimmer/ob#DaylightFactorParameter
 <http://www.semanticweb.org/bimmer/ob#DaylightFactorParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/bimmer/ob#DaylightFactorParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/bimmer/ob#EnvironmentParameter> .
+<http://www.semanticweb.org/bimmer/ob#DaylightFactorParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Parameter to represent the indoor daylight."@en .
 <http://www.semanticweb.org/bimmer/ob#DaylightFactorParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Daylight Factor Parameter"@en .
 # 
 # http://www.semanticweb.org/bimmer/ob#Driver
@@ -585,6 +604,7 @@ _:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid61 .
 _:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "noon" .
 _:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<http://www.semanticweb.org/bimmer/ob#DriverTime> <http://www.w3.org/2000/01/rdf-schema#comment> "N-ary class to define the time, day and season when a specific driver occurs."@en .
 <http://www.semanticweb.org/bimmer/ob#DriverTime> <http://www.w3.org/2000/01/rdf-schema#label> "Driver Time"@en .
 # 
 # http://www.semanticweb.org/bimmer/ob#Environment
@@ -597,6 +617,7 @@ _:genid65 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb
 _:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid66 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/bimmer/ob#hasEnvironmentParameter> .
 _:genid66 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.semanticweb.org/bimmer/ob#EnvironmentParameter> .
+<http://www.semanticweb.org/bimmer/ob#Environment> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent the environmental physical conditions that could be causing the occupant behavior."@en .
 <http://www.semanticweb.org/bimmer/ob#Environment> <http://www.w3.org/2000/01/rdf-schema#label> "Environment"@en .
 # 
 # http://www.semanticweb.org/bimmer/ob#EnvironmentParameter
@@ -617,6 +638,7 @@ _:genid69 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 _:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid70 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/bimmer/ob#parameterName> .
 _:genid70 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.semanticweb.org/bimmer/ob#EnvironmentParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Class that represent a physical variable of the environment where the driver occurs. It could represent variables that impact directly on the comfort levels of the occupant."@en .
 <http://www.semanticweb.org/bimmer/ob#EnvironmentParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Environment Parameter"@en .
 # 
 # http://www.semanticweb.org/bimmer/ob#Equipment
@@ -645,6 +667,7 @@ _:genid73 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb
 # http://www.semanticweb.org/bimmer/ob#GlareParameter
 <http://www.semanticweb.org/bimmer/ob#GlareParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/bimmer/ob#GlareParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/bimmer/ob#EnvironmentParameter> .
+<http://www.semanticweb.org/bimmer/ob#GlareParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Parameter to represent the glare inside a space."@en .
 <http://www.semanticweb.org/bimmer/ob#GlareParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Glare Parameter"@en .
 # 
 # http://www.semanticweb.org/bimmer/ob#HVAC
@@ -669,6 +692,7 @@ _:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 # 
 # http://www.semanticweb.org/bimmer/ob#Habit
 <http://www.semanticweb.org/bimmer/ob#Habit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/bimmer/ob#Habit> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent occupant habits."@en .
 <http://www.semanticweb.org/bimmer/ob#Habit> <http://www.w3.org/2000/01/rdf-schema#label> "Habit"@en .
 # 
 # http://www.semanticweb.org/bimmer/ob#IAQNeed
@@ -683,11 +707,13 @@ _:genid79 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb
 # http://www.semanticweb.org/bimmer/ob#IAQParameter
 <http://www.semanticweb.org/bimmer/ob#IAQParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/bimmer/ob#IAQParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/bimmer/ob#EnvironmentParameter> .
+<http://www.semanticweb.org/bimmer/ob#IAQParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Parameter to represent the indoor air quality."@en .
 <http://www.semanticweb.org/bimmer/ob#IAQParameter> <http://www.w3.org/2000/01/rdf-schema#label> "IAQ Parameter"@en .
 # 
 # http://www.semanticweb.org/bimmer/ob#IlluminanceParameter
 <http://www.semanticweb.org/bimmer/ob#IlluminanceParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/bimmer/ob#IlluminanceParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/bimmer/ob#EnvironmentParameter> .
+<http://www.semanticweb.org/bimmer/ob#IlluminanceParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Parameter to represent the amount of illumination inside a space."@en .
 <http://www.semanticweb.org/bimmer/ob#IlluminanceParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Illuminance Parameter"@en .
 # 
 # http://www.semanticweb.org/bimmer/ob#Inaction
@@ -793,6 +819,7 @@ _:genid92 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb
 _:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid93 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/bimmer/ob#meetingProbability> .
 _:genid93 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.semanticweb.org/bimmer/ob#Meeting> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent a meeting inside a communal space."@en .
 <http://www.semanticweb.org/bimmer/ob#Meeting> <http://www.w3.org/2000/01/rdf-schema#label> "Meeting"@en .
 # 
 # http://www.semanticweb.org/bimmer/ob#Movement
@@ -802,6 +829,7 @@ _:genid93 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000
 _:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid94 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/bimmer/ob#modeledByModel> .
 _:genid94 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb.org/bimmer/ob#MovementModel> .
+<http://www.semanticweb.org/bimmer/ob#Movement> <http://www.w3.org/2000/01/rdf-schema#comment> "The Movement class is used to represent the occupants movements inside a space."@en .
 <http://www.semanticweb.org/bimmer/ob#Movement> <http://www.w3.org/2000/01/rdf-schema#label> "Movement"@en .
 # 
 # http://www.semanticweb.org/bimmer/ob#MovementModel
@@ -823,6 +851,7 @@ _:genid95 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.semanticweb
 # http://www.semanticweb.org/bimmer/ob#NoiseParameter
 <http://www.semanticweb.org/bimmer/ob#NoiseParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/bimmer/ob#NoiseParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/bimmer/ob#EnvironmentParameter> .
+<http://www.semanticweb.org/bimmer/ob#NoiseParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Parameter to represent the amount of indoor and outdoor noise"@en .
 <http://www.semanticweb.org/bimmer/ob#NoiseParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Noise Parameter"@en .
 # 
 # http://www.semanticweb.org/bimmer/ob#NonPhysicalNeed
@@ -892,6 +921,7 @@ _:genid106 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/200
 _:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid107 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/bimmer/ob#minRangeValue> .
 _:genid107 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+<http://www.semanticweb.org/bimmer/ob#ParameterRange> <http://www.w3.org/2000/01/rdf-schema#comment> "N-ary class to represent the minimum and maximm comfort values for an occupant."@en .
 <http://www.semanticweb.org/bimmer/ob#ParameterRange> <http://www.w3.org/2000/01/rdf-schema#label> "Parameter Range"@en .
 # 
 # http://www.semanticweb.org/bimmer/ob#PhysicalNeed
@@ -907,17 +937,19 @@ _:genid107 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/200
 # http://www.semanticweb.org/bimmer/ob#RainingParameter
 <http://www.semanticweb.org/bimmer/ob#RainingParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/bimmer/ob#RainingParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/bimmer/ob#EnvironmentParameter> .
+<http://www.semanticweb.org/bimmer/ob#RainingParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Parameter to represent raining outdoors."@en .
 <http://www.semanticweb.org/bimmer/ob#RainingParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Raining Parameter"@en .
 # 
 # http://www.semanticweb.org/bimmer/ob#RelativeHumidityParameter
 <http://www.semanticweb.org/bimmer/ob#RelativeHumidityParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/bimmer/ob#RelativeHumidityParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/bimmer/ob#EnvironmentParameter> .
+<http://www.semanticweb.org/bimmer/ob#RelativeHumidityParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Parameter to represent indoor and outdoor relative humidity."@en .
 <http://www.semanticweb.org/bimmer/ob#RelativeHumidityParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Relative Humidity Parameter"@en .
 # 
 # http://www.semanticweb.org/bimmer/ob#Report
 <http://www.semanticweb.org/bimmer/ob#Report> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/bimmer/ob#Report> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/bimmer/ob#Action> .
-<http://www.semanticweb.org/bimmer/ob#Report> <http://www.w3.org/2000/01/rdf-schema#comment> "The Report class indicates that an occupant seeks assistance or\nfiles a complaint about their personal discomfort, but does not take\ndirect action to satisfy their needs."@en .
+<http://www.semanticweb.org/bimmer/ob#Report> <http://www.w3.org/2000/01/rdf-schema#comment> "The Report class indicates that an occupant seeks assistance or files a complaint about their personal discomfort, but does not take direct action to satisfy their needs."@en .
 <http://www.semanticweb.org/bimmer/ob#Report> <http://www.w3.org/2000/01/rdf-schema#label> "Report"@en .
 # 
 # http://www.semanticweb.org/bimmer/ob#Schedule
@@ -956,6 +988,7 @@ _:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/
 # http://www.semanticweb.org/bimmer/ob#SolarIrradianceParameter
 <http://www.semanticweb.org/bimmer/ob#SolarIrradianceParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/bimmer/ob#SolarIrradianceParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/bimmer/ob#EnvironmentParameter> .
+<http://www.semanticweb.org/bimmer/ob#SolarIrradianceParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Parameter to represent solar irradiance indoors and outdoors."@en .
 <http://www.semanticweb.org/bimmer/ob#SolarIrradianceParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Solar Irradiance Parameter"@en .
 # 
 # http://www.semanticweb.org/bimmer/ob#Space
@@ -1084,6 +1117,7 @@ _:genid143 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/200
 # http://www.semanticweb.org/bimmer/ob#TemperatureParameter
 <http://www.semanticweb.org/bimmer/ob#TemperatureParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/bimmer/ob#TemperatureParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/bimmer/ob#EnvironmentParameter> .
+<http://www.semanticweb.org/bimmer/ob#TemperatureParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Parameter to represent indoor and outdoor temperature."@en .
 <http://www.semanticweb.org/bimmer/ob#TemperatureParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Temperature Parameter"@en .
 # 
 # http://www.semanticweb.org/bimmer/ob#ThermalComfortEnvelop
