@@ -1,5 +1,5 @@
 <https://bimerr.iot.linkeddata.es/def/occupancy-profile#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://bimerr.iot.linkeddata.es/def/occupancy-profile#> <http://purl.org/dc/terms/creator> <http://www.semanticweb.org/bimmer/ob> .
+<https://bimerr.iot.linkeddata.es/def/occupancy-profile#> <http://purl.org/dc/terms/creator> <http://www.oeg-upm.net/> .
 <https://bimerr.iot.linkeddata.es/def/occupancy-profile#> <http://purl.org/dc/terms/license> ""@en .
 <https://bimerr.iot.linkeddata.es/def/occupancy-profile#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology aims to model the Occupancy Behavior domain according to the obXML schema (https://behavior.lbl.gov/?q=obXML)"@en .
 <https://bimerr.iot.linkeddata.es/def/occupancy-profile#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .

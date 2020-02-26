@@ -2,7 +2,7 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 <..\index-en.html> a prov:Entity;
-	 prov:wasAttributedTo <http://www.semanticweb.org/bimmer/ob>;
-	 dc:creator <http://www.semanticweb.org/bimmer/ob>;
+	 prov:wasAttributedTo <http://www.oeg-upm.net/>;
+	 dc:creator <http://www.oeg-upm.net/>;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 .

@@ -7,7 +7,7 @@
 @base <https://bimerr.iot.linkeddata.es/def/occupancy-profile#> .
 
 <https://bimerr.iot.linkeddata.es/def/occupancy-profile#> rdf:type owl:Ontology ;
-                                                           <http://purl.org/dc/terms/creator> <http://www.semanticweb.org/bimmer/ob> ;
+                                                           <http://purl.org/dc/terms/creator> <http://www.oeg-upm.net/> ;
                                                            <http://purl.org/dc/terms/license> ""@en ;
                                                            rdfs:comment "This ontology aims to model the Occupancy Behavior domain according to the obXML schema (https://behavior.lbl.gov/?q=obXML)"@en ;
                                                            owl:versionInfo "0.0.1" .

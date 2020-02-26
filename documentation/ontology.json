@@ -863,7 +863,7 @@
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/creator" : [ {
-    "@id" : "http://www.semanticweb.org/bimmer/ob"
+    "@id" : "http://www.oeg-upm.net/"
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@language" : "en",

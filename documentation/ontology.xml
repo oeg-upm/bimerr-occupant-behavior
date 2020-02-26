@@ -9,7 +9,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://bimerr.iot.linkeddata.es/def/occupancy-profile#">
-        <terms:creator rdf:resource="http://www.semanticweb.org/bimmer/ob"/>
+        <terms:creator rdf:resource="http://www.oeg-upm.net/"/>
         <terms:license xml:lang="en"></terms:license>
         <rdfs:comment xml:lang="en">This ontology aims to model the Occupancy Behavior domain according to the obXML schema (https://behavior.lbl.gov/?q=obXML)</rdfs:comment>
         <owl:versionInfo>0.0.1</owl:versionInfo>
