@@ -1,5 +1,6 @@
-# bimerr-occupant-behavior
-BIMERR ontology for Occupant Behavior data for energy consumption.
+# Occupancy Behavior Ontology
+This repository contains the code and documentation generated for the Occupancy Behavior ontology which is available at:
+https://bimerr.iot.linkeddata.es/def/occupancy-profile
 
-## Relevant Links
-* The requirements are stored in the following Google Spreadsheet: https://docs.google.com/spreadsheets/d/17G_LrgxkGj0YQDpPOka4sWUFwSM3mBAAAhiFuFt413w/edit?usp=sharing
+Current version of the ontology model
+![Current version of the model](https://github.com/oeg-upm/bimerr-occupant-behavior/tree/master/diagrams/Occupancy_Behavior.jpg "Occupancy Profile model")
