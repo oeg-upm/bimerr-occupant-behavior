@@ -1,5 +1,5 @@
-# Occupancy Behavior Ontology
-This repository contains the code and documentation generated for the Occupancy Behavior ontology which is available at:
+# Occupancy Profile Ontology
+This repository contains the code and documentation generated for the Occupancy Profile ontology which is available at:
 https://bimerr.iot.linkeddata.es/def/occupancy-profile
 
 Current version of the ontology model
