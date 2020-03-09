@@ -1,8 +1,14 @@
 <https://bimerr.iot.linkeddata.es/def/occupancy-profile#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://bimerr.iot.linkeddata.es/def/occupancy-profile#> <http://purl.org/dc/elements/1.1/created> "2020-02-01" .
+<https://bimerr.iot.linkeddata.es/def/occupancy-profile#> <http://purl.org/dc/elements/1.1/creator> "Serge Chávez Feria" .
+<https://bimerr.iot.linkeddata.es/def/occupancy-profile#> <http://purl.org/dc/elements/1.1/description> "The Occupancy Profile ontology has been developed to represent people’s behavior inside buildings with a focus on the energy impact their actions produce."@en .
+<https://bimerr.iot.linkeddata.es/def/occupancy-profile#> <http://purl.org/dc/elements/1.1/publisher> "http://www.oeg-upm.net/"@en .
+<https://bimerr.iot.linkeddata.es/def/occupancy-profile#> <http://purl.org/dc/elements/1.1/title> "Occupancy Profile ontology"@en .
 <https://bimerr.iot.linkeddata.es/def/occupancy-profile#> <http://purl.org/dc/terms/creator> <http://www.oeg-upm.net/> .
-<https://bimerr.iot.linkeddata.es/def/occupancy-profile#> <http://purl.org/dc/terms/license> ""@en .
-<https://bimerr.iot.linkeddata.es/def/occupancy-profile#> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology aims to model the Occupancy Behavior domain according to the obXML schema (https://behavior.lbl.gov/?q=obXML)"@en .
-<https://bimerr.iot.linkeddata.es/def/occupancy-profile#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+<https://bimerr.iot.linkeddata.es/def/occupancy-profile#> <http://purl.org/dc/terms/license> "http://purl.org/NET/rdflicense/cc-by4.0"@en .
+<https://bimerr.iot.linkeddata.es/def/occupancy-profile#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "op"@en .
+<https://bimerr.iot.linkeddata.es/def/occupancy-profile#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://bimerr.iot.linkeddata.es/def/occupancy-profile#" .
+<https://bimerr.iot.linkeddata.es/def/occupancy-profile#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.2" .
 # 
 # 
 # #################################################################
@@ -11,6 +17,15 @@
 # #
 # #################################################################
 # 
+# 
+# http://purl.org/dc/elements/1.1/created
+<http://purl.org/dc/elements/1.1/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/elements/1.1/publisher
 <http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -26,6 +41,12 @@
 # 
 # http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 

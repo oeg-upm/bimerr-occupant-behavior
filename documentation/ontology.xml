@@ -7,12 +7,19 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://bimerr.iot.linkeddata.es/def/occupancy-profile#">
+        <dc:created>2020-02-01</dc:created>
+        <dc:creator>Serge Chávez Feria</dc:creator>
+        <dc:description xml:lang="en">The Occupancy Profile ontology has been developed to represent people’s behavior inside buildings with a focus on the energy impact their actions produce.</dc:description>
+        <dc:publisher xml:lang="en">http://www.oeg-upm.net/</dc:publisher>
+        <dc:title xml:lang="en">Occupancy Profile ontology</dc:title>
         <terms:creator rdf:resource="http://www.oeg-upm.net/"/>
-        <terms:license xml:lang="en"></terms:license>
-        <rdfs:comment xml:lang="en">This ontology aims to model the Occupancy Behavior domain according to the obXML schema (https://behavior.lbl.gov/?q=obXML)</rdfs:comment>
-        <owl:versionInfo>0.0.1</owl:versionInfo>
+        <terms:license xml:lang="en">http://purl.org/NET/rdflicense/cc-by4.0</terms:license>
+        <vann:preferredNamespacePrefix xml:lang="en">op</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri>https://bimerr.iot.linkeddata.es/def/occupancy-profile#</vann:preferredNamespaceUri>
+        <owl:versionInfo>0.0.2</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -26,6 +33,27 @@
      -->
 
 
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/created"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
     
 
 
@@ -61,6 +89,20 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
     
 
 

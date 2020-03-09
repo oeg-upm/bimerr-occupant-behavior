@@ -7,14 +7,32 @@
 @base <https://bimerr.iot.linkeddata.es/def/occupancy-profile#> .
 
 <https://bimerr.iot.linkeddata.es/def/occupancy-profile#> rdf:type owl:Ontology ;
+                                                           <http://purl.org/dc/elements/1.1/created> "2020-02-01" ;
+                                                           <http://purl.org/dc/elements/1.1/creator> "Serge Chávez Feria" ;
+                                                           <http://purl.org/dc/elements/1.1/description> "The Occupancy Profile ontology has been developed to represent people’s behavior inside buildings with a focus on the energy impact their actions produce."@en ;
+                                                           <http://purl.org/dc/elements/1.1/publisher> "http://www.oeg-upm.net/"@en ;
+                                                           <http://purl.org/dc/elements/1.1/title> "Occupancy Profile ontology"@en ;
                                                            <http://purl.org/dc/terms/creator> <http://www.oeg-upm.net/> ;
-                                                           <http://purl.org/dc/terms/license> ""@en ;
-                                                           rdfs:comment "This ontology aims to model the Occupancy Behavior domain according to the obXML schema (https://behavior.lbl.gov/?q=obXML)"@en ;
-                                                           owl:versionInfo "0.0.1" .
+                                                           <http://purl.org/dc/terms/license> "http://purl.org/NET/rdflicense/cc-by4.0"@en ;
+                                                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "op"@en ;
+                                                           <http://purl.org/vocab/vann/preferredNamespaceUri> "https://bimerr.iot.linkeddata.es/def/occupancy-profile#" ;
+                                                           owl:versionInfo "0.0.2" .
 
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/elements/1.1/created
+<http://purl.org/dc/elements/1.1/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
 
 ###  http://purl.org/dc/elements/1.1/publisher
 <http://purl.org/dc/elements/1.1/publisher> rdf:type owl:AnnotationProperty .
@@ -34,6 +52,14 @@
 
 ###  http://purl.org/dc/terms/modified
 <http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
 #################################################################
