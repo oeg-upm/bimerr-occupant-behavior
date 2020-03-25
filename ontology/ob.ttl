@@ -1186,10 +1186,6 @@ op:Afternoon rdf:type owl:NamedIndividual ,
                       op:TimeOfDay .
 
 
-###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#All
-op:All rdf:type owl:NamedIndividual .
-
-
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#Arrival
 op:Arrival rdf:type owl:NamedIndividual ,
                     op:StatusTransitionTypeConcept .
@@ -1238,10 +1234,6 @@ op:Fixed rdf:type owl:NamedIndividual ,
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#Glare
 op:Glare rdf:type owl:NamedIndividual ,
                   saref:Property .
-
-
-###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#Holidays
-op:Holidays rdf:type owl:NamedIndividual .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#ISOAdaptiveComfort
@@ -1357,14 +1349,6 @@ op:TurnOff rdf:type owl:NamedIndividual ,
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#TurnOn
 op:TurnOn rdf:type owl:NamedIndividual ,
                    op:Interaction .
-
-
-###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#Weekdays
-op:Weekdays rdf:type owl:NamedIndividual .
-
-
-###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#Weekends
-op:Weekends rdf:type owl:NamedIndividual .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#Winter
