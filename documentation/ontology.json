@@ -552,7 +552,7 @@
   "@id" : "_:genid67",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#DayOfWeek"
+    "@id" : "http://www.w3.org/2006/time#DayOfWeek"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#hasDayOfWeek"
@@ -587,17 +587,17 @@
 }, {
   "@id" : "_:genid70",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#endTime"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#time"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#onHolidays"
   } ]
 }, {
   "@id" : "_:genid71",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#startTime"
+    "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#endTime"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#time"
@@ -606,13 +606,22 @@
   "@id" : "_:genid72",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#startTime"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#time"
+  } ]
+}, {
+  "@id" : "_:genid73",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/saref4building#hasSpace"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://w3id.org/def/saref4building#BuildingSpace"
   } ]
 }, {
-  "@id" : "_:genid73",
+  "@id" : "_:genid74",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/saref4building#contains"
@@ -621,7 +630,7 @@
     "@id" : "https://w3id.org/def/saref4building#BuildingObject"
   } ]
 }, {
-  "@id" : "_:genid74",
+  "@id" : "_:genid75",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOperationalMode"
@@ -630,7 +639,7 @@
     "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConcept"
   } ]
 }, {
-  "@id" : "_:genid75",
+  "@id" : "_:genid76",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -653,7 +662,7 @@
     "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOccupant"
   } ]
 }, {
-  "@id" : "_:genid80",
+  "@id" : "_:genid81",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -669,7 +678,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid86",
+  "@id" : "_:genid87",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
   "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
     "@list" : [ {
@@ -719,6 +728,9 @@
 }, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
   "@id" : "http://www.w3.org/2001/XMLSchema#duration",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
@@ -868,20 +880,6 @@
     "@id" : "_:genid11"
   }, {
     "@id" : "_:genid12"
-  } ]
-}, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#DayOfWeek",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Class to represent an additional classification for a day (e.g. Weekday, Holiday, etc)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Day of week"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/2006/time#DayOfWeek"
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#",
@@ -1168,7 +1166,7 @@
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#Holidays",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://bimerr.iot.linkeddata.es/def/building#DayOfWeek" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#IAQNeed",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -1724,6 +1722,8 @@
     "@id" : "_:genid68"
   }, {
     "@id" : "_:genid69"
+  }, {
+    "@id" : "_:genid70"
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#TimeOfDay",
@@ -1737,9 +1737,9 @@
     "@value" : "Time Of Day"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid70"
-  }, {
     "@id" : "_:genid71"
+  }, {
+    "@id" : "_:genid72"
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#TurnOff",
@@ -1763,10 +1763,10 @@
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#Weekdays",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://bimerr.iot.linkeddata.es/def/building#DayOfWeek" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#Weekends",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://bimerr.iot.linkeddata.es/def/building#DayOfWeek" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#WeibullFormula",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -1831,21 +1831,21 @@
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#definedByRange",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "defined by range"
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#describedByFormula",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "described by formula"
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#describesParameter",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "describes parameter"
@@ -1866,7 +1866,7 @@
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "detailed by"
@@ -1928,7 +1928,7 @@
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#hasDayOfWeek",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has day of week"
@@ -1976,14 +1976,14 @@
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#hasSeason",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has season"
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#hasTimeOfDay",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has time of day"
@@ -1997,14 +1997,14 @@
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#hasUnitOfMeasure",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has unit of measure"
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#identifier",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "identifier"
@@ -2031,7 +2031,7 @@
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#interactsOver",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "interacts over"
@@ -2045,28 +2045,28 @@
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#maxNumberOccupants",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "max number occupants"
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#maxRangeValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "max range value"
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "min number occupants"
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "min range value"
@@ -2087,31 +2087,38 @@
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantAge",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "occupant age"
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantGender",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "occupant gender"
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantJobtype",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "occupant jobtype"
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantLifestyle",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "occupant lifestyle"
+  } ]
+}, {
+  "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#onHolidays",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "on holidays"
   } ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#percentTimePresence",
@@ -2188,7 +2195,7 @@
     "@value" : "Building"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid72"
+    "@id" : "_:genid73"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4building#BuildingObject",
@@ -2216,7 +2223,7 @@
     "@value" : "Building space"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid73"
+    "@id" : "_:genid74"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4building#PhysicalObject",
@@ -2230,7 +2237,7 @@
     "@value" : "Physical object"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid74"
+    "@id" : "_:genid75"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4building#ShadingDevice",

@@ -66,6 +66,10 @@
 #    Datatypes
 #################################################################
 
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
 ###  http://www.w3.org/2001/XMLSchema#duration
 xsd:duration rdf:type rdfs:Datatype .
 
@@ -102,17 +106,20 @@ xsd:time rdf:type rdfs:Datatype .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#definedByRange
-:definedByRange rdf:type owl:ObjectProperty ;
+:definedByRange rdf:type owl:ObjectProperty ,
+                         owl:FunctionalProperty ;
                 rdfs:label "defined by range"@en .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#describedByFormula
-:describedByFormula rdf:type owl:ObjectProperty ;
+:describedByFormula rdf:type owl:ObjectProperty ,
+                             owl:FunctionalProperty ;
                     rdfs:label "described by formula"@en .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#describesParameter
-:describesParameter rdf:type owl:ObjectProperty ;
+:describesParameter rdf:type owl:ObjectProperty ,
+                             owl:FunctionalProperty ;
                     rdfs:label "describes parameter"@en .
 
 
@@ -122,7 +129,8 @@ xsd:time rdf:type rdfs:Datatype .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy
-:detailedBy rdf:type owl:ObjectProperty ;
+:detailedBy rdf:type owl:ObjectProperty ,
+                     owl:FunctionalProperty ;
             rdfs:label "detailed by"@en .
 
 
@@ -144,7 +152,8 @@ xsd:time rdf:type rdfs:Datatype .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#hasDayOfWeek
-:hasDayOfWeek rdf:type owl:ObjectProperty ;
+:hasDayOfWeek rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
               rdfs:label "has day of week"@en .
 
 
@@ -176,12 +185,14 @@ xsd:time rdf:type rdfs:Datatype .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#hasSeason
-:hasSeason rdf:type owl:ObjectProperty ;
+:hasSeason rdf:type owl:ObjectProperty ,
+                    owl:FunctionalProperty ;
            rdfs:label "has season"@en .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#hasTimeOfDay
-:hasTimeOfDay rdf:type owl:ObjectProperty ;
+:hasTimeOfDay rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
               rdfs:label "has time of day"@en .
 
 
@@ -191,7 +202,8 @@ xsd:time rdf:type rdfs:Datatype .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#hasUnitOfMeasure
-:hasUnitOfMeasure rdf:type owl:ObjectProperty ;
+:hasUnitOfMeasure rdf:type owl:ObjectProperty ,
+                           owl:FunctionalProperty ;
                   rdfs:label "has unit of measure"@en .
 
 
@@ -208,7 +220,8 @@ xsd:time rdf:type rdfs:Datatype .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#interactsOver
-:interactsOver rdf:type owl:ObjectProperty ;
+:interactsOver rdf:type owl:ObjectProperty ,
+                        owl:FunctionalProperty ;
                rdfs:label "interacts over"@en .
 
 
@@ -282,27 +295,32 @@ xsd:time rdf:type rdfs:Datatype .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#identifier
-:identifier rdf:type owl:DatatypeProperty ;
+:identifier rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
             rdfs:label "identifier"@en .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#maxNumberOccupants
-:maxNumberOccupants rdf:type owl:DatatypeProperty ;
+:maxNumberOccupants rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
                     rdfs:label "max number occupants"@en .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#maxRangeValue
-:maxRangeValue rdf:type owl:DatatypeProperty ;
+:maxRangeValue rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
                rdfs:label "max range value"@en .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants
-:minNumberOccupants rdf:type owl:DatatypeProperty ;
+:minNumberOccupants rdf:type owl:DatatypeProperty ,
+                             owl:FunctionalProperty ;
                     rdfs:label "min number occupants"@en .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue
-:minRangeValue rdf:type owl:DatatypeProperty ;
+:minRangeValue rdf:type owl:DatatypeProperty ,
+                        owl:FunctionalProperty ;
                rdfs:label "min range value"@en .
 
 
@@ -317,23 +335,32 @@ xsd:time rdf:type rdfs:Datatype .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantAge
-:occupantAge rdf:type owl:DatatypeProperty ;
+:occupantAge rdf:type owl:DatatypeProperty ,
+                      owl:FunctionalProperty ;
              rdfs:label "occupant age"@en .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantGender
-:occupantGender rdf:type owl:DatatypeProperty ;
+:occupantGender rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
                 rdfs:label "occupant gender"@en .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantJobtype
-:occupantJobtype rdf:type owl:DatatypeProperty ;
+:occupantJobtype rdf:type owl:DatatypeProperty ,
+                          owl:FunctionalProperty ;
                  rdfs:label "occupant jobtype"@en .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantLifestyle
-:occupantLifestyle rdf:type owl:DatatypeProperty ;
+:occupantLifestyle rdf:type owl:DatatypeProperty ,
+                            owl:FunctionalProperty ;
                    rdfs:label "occupant lifestyle"@en .
+
+
+###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#onHolidays
+:onHolidays rdf:type owl:DatatypeProperty ;
+            rdfs:label "on holidays"@en .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#percentTimePresence
@@ -459,13 +486,6 @@ xsd:time rdf:type rdfs:Datatype .
                                                                               ] ;
                                                               rdfs:comment "Class to represent the different spaces the building have and where the occupant behaviors occur." ;
                                                               rdfs:label "Building Space"@en .
-
-
-###  https://bimerr.iot.linkeddata.es/def/building#DayOfWeek
-<https://bimerr.iot.linkeddata.es/def/building#DayOfWeek> rdf:type owl:Class ;
-                                                          rdfs:subClassOf <http://www.w3.org/2006/time#DayOfWeek> ;
-                                                          rdfs:comment "Class to represent an additional classification for a day (e.g. Weekday, Holiday, etc)."@en ;
-                                                          rdfs:label "Day of week"@en .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#AccousticNeed
@@ -968,7 +988,7 @@ xsd:time rdf:type rdfs:Datatype .
       rdfs:subClassOf :Driver ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :hasDayOfWeek ;
-                        owl:allValuesFrom <https://bimerr.iot.linkeddata.es/def/building#DayOfWeek>
+                        owl:allValuesFrom <http://www.w3.org/2006/time#DayOfWeek>
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :hasSeason ;
@@ -977,6 +997,10 @@ xsd:time rdf:type rdfs:Datatype .
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :hasTimeOfDay ;
                         owl:allValuesFrom :TimeOfDay
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :onHolidays ;
+                        owl:allValuesFrom xsd:date
                       ] ;
       rdfs:comment "Driver related to time conditions that could be causing a behavior. It also describes the time when another type of driver occur."@en ;
       rdfs:label "Time"@en .
@@ -1208,8 +1232,7 @@ xsd:time rdf:type rdfs:Datatype .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#Holidays
-:Holidays rdf:type owl:NamedIndividual ,
-                   <https://bimerr.iot.linkeddata.es/def/building#DayOfWeek> .
+:Holidays rdf:type owl:NamedIndividual .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#ISOAdaptiveComfort
@@ -1328,13 +1351,11 @@ xsd:time rdf:type rdfs:Datatype .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#Weekdays
-:Weekdays rdf:type owl:NamedIndividual ,
-                   <https://bimerr.iot.linkeddata.es/def/building#DayOfWeek> .
+:Weekdays rdf:type owl:NamedIndividual .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#Weekends
-:Weekends rdf:type owl:NamedIndividual ,
-                   <https://bimerr.iot.linkeddata.es/def/building#DayOfWeek> .
+:Weekends rdf:type owl:NamedIndividual .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#Winter
