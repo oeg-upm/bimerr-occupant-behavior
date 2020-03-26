@@ -16,10 +16,6 @@ This section provides details for each class and property defined by Occupancy P
             title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#Behavior">Behavior</a>
       </li>
       <li>
-         <a href="#https://bimerr.iot.linkeddata.es/def/building#Building"
-            title="https://bimerr.iot.linkeddata.es/def/building#Building">Building</a>
-      </li>
-      <li>
          <a href="#https://w3id.org/def/saref4building#Building" title="https://w3id.org/def/saref4building#Building">Building</a>
       </li>
       <li>
@@ -99,8 +95,16 @@ This section provides details for each class and property defined by Occupancy P
             title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#Interaction">Interaction</a>
       </li>
       <li>
+         <a href="#InteractionConcept"
+            title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionConcept">Interaction concept</a>
+      </li>
+      <li>
          <a href="#InteractionFormula"
             title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionFormula">Interaction Formula</a>
+      </li>
+      <li>
+         <a href="#InteractionScheme"
+            title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionScheme">Interaction scheme</a>
       </li>
       <li>
          <a href="#LightingDevice"
@@ -315,24 +319,6 @@ This section provides details for each class and property defined by Occupancy P
          <dd/>
       </dl>
    </div>
-   <div class="entity" id="https://bimerr.iot.linkeddata.es/def/building#Building">
-      <h3>Building<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://bimerr.iot.linkeddata.es/def/building#Building</p>
-      <div class="comment">
-         <span class="markdown">Building where the occupancy behaviors occur.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#https://w3id.org/def/saref4building#Building" title="https://w3id.org/def/saref4building#Building">Building</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="https://w3id.org/def/saref4building#Building">
       <h3>Building<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -346,12 +332,6 @@ This section provides details for each class and property defined by Occupancy P
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#https://bimerr.iot.linkeddata.es/def/building#Building"
-               title="https://bimerr.iot.linkeddata.es/def/building#Building">Building</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
       </dl>
    </div>
    <div class="entity" id="https://w3id.org/def/saref4building#BuildingObject">
@@ -458,7 +438,9 @@ This section provides details for each class and property defined by Occupancy P
          <dd/>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#OperationalModeConcept"
+            <a href="#InteractionConcept"
+               title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionConcept">Interaction concept</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#OperationalModeConcept"
                title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConcept">Operational mode concept</a>
             <sup class="type-c" title="class">c</sup>, <a href="#StatusTransitionTypeConcept"
                title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransitionTypeConcept">Status transition type concept</a>
@@ -496,7 +478,9 @@ This section provides details for each class and property defined by Occupancy P
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#OperationalModeConceptScheme"
+            <a href="#InteractionScheme"
+               title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionScheme">Interaction scheme</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#OperationalModeConceptScheme"
                title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConceptScheme">Operational mode scheme</a>
             <sup class="type-c" title="class">c</sup>, <a href="#StatusTransitionScheme"
                title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransitionScheme">Status transition scheme</a>
@@ -828,10 +812,28 @@ This section provides details for each class and property defined by Occupancy P
                title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#Action">Action</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+      </dl>
+   </div>
+   <div class="entity" id="InteractionConcept">
+      <h3>Interaction concept<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionConcept</p>
+      <div class="comment">
+         <span class="markdown">Types of interactions between occupants and systems.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#Concept" title="http://www.w3.org/2004/02/skos/core#Concept">Concept</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has members</dt>
          <dd>
-            <a href="#SetControlValue"
-               title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#SetControlValue">set control value</a>
+            <a href="#SetToControlValue"
+               title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#SetToControlValue">set to control value</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#TurnOff"
                title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#TurnOff">turn off</a>
             <sup class="type-ni" title="named individual">ni</sup>, <a href="#TurnOn"
@@ -874,6 +876,25 @@ This section provides details for each class and property defined by Occupancy P
             <sup class="type-op" title="object property">op</sup>, <a href="#hasIndependentVariable"
                title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#hasIndependentVariable">has independent variable</a>
             <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="InteractionScheme">
+      <h3>Interaction scheme<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionScheme</p>
+      <div class="comment">
+         <span class="markdown">An aggregation of SKOS concepts regarding the interaction type between occupants and space systems</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#http://www.w3.org/2004/02/skos/core#ConceptScheme"
+               title="http://www.w3.org/2004/02/skos/core#ConceptScheme">Concept Scheme</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -2690,9 +2711,9 @@ This section provides details for each class and property defined by Occupancy P
          </a>
       </li>
       <li>
-         <a href="#SetControlValue"
-            title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#SetControlValue">
-            <span>set control value</span>
+         <a href="#SetToControlValue"
+            title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#SetToControlValue">
+            <span>set to control value</span>
          </a>
       </li>
       <li>
@@ -3254,18 +3275,18 @@ This section provides details for each class and property defined by Occupancy P
          </dd>
       </dl>
    </div>
-   <div class="entity" id="SetControlValue">
-      <h3>set control value<sup class="type-ni" title="named individual">ni</sup>
+   <div class="entity" id="SetToControlValue">
+      <h3>set to control value<sup class="type-ni" title="named individual">ni</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://bimerr.iot.linkeddata.es/def/occupancy-profile#SetControlValue</p>
+         <strong>IRI:</strong> https://bimerr.iot.linkeddata.es/def/occupancy-profile#SetToControlValue</p>
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#Interaction"
-               title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#Interaction">Interaction</a>
+            <a href="#InteractionConcept"
+               title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionConcept">Interaction concept</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -3435,8 +3456,8 @@ This section provides details for each class and property defined by Occupancy P
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#Interaction"
-               title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#Interaction">Interaction</a>
+            <a href="#InteractionConcept"
+               title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionConcept">Interaction concept</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -3451,8 +3472,8 @@ This section provides details for each class and property defined by Occupancy P
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#Interaction"
-               title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#Interaction">Interaction</a>
+            <a href="#InteractionConcept"
+               title="https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionConcept">Interaction concept</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>

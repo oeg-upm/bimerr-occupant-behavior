@@ -447,25 +447,6 @@ foaf:Person rdf:type owl:Class ;
             rdfs:label "Person"@en .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Building
-building:Building rdf:type owl:Class ;
-                  rdfs:subClassOf s4bldg:Building ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty op:identifier ;
-                                    owl:someValuesFrom xsd:string
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty op:buildingAddress ;
-                                    owl:allValuesFrom xsd:string
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty op:description ;
-                                    owl:allValuesFrom xsd:string
-                                  ] ;
-                  rdfs:comment "Building where the occupancy behaviors occur."@en ;
-                  rdfs:label "Building"@en .
-
-
 ###  https://bimerr.iot.linkeddata.es/def/building#BuildingSpace
 building:BuildingSpace rdf:type owl:Class ;
                        rdfs:subClassOf s4bldg:BuildingSpace ,
@@ -680,6 +661,13 @@ op:Interaction rdf:type owl:Class ;
                rdfs:label "Interaction"@en .
 
 
+###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionConcept
+op:InteractionConcept rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                      rdfs:comment "Types of interactions between occupants and systems."@en ;
+                      rdfs:label "Interaction concept"@en .
+
+
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionFormula
 op:InteractionFormula rdf:type owl:Class ;
                       rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -696,6 +684,13 @@ op:InteractionFormula rdf:type owl:Class ;
                                       ] ;
                       rdfs:comment "Formula to model the probability of interaction between ocupant and system."@en ;
                       rdfs:label "Interaction Formula"@en .
+
+
+###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionScheme
+op:InteractionScheme rdf:type owl:Class ;
+                     rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                     rdfs:comment "An aggregation of SKOS concepts regarding the interaction type between occupants and space systems"@en ;
+                     rdfs:label "Interaction scheme"@en .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#LightingDevice
@@ -808,10 +803,6 @@ op:Occupant rdf:type owl:Class ;
                             [ rdf:type owl:Restriction ;
                               owl:onProperty op:identifier ;
                               owl:someValuesFrom xsd:string
-                            ] ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty op:name ;
-                              owl:allValuesFrom xsd:string
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty op:occupantAge ;
@@ -1301,9 +1292,9 @@ op:RelativeHumidity rdf:type owl:NamedIndividual ,
                              saref:Property .
 
 
-###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#SetControlValue
-op:SetControlValue rdf:type owl:NamedIndividual ,
-                            op:Interaction .
+###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#SetToControlValue
+op:SetToControlValue rdf:type owl:NamedIndividual ,
+                              op:InteractionConcept .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#ShortTermLeaving
@@ -1343,12 +1334,12 @@ op:Temperature rdf:type owl:NamedIndividual ,
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#TurnOff
 op:TurnOff rdf:type owl:NamedIndividual ,
-                    op:Interaction .
+                    op:InteractionConcept .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#TurnOn
 op:TurnOn rdf:type owl:NamedIndividual ,
-                   op:Interaction .
+                   op:InteractionConcept .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#Winter
