@@ -1,0 +1,187 @@
+@prefix op: <https://bimerr.iot.linkeddata.es/def/occupancy-profile#> .
+@prefix building: <https://bimerr.iot.linkeddata.es/def/building#> .
+@prefix s4bldg: <https://w3id.org/def/saref4bldg> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix foaf: <http://xmlns.com/foaf/spec/#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix s4city: <https://w3id.org/def/saref4city#> .
+@prefix data: <https://www.data.bimerr.occupancy.es/resource/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix saref: <https://saref.etsi.org/core/> .
+@base <https://www.data.bimerr.occupancy.es/def/home/> .
+
+
+data:Building_1 rdf:type building:Building;
+		building:description "An office building which contains 12 spaces and 16 staffs"^^xsd:string;
+		s4bldg:hasSpace data:S2_Researcher_Office .
+		
+
+data:S2_Researcher_Office rdf:type building:BuildingSpace;
+		s4bldg:contains data:Thermostat_1;
+		s4bldg:contains data:HVAC_1;
+		building:description "Shared Office for 4 researchers"^^xsd:string;
+		op:hasOccupant data:OC_Researcher_1;
+		op:hasOccupant data:OC_Researcher_2 .
+		
+data:OC_Researcher_1 rdf:type op:Occupant;
+		op:age "21"^^xsd:integer;
+		op:hasBehavior data:B_Therm .
+		
+data:OC_Researcher_2 rdf:type op:Occupant;
+		op:age "22"^^xsd:integer;
+		op:hasBehavior data:B_AC;
+		op:hasBehavior data:B_M_Researcher .
+		
+data:Thermostat_1 rdf:type op:Thermostat;
+		op:hasOperationalMode op:Adjustable .
+		
+op:Adjustable rdf:type op:OperationalModeConcept .
+		
+data:HVAC_1 rdf:type op:HVAC;
+		op:hasOperationalMode op:ZoneOnOff .
+		
+op:ZoneOnOff rdf:type op:OperationalModeConcept .
+
+
+data:B_Therm rdf:type op:Behavior;
+		op:leadsTo data:Interaction_1;
+		op:description "Set thermostat to 23 deg.C based on the probability curve"^^xsd:string;
+		op:drivenBy data:DriverSet_1 .
+		
+data:Interaction_1 rdf:type op:Interaction;
+		op:interactsOver data:Thermostat_1;
+		op:controlValue "23"^^xsd:integer;
+		op:describedByFormula data:Weibull1DFormula_1;
+		op:interactionType op:SetToControlValue .
+		
+op:SetToControlValue rdf:type op:InteractionConcept .
+
+data:Weibull1DFormula_1 rdf:type op:WeibullFormula;
+		op:description "S Shaped Curve Probability Function"^^xsd:string;
+		op:hasCoefficient data:Coefficient_A1;
+		op:hasCoefficient data:Coefficient_B1;
+		op:hasCoefficient data:Coefficient_C1;
+		op:hasIndependentVariable data:EnvironmentParameter_1 .
+		
+data:Coefficient_A1 rdf:type op:Coefficient;
+		op:coefficientValue "27.75"^^xsd:float;
+		op:name "CoefficientA"^^xsd:string .
+		
+data:Coefficient_B1 rdf:type op:Coefficient;
+		op:coefficientValue "15.87"^^xsd:float;
+		op:name "CoefficientB"^^xsd:string .
+		
+data:Coefficient_C1 rdf:type op:Coefficient;
+		op:coefficientValue "15.87"^^xsd:float;
+		op:name "CoefficientC"^^xsd:string .
+		
+data:EnvironmentParameter_1 rdf:type op:EnvironmentalParameter;
+		op:name "Room dry-bulb air temperature"^^xsd:string;
+		op:describesProperty op:Temperature .
+		
+op:Temperature rdf:type saref:Property .
+
+data:DriverSet_1 rdf:type op:DriverSet;
+		op:composedOf data:Environment_1 .
+		
+data:Environment_1 rdf:type op:Environment;
+		op:hasEnvironmentalParameter data:EnvironmentParameter_1 .
+		
+data:B_AC rdf:type op:Behavior;
+		op:description "Hot AC On 27 deg.C"^^xsd:string;
+		op:drivenBy data:DriverSet_2;
+		op:influencedByNeed data:ThermalNeed_1;
+		op:leadsTo data:Interaction_2 .
+		
+data:DriverSet_2 rdf:type op:DriverSet;
+		op:composedOf data:Environment_2;
+		op:composedOf data:Time_1 .
+		
+data:Environment_2 rdf:type op:Environment;
+		op:hasEnvironmentalParameter data:EnvironmentParameter_1 .
+		
+data:Time_1 rdf:type op:Time;
+		op:hasSeason op:Summer;
+		op:hasSeason op:Spring;
+		op:hasSeason op:Winter;
+		op:hasSeason op:Fall;
+		op:hasTimeOfDay op:Day;
+		op:hasDayOfWeek op:Monday .
+		
+op:Summer rdf:type op:Season .
+
+op:Spring rdf:type op:Season .
+
+op:Winter rdf:type op:Season .
+
+op:Fall rdf:type op:Season .
+
+op:Day rdf:type op:TimeOfDay .
+
+time:Monday rdf:type time:DayOfWeek .
+
+
+data:ThermalNeed_1 rdf:type op:ThermalNeed;
+		op:definedByRange data:ParameterRange_1 .
+		
+data:ParameterRange_1 rdf:type op:ParameterRange;
+		op:describesParameter data:EnvironmentParameter_1;
+		op:maxRangeValue "24.0"^^xsd:float;
+		op:minRangeValue "21.0"^^xsd:float .
+		
+data:Interaction_2 rdf:type op:Interaction;
+		op:interactsOver data:HVAC_1;
+		op:interactionType op:TurnOn;
+		op:describedByFormula data:Weibull1DFormula_2 .
+		
+op:TurnOn rdf:type op:InteractionConcept .
+
+data:Weibull1DFormula_2 rdf:type op:WeibullFormula;
+		op:hasCoefficient data:Coefficient_A2;
+		op:hasCoefficient data:Coefficient_B2;
+		op:hasCoefficient data:Coefficient_C2;
+		op:hasIndependentVariable data:EnvironmentParameter_1 .
+		
+data:Coefficient_A2 rdf:type op:Coefficient;
+		op:coefficientValue "24"^^xsd:float .
+
+data:Coefficient_B2 rdf:type op:Coefficient;
+		op:coefficientValue "3"^^xsd:float .
+		
+data:Coefficient_C2 rdf:type op:Coefficient;
+		op:coefficientValue "8"^^xsd:float .
+		
+		
+data:B_M_Researcher rdf:type op:Behavior;
+		op:description "Researcher and senior 70% own office and 15% other office"^^xsd:string;
+		op:leadsTo data:SpaceOccupancy_1;
+		op:leadsTo data:StatusTransition_1;
+		op:leadsTo data:StatusTransition_2 .
+		
+data:SpaceOccupancy_1 rdf:type op:SpaceOccupancy;
+		op:percentTimePresence "70.0"^^xsd:float;
+		op:duration "PT90M"^^xsd:duration .
+		
+data:StatusTransition_1 rdf:type op:StatusTransition;
+		op:transitionType op:Arrival;
+		op:specifiedBy data:CustomProbabilityModel_1 .
+		
+op:Arrival rdf:type op:StatusTransitionConcept .
+
+data:CustomProbabilityModel_1 rdf:type op:CustomProbabilityModel;
+		op:time "09:00:00"^^xsd:time;
+		op:probability "70.0"^^xsd:float .
+		
+		
+data:StatusTransition_2 rdf:type op:StatusTransition;
+		op:transitionType op:ShortTermLeaving;
+		op:specifiedBy data:NormalProbabilityModel_1;
+		op:typicalDuration "PT60M"^^xsd:duration;
+		op:minimalDuration "PT30M"^^xsd:duration .
+		
+data:NormalProbabilityModel_1 rdf:type op:NormalProbabilityModel;
+		op:earlyOccurTime "11:00:00"^^xsd:time;
+		op:typicalOccurTime "12:00:00"^^xsd:time .
+		
+op:ShortTermLeaving rdf:type op:StatusTransitionConcept .
