@@ -11,6 +11,7 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://bimerr.iot.linkeddata.es/def/occupancy-profile#">
         <dc:created>2020-02-01</dc:created>
+        <dc:creator>María Poveda Vilallón</dc:creator>
         <dc:creator>Serge Chávez Feria</dc:creator>
         <dc:description xml:lang="en">The Occupancy Profile ontology has been developed to represent people’s behavior inside building spaces.</dc:description>
         <dc:publisher xml:lang="en">http://www.oeg-upm.net/</dc:publisher>
@@ -772,35 +773,6 @@
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#Building -->
-
-
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#Building">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4building#Building"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/occupancy-profile#identifier"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/occupancy-profile#buildingAddress"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/occupancy-profile#description"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Building where the occupancy behaviors occur.</rdfs:comment>
-        <rdfs:label xml:lang="en">Building</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://bimerr.iot.linkeddata.es/def/building#BuildingSpace -->
 
 
@@ -1135,6 +1107,17 @@
     
 
 
+    <!-- https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionConcept -->
+
+
+    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionConcept">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment xml:lang="en">Types of interactions between occupants and systems.</rdfs:comment>
+        <rdfs:label xml:lang="en">Interaction concept</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionFormula -->
 
 
@@ -1159,6 +1142,17 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Formula to model the probability of interaction between ocupant and system.</rdfs:comment>
         <rdfs:label xml:lang="en">Interaction Formula</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionScheme -->
+
+
+    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionScheme">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:comment xml:lang="en">An aggregation of SKOS concepts regarding the interaction type between occupants and space systems</rdfs:comment>
+        <rdfs:label xml:lang="en">Interaction scheme</rdfs:label>
     </owl:Class>
     
 
@@ -1334,12 +1328,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/occupancy-profile#identifier"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/occupancy-profile#name"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2150,11 +2138,11 @@
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/occupancy-profile#SetControlValue -->
+    <!-- https://bimerr.iot.linkeddata.es/def/occupancy-profile#SetToControlValue -->
 
 
-    <owl:NamedIndividual rdf:about="https://bimerr.iot.linkeddata.es/def/occupancy-profile#SetControlValue">
-        <rdf:type rdf:resource="https://bimerr.iot.linkeddata.es/def/occupancy-profile#Interaction"/>
+    <owl:NamedIndividual rdf:about="https://bimerr.iot.linkeddata.es/def/occupancy-profile#SetToControlValue">
+        <rdf:type rdf:resource="https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionConcept"/>
     </owl:NamedIndividual>
     
 
@@ -2226,7 +2214,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://bimerr.iot.linkeddata.es/def/occupancy-profile#TurnOff">
-        <rdf:type rdf:resource="https://bimerr.iot.linkeddata.es/def/occupancy-profile#Interaction"/>
+        <rdf:type rdf:resource="https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionConcept"/>
     </owl:NamedIndividual>
     
 
@@ -2235,7 +2223,7 @@
 
 
     <owl:NamedIndividual rdf:about="https://bimerr.iot.linkeddata.es/def/occupancy-profile#TurnOn">
-        <rdf:type rdf:resource="https://bimerr.iot.linkeddata.es/def/occupancy-profile#Interaction"/>
+        <rdf:type rdf:resource="https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionConcept"/>
     </owl:NamedIndividual>
     
 

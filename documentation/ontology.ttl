@@ -8,7 +8,8 @@
 
 <https://bimerr.iot.linkeddata.es/def/occupancy-profile#> rdf:type owl:Ontology ;
                                                            <http://purl.org/dc/elements/1.1/created> "2020-02-01" ;
-                                                           <http://purl.org/dc/elements/1.1/creator> "Serge Chávez Feria" ;
+                                                           <http://purl.org/dc/elements/1.1/creator> "María Poveda Vilallón" ,
+                                                                                                     "Serge Chávez Feria" ;
                                                            <http://purl.org/dc/elements/1.1/description> "The Occupancy Profile ontology has been developed to represent people’s behavior inside building spaces."@en ;
                                                            <http://purl.org/dc/elements/1.1/publisher> "http://www.oeg-upm.net/"@en ;
                                                            <http://purl.org/dc/elements/1.1/title> "Occupancy Profile ontology"@en ;
@@ -438,25 +439,6 @@ xsd:time rdf:type rdfs:Datatype .
                                    rdfs:label "Person"@en .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Building
-<https://bimerr.iot.linkeddata.es/def/building#Building> rdf:type owl:Class ;
-                                                         rdfs:subClassOf <https://w3id.org/def/saref4building#Building> ,
-                                                                         [ rdf:type owl:Restriction ;
-                                                                           owl:onProperty :identifier ;
-                                                                           owl:someValuesFrom xsd:string
-                                                                         ] ,
-                                                                         [ rdf:type owl:Restriction ;
-                                                                           owl:onProperty :buildingAddress ;
-                                                                           owl:allValuesFrom xsd:string
-                                                                         ] ,
-                                                                         [ rdf:type owl:Restriction ;
-                                                                           owl:onProperty :description ;
-                                                                           owl:allValuesFrom xsd:string
-                                                                         ] ;
-                                                         rdfs:comment "Building where the occupancy behaviors occur."@en ;
-                                                         rdfs:label "Building"@en .
-
-
 ###  https://bimerr.iot.linkeddata.es/def/building#BuildingSpace
 <https://bimerr.iot.linkeddata.es/def/building#BuildingSpace> rdf:type owl:Class ;
                                                               rdfs:subClassOf <https://w3id.org/def/saref4building#BuildingSpace> ,
@@ -671,6 +653,13 @@ xsd:time rdf:type rdfs:Datatype .
              rdfs:label "Interaction"@en .
 
 
+###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionConcept
+:InteractionConcept rdf:type owl:Class ;
+                    rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
+                    rdfs:comment "Types of interactions between occupants and systems."@en ;
+                    rdfs:label "Interaction concept"@en .
+
+
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionFormula
 :InteractionFormula rdf:type owl:Class ;
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -687,6 +676,13 @@ xsd:time rdf:type rdfs:Datatype .
                                     ] ;
                     rdfs:comment "Formula to model the probability of interaction between ocupant and system."@en ;
                     rdfs:label "Interaction Formula"@en .
+
+
+###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionScheme
+:InteractionScheme rdf:type owl:Class ;
+                   rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                   rdfs:comment "An aggregation of SKOS concepts regarding the interaction type between occupants and space systems"@en ;
+                   rdfs:label "Interaction scheme"@en .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#LightingDevice
@@ -799,10 +795,6 @@ xsd:time rdf:type rdfs:Datatype .
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :identifier ;
                             owl:someValuesFrom xsd:string
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :name ;
-                            owl:allValuesFrom xsd:string
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :occupantAge ;
@@ -1292,9 +1284,9 @@ xsd:time rdf:type rdfs:Datatype .
                            <https://w3id.org/saref#Property> .
 
 
-###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#SetControlValue
-:SetControlValue rdf:type owl:NamedIndividual ,
-                          :Interaction .
+###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#SetToControlValue
+:SetToControlValue rdf:type owl:NamedIndividual ,
+                            :InteractionConcept .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#ShortTermLeaving
@@ -1334,12 +1326,12 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#TurnOff
 :TurnOff rdf:type owl:NamedIndividual ,
-                  :Interaction .
+                  :InteractionConcept .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#TurnOn
 :TurnOn rdf:type owl:NamedIndividual ,
-                 :Interaction .
+                 :InteractionConcept .
 
 
 ###  https://bimerr.iot.linkeddata.es/def/occupancy-profile#Winter
