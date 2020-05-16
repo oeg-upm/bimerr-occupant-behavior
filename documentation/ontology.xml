@@ -11,7 +11,8 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="http://bimerr.iot.linkeddata.es/def/occupancy-profile#">
         <dc:created>2020-02-01</dc:created>
-        <dc:creator>María Poveda Vilallón</dc:creator>
+        <dc:creator>María Poveda Villalón</dc:creator>
+        <dc:creator>Raúl García Castro</dc:creator>
         <dc:creator>Serge Chávez Feria</dc:creator>
         <dc:description xml:lang="en">The Occupancy Profile ontology has been developed to represent people’s behavior inside building spaces.</dc:description>
         <dc:publisher xml:lang="en">http://www.oeg-upm.net/</dc:publisher>
@@ -20,7 +21,7 @@
         <terms:license xml:lang="en">http://purl.org/NET/rdflicense/cc-by4.0</terms:license>
         <vann:preferredNamespacePrefix xml:lang="en">op</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>http://bimerr.iot.linkeddata.es/def/occupancy-profile#</vann:preferredNamespaceUri>
-        <owl:versionInfo>0.0.4</owl:versionInfo>
+        <owl:versionInfo>0.0.5</owl:versionInfo>
     </owl:Ontology>
     
 

@@ -741,7 +741,9 @@
     "@value" : "2020-02-01"
   } ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "María Poveda Vilallón"
+    "@value" : "María Poveda Villalón"
+  }, {
+    "@value" : "Raúl García Castro"
   }, {
     "@value" : "Serge Chávez Feria"
   } ],
@@ -772,7 +774,7 @@
     "@value" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.0.4"
+    "@value" : "0.0.5"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#ASHRAEAdaptiveComfort",
