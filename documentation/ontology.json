@@ -9,24 +9,6 @@
   } ]
 }, {
   "@id" : "_:genid10",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#drivenBy"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#DriverSet"
-  } ]
-}, {
-  "@id" : "_:genid11",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#leadsTo"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "_:genid12"
-  } ]
-}, {
-  "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -36,7 +18,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid15",
+  "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Need"
@@ -45,7 +27,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#influencedByNeed"
   } ]
 }, {
-  "@id" : "_:genid16",
+  "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#identifier"
@@ -54,16 +36,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "_:genid17",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#description"
-  } ]
-}, {
-  "@id" : "_:genid18",
+  "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#coefficientValue"
@@ -72,25 +45,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "_:genid19",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#name"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "_:genid2",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#description"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "_:genid20",
+  "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#probability"
@@ -99,16 +54,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "_:genid21",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#time"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#time"
-  } ]
-}, {
-  "@id" : "_:genid22",
+  "@id" : "_:genid17",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#composedOf"
@@ -117,7 +63,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Driver"
   } ]
 }, {
-  "@id" : "_:genid23",
+  "@id" : "_:genid18",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasEnvironmentalParameter"
@@ -126,16 +72,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#EnvironmentalParameter"
   } ]
 }, {
-  "@id" : "_:genid24",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#describesProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/saref#Property"
-  } ]
-}, {
-  "@id" : "_:genid25",
+  "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasUnitOfMeasure"
@@ -144,7 +81,7 @@
     "@id" : "https://w3id.org/saref#UnitOfMeasure"
   } ]
 }, {
-  "@id" : "_:genid26",
+  "@id" : "_:genid2",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#identifier"
@@ -153,25 +90,16 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "_:genid27",
+  "@id" : "_:genid20",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#description"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#identifier"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "_:genid28",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#name"
-  } ]
-}, {
-  "@id" : "_:genid29",
+  "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#describedByFormula"
@@ -180,16 +108,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionFormula"
   } ]
 }, {
-  "@id" : "_:genid3",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#identifier"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "_:genid30",
+  "@id" : "_:genid22",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#interactsOver"
@@ -198,7 +117,7 @@
     "@id" : "https://w3id.org/def/saref4building#BuildingObject"
   } ]
 }, {
-  "@id" : "_:genid31",
+  "@id" : "_:genid23",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#controlValue"
@@ -207,7 +126,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "_:genid32",
+  "@id" : "_:genid24",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasCoefficient"
@@ -216,7 +135,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Coefficient"
   } ]
 }, {
-  "@id" : "_:genid33",
+  "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasIndependentVariable"
@@ -225,16 +144,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#EnvironmentalParameter"
   } ]
 }, {
-  "@id" : "_:genid34",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#description"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "_:genid35",
+  "@id" : "_:genid26",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#earlyOccurTime"
@@ -243,7 +153,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#time"
   } ]
 }, {
-  "@id" : "_:genid36",
+  "@id" : "_:genid27",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalTime"
@@ -252,7 +162,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#time"
   } ]
 }, {
-  "@id" : "_:genid37",
+  "@id" : "_:genid28",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#duration"
@@ -261,7 +171,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#duration"
   } ]
 }, {
-  "@id" : "_:genid38",
+  "@id" : "_:genid29",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#endTime"
@@ -270,16 +180,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "_:genid39",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#probability"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ]
-}, {
-  "@id" : "_:genid4",
+  "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Meeting"
@@ -288,7 +189,16 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasMeeting"
   } ]
 }, {
-  "@id" : "_:genid40",
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#probability"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
+  } ]
+}, {
+  "@id" : "_:genid31",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#startTime"
@@ -297,7 +207,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "_:genid41",
+  "@id" : "_:genid32",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#earlyOccurTime"
@@ -306,7 +216,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#time"
   } ]
 }, {
-  "@id" : "_:genid42",
+  "@id" : "_:genid33",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalTime"
@@ -315,7 +225,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#time"
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid34",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBehavior"
@@ -324,7 +234,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Behavior"
   } ]
 }, {
-  "@id" : "_:genid44",
+  "@id" : "_:genid35",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#identifier"
@@ -333,7 +243,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "_:genid45",
+  "@id" : "_:genid36",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
@@ -342,7 +252,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantAge"
   } ]
 }, {
-  "@id" : "_:genid46",
+  "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -351,7 +261,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantGender"
   } ]
 }, {
-  "@id" : "_:genid47",
+  "@id" : "_:genid38",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -360,7 +270,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantJobtype"
   } ]
 }, {
-  "@id" : "_:genid48",
+  "@id" : "_:genid39",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -369,16 +279,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantLifestyle"
   } ]
 }, {
-  "@id" : "_:genid49",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#describesParameter"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#EnvironmentalParameter"
-  } ]
-}, {
-  "@id" : "_:genid5",
+  "@id" : "_:genid4",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant"
@@ -387,7 +288,16 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOccupant"
   } ]
 }, {
-  "@id" : "_:genid50",
+  "@id" : "_:genid40",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#describesParameter"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#EnvironmentalParameter"
+  } ]
+}, {
+  "@id" : "_:genid41",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxRangeValue"
@@ -396,7 +306,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "_:genid51",
+  "@id" : "_:genid42",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue"
@@ -405,7 +315,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "_:genid52",
+  "@id" : "_:genid43",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#definedByRange"
@@ -414,7 +324,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange"
   } ]
 }, {
-  "@id" : "_:genid53",
+  "@id" : "_:genid44",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#endSeason"
@@ -423,7 +333,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#gMonthDay"
   } ]
 }, {
-  "@id" : "_:genid54",
+  "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#startSeason"
@@ -432,7 +342,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#gMonthDay"
   } ]
 }, {
-  "@id" : "_:genid55",
+  "@id" : "_:genid46",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#relatedToSpace"
@@ -441,7 +351,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
   } ]
 }, {
-  "@id" : "_:genid56",
+  "@id" : "_:genid47",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#duration"
@@ -450,7 +360,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#duration"
   } ]
 }, {
-  "@id" : "_:genid57",
+  "@id" : "_:genid48",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#percentTimePresence"
@@ -459,7 +369,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "_:genid58",
+  "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy"
@@ -468,16 +378,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
   } ]
 }, {
-  "@id" : "_:genid59",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasTransitionType"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransitionTypeConcept"
-  } ]
-}, {
-  "@id" : "_:genid6",
+  "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#identifier"
@@ -486,7 +387,16 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "_:genid60",
+  "@id" : "_:genid50",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasTransitionType"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransitionTypeConcept"
+  } ]
+}, {
+  "@id" : "_:genid51",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#specifiedBy"
@@ -495,7 +405,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#MovementModel"
   } ]
 }, {
-  "@id" : "_:genid61",
+  "@id" : "_:genid52",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#minimalDuration"
@@ -504,7 +414,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#duration"
   } ]
 }, {
-  "@id" : "_:genid62",
+  "@id" : "_:genid53",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalDuration"
@@ -513,7 +423,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#duration"
   } ]
 }, {
-  "@id" : "_:genid63",
+  "@id" : "_:genid54",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2006/time#DayOfWeek"
@@ -522,7 +432,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasDayOfWeek"
   } ]
 }, {
-  "@id" : "_:genid64",
+  "@id" : "_:genid55",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Season"
@@ -531,7 +441,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasSeason"
   } ]
 }, {
-  "@id" : "_:genid65",
+  "@id" : "_:genid56",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#TimeOfDay"
@@ -540,7 +450,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasTimeOfDay"
   } ]
 }, {
-  "@id" : "_:genid66",
+  "@id" : "_:genid57",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#date"
@@ -549,7 +459,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#onHolidays"
   } ]
 }, {
-  "@id" : "_:genid67",
+  "@id" : "_:genid58",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#endTime"
@@ -558,7 +468,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#time"
   } ]
 }, {
-  "@id" : "_:genid68",
+  "@id" : "_:genid59",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#startTime"
@@ -567,25 +477,16 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#time"
   } ]
 }, {
-  "@id" : "_:genid69",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#inSchema"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
-  } ]
-}, {
-  "@id" : "_:genid7",
+  "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#description"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxNumberOccupants"
   } ]
 }, {
-  "@id" : "_:genid70",
+  "@id" : "_:genid60",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#broader"
@@ -594,7 +495,16 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   } ]
 }, {
-  "@id" : "_:genid71",
+  "@id" : "_:genid61",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ]
+}, {
+  "@id" : "_:genid62",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#narrower"
@@ -603,7 +513,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
   } ]
 }, {
-  "@id" : "_:genid72",
+  "@id" : "_:genid63",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/saref4building#hasSpace"
@@ -612,7 +522,7 @@
     "@id" : "https://w3id.org/def/saref4building#BuildingSpace"
   } ]
 }, {
-  "@id" : "_:genid73",
+  "@id" : "_:genid64",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/saref4building#contains"
@@ -621,7 +531,7 @@
     "@id" : "https://w3id.org/def/saref4building#BuildingObject"
   } ]
 }, {
-  "@id" : "_:genid74",
+  "@id" : "_:genid65",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOperationalMode"
@@ -630,7 +540,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConcept"
   } ]
 }, {
-  "@id" : "_:genid75",
+  "@id" : "_:genid66",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -644,16 +554,16 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid8",
+  "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxNumberOccupants"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants"
   } ]
 }, {
-  "@id" : "_:genid80",
+  "@id" : "_:genid71",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -669,7 +579,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid86",
+  "@id" : "_:genid77",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
   "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
     "@list" : [ {
@@ -681,13 +591,22 @@
     } ]
   } ]
 }, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#drivenBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#DriverSet"
+  } ]
+}, {
   "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#leadsTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid10"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building",
@@ -701,13 +620,13 @@
     "@value" : "Building"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/bot#Building"
+  }, {
     "@id" : "https://w3id.org/def/saref4building#Building"
   }, {
     "@id" : "_:genid1"
   }, {
     "@id" : "_:genid2"
-  }, {
-    "@id" : "_:genid3"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace",
@@ -717,10 +636,14 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Building Space"
+    "@value" : "Space"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/bot#Space"
+  }, {
     "@id" : "https://w3id.org/def/saref4building#BuildingSpace"
+  }, {
+    "@id" : "_:genid3"
   }, {
     "@id" : "_:genid4"
   }, {
@@ -729,17 +652,10 @@
     "@id" : "_:genid6"
   }, {
     "@id" : "_:genid7"
-  }, {
-    "@id" : "_:genid8"
-  }, {
-    "@id" : "_:genid9"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
-  "http://purl.org/dc/elements/1.1/created" : [ {
-    "@value" : "2020-02-01"
-  } ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "María Poveda Villalón"
   }, {
@@ -749,7 +665,7 @@
   } ],
   "http://purl.org/dc/elements/1.1/description" : [ {
     "@language" : "en",
-    "@value" : "The Occupancy Profile ontology has been developed to represent people’s behavior inside building spaces."
+    "@value" : "The Occupancy Profile ontology has been developed to represent and define occupancy profiles in building spaces.|"
   } ],
   "http://purl.org/dc/elements/1.1/publisher" : [ {
     "@language" : "en",
@@ -828,15 +744,13 @@
     "@value" : "Behavior"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid10"
+    "@id" : "_:genid8"
   }, {
-    "@id" : "_:genid11"
+    "@id" : "_:genid9"
   }, {
-    "@id" : "_:genid15"
+    "@id" : "_:genid13"
   }, {
-    "@id" : "_:genid16"
-  }, {
-    "@id" : "_:genid17"
+    "@id" : "_:genid14"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Coefficient",
@@ -850,9 +764,7 @@
     "@value" : "Coefficient"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid18"
-  }, {
-    "@id" : "_:genid19"
+    "@id" : "_:genid15"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#ConstantValueFormula",
@@ -885,9 +797,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#MovementModel"
   }, {
-    "@id" : "_:genid20"
-  }, {
-    "@id" : "_:genid21"
+    "@id" : "_:genid16"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Day",
@@ -921,7 +831,7 @@
     "@value" : "Driver set"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid22"
+    "@id" : "_:genid17"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#EnteringRoom",
@@ -940,7 +850,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Driver"
   }, {
-    "@id" : "_:genid23"
+    "@id" : "_:genid18"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#EnvironmentalParameter",
@@ -954,15 +864,11 @@
     "@value" : "Environmental parameter"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid24"
+    "@id" : "https://w3id.org/saref#Property"
   }, {
-    "@id" : "_:genid25"
+    "@id" : "_:genid19"
   }, {
-    "@id" : "_:genid26"
-  }, {
-    "@id" : "_:genid27"
-  }, {
-    "@id" : "_:genid28"
+    "@id" : "_:genid20"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Equipment",
@@ -1066,11 +972,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Action"
   }, {
-    "@id" : "_:genid29"
+    "@id" : "_:genid21"
   }, {
-    "@id" : "_:genid30"
+    "@id" : "_:genid22"
   }, {
-    "@id" : "_:genid31"
+    "@id" : "_:genid23"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionConcept",
@@ -1098,11 +1004,9 @@
     "@value" : "Interaction Formula"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid32"
+    "@id" : "_:genid24"
   }, {
-    "@id" : "_:genid33"
-  }, {
-    "@id" : "_:genid34"
+    "@id" : "_:genid25"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionScheme",
@@ -1177,9 +1081,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#MovementModel"
   }, {
-    "@id" : "_:genid35"
+    "@id" : "_:genid26"
   }, {
-    "@id" : "_:genid36"
+    "@id" : "_:genid27"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Meeting",
@@ -1193,13 +1097,13 @@
     "@value" : "Meeting"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid37"
+    "@id" : "_:genid28"
   }, {
-    "@id" : "_:genid38"
+    "@id" : "_:genid29"
   }, {
-    "@id" : "_:genid39"
+    "@id" : "_:genid30"
   }, {
-    "@id" : "_:genid40"
+    "@id" : "_:genid31"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Morning",
@@ -1216,7 +1120,7 @@
     "@value" : "Movement"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Action"
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#MovementModel",
@@ -1280,9 +1184,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#MovementModel"
   }, {
-    "@id" : "_:genid41"
+    "@id" : "_:genid32"
   }, {
-    "@id" : "_:genid42"
+    "@id" : "_:genid33"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant",
@@ -1298,17 +1202,17 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://xmlns.com/foaf/0.1/Person"
   }, {
-    "@id" : "_:genid43"
+    "@id" : "_:genid34"
   }, {
-    "@id" : "_:genid44"
+    "@id" : "_:genid35"
   }, {
-    "@id" : "_:genid45"
+    "@id" : "_:genid36"
   }, {
-    "@id" : "_:genid46"
+    "@id" : "_:genid37"
   }, {
-    "@id" : "_:genid47"
+    "@id" : "_:genid38"
   }, {
-    "@id" : "_:genid48"
+    "@id" : "_:genid39"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#OnOff",
@@ -1356,11 +1260,11 @@
     "@value" : "Parameter Range"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid49"
+    "@id" : "_:genid40"
   }, {
-    "@id" : "_:genid50"
+    "@id" : "_:genid41"
   }, {
-    "@id" : "_:genid51"
+    "@id" : "_:genid42"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#PhysicalNeed",
@@ -1376,7 +1280,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Need"
   }, {
-    "@id" : "_:genid52"
+    "@id" : "_:genid43"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#QuadraticFormula",
@@ -1438,9 +1342,9 @@
     "@value" : "Season"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid53"
+    "@id" : "_:genid44"
   }, {
-    "@id" : "_:genid54"
+    "@id" : "_:genid45"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#SetToControlValue",
@@ -1468,11 +1372,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#RandomMovement"
   }, {
-    "@id" : "_:genid55"
+    "@id" : "_:genid46"
   }, {
-    "@id" : "_:genid56"
+    "@id" : "_:genid47"
   }, {
-    "@id" : "_:genid57"
+    "@id" : "_:genid48"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Spatial",
@@ -1488,7 +1392,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Driver"
   }, {
-    "@id" : "_:genid58"
+    "@id" : "_:genid49"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Spring",
@@ -1507,13 +1411,13 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Movement"
   }, {
-    "@id" : "_:genid59"
+    "@id" : "_:genid50"
   }, {
-    "@id" : "_:genid60"
+    "@id" : "_:genid51"
   }, {
-    "@id" : "_:genid61"
+    "@id" : "_:genid52"
   }, {
-    "@id" : "_:genid62"
+    "@id" : "_:genid53"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransitionScheme",
@@ -1594,13 +1498,13 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Driver"
   }, {
-    "@id" : "_:genid63"
+    "@id" : "_:genid54"
   }, {
-    "@id" : "_:genid64"
+    "@id" : "_:genid55"
   }, {
-    "@id" : "_:genid65"
+    "@id" : "_:genid56"
   }, {
-    "@id" : "_:genid66"
+    "@id" : "_:genid57"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#TimeOfDay",
@@ -1614,9 +1518,9 @@
     "@value" : "Time Of Day"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid67"
+    "@id" : "_:genid58"
   }, {
-    "@id" : "_:genid68"
+    "@id" : "_:genid59"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#TurnOff",
@@ -1675,69 +1579,120 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#buildingAddress",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relationship indicating the address of a building"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "building address"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#coefficientValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relationship indicating the value of a coefficient."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "coefficient value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#composedOf",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship that indicates the composition of a set of drivers."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#DriverSet"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "composed of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Driver"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#controlValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relationship indicating the magnitud of a control action over a building system."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "control value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#definedByRange",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property used to describe occupant needs by defining comfort limits w.r.t. an environmental parameter."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#PhysicalNeed"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "defined by range"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#describedByFormula",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property to relate an interaction with a formula describing the probability of occurance."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Interaction"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "described by formula"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionFormula"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#describesParameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a comfort envelop with an environmental parameter."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "describes parameter"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#describesProperty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "describes property"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#description",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a spatial driver to an specific building space"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "detailed by"
@@ -1745,48 +1700,103 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#drivenBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property to link an occupant with a set of internal or external drivers that are controlling its interactions with building systems."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Behavior"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "driven by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#DriverSet"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#duration",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Average duration of an event."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "duration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#earlyOccurTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Earliest occurrence time of an event."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "early occur time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#time"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#endSeason",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship that indicates the month when a season ends."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Season"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "end season"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#gMonthDay"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#endTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The end time of an event or activity."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "end time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBehavior",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property to indicate that an occupant has a behavior."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has behavior"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Behavior"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasCoefficient",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a formula with a coefficient."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionFormula"
   } ],
@@ -1800,20 +1810,44 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasDayOfWeek",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates which days of the week are behavioral drivers for an occupant."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Time"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has day of week"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2006/time#DayOfWeek"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasEnvironmentalParameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates and occupant environmental driver with an environmental property like temperature or illuminance."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Environment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has environmental parameter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#EnvironmentalParameter"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasIndependentVariable",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a formula with an independent variable."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionFormula"
   } ],
@@ -1827,89 +1861,174 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasMeeting",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates that a meeting can occur within a space."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has meeting"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Meeting"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOccupant",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship that indicates that an space can have an occupant."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has occupant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOperationalMode",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship to indicate the type of control mode of a system, such as fixed or operable modes for a window."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/saref4building#PhysicalObject"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has operational mode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConcept"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasSeason",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates which seasons are behavioral drivers for an occupant."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Time"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has season"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Season"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasTimeOfDay",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates which times during a day are behavioral drivers for an occupant."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Time"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has time of day"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#TimeOfDay"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasTransitionType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship that indicates the type of status transition event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransition"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has transition type"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransitionTypeConcept"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasUnitOfMeasure",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates an environmental parameter with a unit of measure."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has unit of measure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/saref#UnitOfMeasure"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#identifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Identifier of an element given in the obXML file. Attribute considered for backward compatibility."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "identifier"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#inSchema",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "in schema"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
-  } ]
-}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#influencedByNeed",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates that a driver can be influenced by an occupant comfort need."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Behavior"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "influenced by need"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Need"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#interactsOver",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship that describes an interaction between an occupant and a building component or system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Interaction"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "interacts over"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/def/saref4building#PhysicalObject"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#leadsTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship to indicate the outcome of a behavior. It could lead to an action over a building system to recover comfort or to a passive acceptance of the environmental conditions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Behavior"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "leads to"
@@ -1917,104 +2036,204 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxNumberOccupants",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship that indicates the maximum number of occupants inside a space."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "max number occupants"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxRangeValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Upper boundary of a parameter range description."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "max range value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship that indicates the minimum number of occupants inside a space."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "min number occupants"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Lower boundary of a parameter range description."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "min range value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#minimalDuration",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The minimal duration of an event."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "minimal duration"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#name",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "name"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantAge",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Age of an occupant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "occupant age"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantGender",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Gender of an occupant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "occupant gender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantJobtype",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Jobtype of an occupant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "occupant jobtype"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantLifestyle",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Lifestyle of an occupant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "occupant lifestyle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#onHolidays",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates which days that act as time drivers are holidays."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "on holidays"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#percentTimePresence",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Percentage of occupancy time in a space."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "percent time presence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#probability",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship that links a probility to an event. For example the occurance probability of a meeting."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "probability"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#relatedToSpace",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property that relates space occupancy events to an specific building space."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "related to space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#specifiedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a transition event to a movement model that describe this action."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "specified by"
@@ -2022,37 +2241,61 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#startSeason",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship that indicates the month when a season start."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Season"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "start season"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#gMonthDay"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#startTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The start time of an event or activity."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "start time"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#time",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalDuration",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The typical duration of an event or activity."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "typical duration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#duration"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Typical occurrence time of an event."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "typical time"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#time"
   } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/created",
@@ -2107,11 +2350,11 @@
     "@value" : "Concept"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid69"
+    "@id" : "_:genid60"
   }, {
-    "@id" : "_:genid70"
+    "@id" : "_:genid61"
   }, {
-    "@id" : "_:genid71"
+    "@id" : "_:genid62"
   } ]
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
@@ -2135,6 +2378,19 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "in scheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
   } ]
 }, {
   "@id" : "http://www.w3.org/2004/02/skos/core#narrower",
@@ -2193,6 +2449,20 @@
     "@value" : "Person"
   } ]
 }, {
+  "@id" : "https://w3id.org/bot#Building",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "bot:Building"
+  } ]
+}, {
+  "@id" : "https://w3id.org/bot#Space",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "bot:Space"
+  } ]
+}, {
   "@id" : "https://w3id.org/def/saref4building#Building",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2201,10 +2471,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Building"
+    "@value" : "s4bldg:Building"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid72"
+    "@id" : "_:genid63"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4building#BuildingObject",
@@ -2229,10 +2499,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Building space"
+    "@value" : "s4bldg:Space"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid73"
+    "@id" : "_:genid64"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4building#PhysicalObject",
@@ -2246,7 +2516,7 @@
     "@value" : "Physical object"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid74"
+    "@id" : "_:genid65"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4building#ShadingDevice",
@@ -2279,6 +2549,10 @@
 }, {
   "@id" : "https://w3id.org/def/saref4building#contains",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relation between a physical space and the objects located in such space."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "contains"
@@ -2286,6 +2560,10 @@
 }, {
   "@id" : "https://w3id.org/def/saref4building#hasSpace",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relation between a building or a building space and the spaces it can be divided into."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has space"
