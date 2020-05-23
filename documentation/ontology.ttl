@@ -498,8 +498,10 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Building
 <http://bimerr.iot.linkeddata.es/def/building#Building> rdf:type owl:Class ;
-                                                        rdfs:subClassOf <https://w3id.org/bot#Building> ,
-                                                                        <https://w3id.org/def/saref4building#Building> ,
+                                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <https://w3id.org/def/saref4building#hasSpace> ;
+                                                                          owl:someValuesFrom <http://bimerr.iot.linkeddata.es/def/building#BuildingSpace>
+                                                                        ] ,
                                                                         [ rdf:type owl:Restriction ;
                                                                           owl:onProperty :buildingAddress ;
                                                                           owl:someValuesFrom xsd:string
@@ -514,8 +516,10 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  http://bimerr.iot.linkeddata.es/def/building#BuildingSpace
 <http://bimerr.iot.linkeddata.es/def/building#BuildingSpace> rdf:type owl:Class ;
-                                                             rdfs:subClassOf <https://w3id.org/bot#Space> ,
-                                                                             <https://w3id.org/def/saref4building#BuildingSpace> ,
+                                                             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                               owl:onProperty <https://w3id.org/def/saref4building#contains> ;
+                                                                               owl:someValuesFrom <https://w3id.org/def/saref4building#PhysicalObject>
+                                                                             ] ,
                                                                              [ rdf:type owl:Restriction ;
                                                                                owl:onProperty :hasMeeting ;
                                                                                owl:allValuesFrom :Meeting
@@ -1112,41 +1116,11 @@ xsd:time rdf:type rdfs:Datatype .
                                    rdfs:label "Person"@en .
 
 
-###  https://w3id.org/bot#Building
-<https://w3id.org/bot#Building> rdf:type owl:Class ;
-                                rdfs:label "bot:Building"@en .
-
-
-###  https://w3id.org/bot#Space
-<https://w3id.org/bot#Space> rdf:type owl:Class ;
-                             rdfs:label "bot:Space"@en .
-
-
-###  https://w3id.org/def/saref4building#Building
-<https://w3id.org/def/saref4building#Building> rdf:type owl:Class ;
-                                               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <https://w3id.org/def/saref4building#hasSpace> ;
-                                                                 owl:someValuesFrom <https://w3id.org/def/saref4building#BuildingSpace>
-                                                               ] ;
-                                               rdfs:comment "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space). (Definition taken from S4BLDG ontology)"@en ;
-                                               rdfs:label "s4bldg:Building"@en .
-
-
 ###  https://w3id.org/def/saref4building#BuildingObject
 <https://w3id.org/def/saref4building#BuildingObject> rdf:type owl:Class ;
                                                      rdfs:subClassOf <https://w3id.org/def/saref4building#PhysicalObject> ;
                                                      rdfs:comment "An object in the building that can be controlled by devices, such as a door or a window that can be automatically opened or closed by an actuator. (Definition taken from SAREF 1.0)"@en ;
                                                      rdfs:label "Building object"@en .
-
-
-###  https://w3id.org/def/saref4building#BuildingSpace
-<https://w3id.org/def/saref4building#BuildingSpace> rdf:type owl:Class ;
-                                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                      owl:onProperty <https://w3id.org/def/saref4building#contains> ;
-                                                                      owl:someValuesFrom <https://w3id.org/def/saref4building#BuildingObject>
-                                                                    ] ;
-                                                    rdfs:comment "An entity used to define the physical spaces of the building. A building space contains devices or building objects. (Definition taken from S4BLDG ontology)"@en ;
-                                                    rdfs:label "s4bldg:Space"@en .
 
 
 ###  https://w3id.org/def/saref4building#PhysicalObject

@@ -1,7 +1,6 @@
 @prefix : <http://bimerr.iot.linkeddata.es/def/occupancy-profile#> .
 @prefix dc: <http://purl.org/dc/elements/1.1> .
 @prefix op: <http://bimerr.iot.linkeddata.es/def/occupancy-profile#> .
-@prefix bot: <https://w3id.org/bot#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -508,8 +507,10 @@ op:typicalTime rdf:type owl:DatatypeProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Building
 building:Building rdf:type owl:Class ;
-                  rdfs:subClassOf bot:Building ,
-                                  s4bldg:Building ,
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty s4bldg:hasSpace ;
+                                    owl:someValuesFrom building:BuildingSpace
+                                  ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty op:buildingAddress ;
                                     owl:someValuesFrom xsd:string
@@ -524,8 +525,10 @@ building:Building rdf:type owl:Class ;
 
 ###  http://bimerr.iot.linkeddata.es/def/building#BuildingSpace
 building:BuildingSpace rdf:type owl:Class ;
-                       rdfs:subClassOf bot:Space ,
-                                       s4bldg:BuildingSpace ,
+                       rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                         owl:onProperty s4bldg:contains ;
+                                         owl:someValuesFrom s4bldg:PhysicalObject
+                                       ] ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty op:hasMeeting ;
                                          owl:allValuesFrom op:Meeting
@@ -1122,41 +1125,11 @@ foaf:Person rdf:type owl:Class ;
             rdfs:label "Person"@en .
 
 
-###  https://w3id.org/bot#Building
-bot:Building rdf:type owl:Class ;
-             rdfs:label "bot:Building"@en .
-
-
-###  https://w3id.org/bot#Space
-bot:Space rdf:type owl:Class ;
-          rdfs:label "bot:Space"@en .
-
-
-###  https://w3id.org/def/saref4building#Building
-s4bldg:Building rdf:type owl:Class ;
-                rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                  owl:onProperty s4bldg:hasSpace ;
-                                  owl:someValuesFrom s4bldg:BuildingSpace
-                                ] ;
-                rdfs:comment "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space). (Definition taken from S4BLDG ontology)"@en ;
-                rdfs:label "s4bldg:Building"@en .
-
-
 ###  https://w3id.org/def/saref4building#BuildingObject
 s4bldg:BuildingObject rdf:type owl:Class ;
                       rdfs:subClassOf s4bldg:PhysicalObject ;
                       rdfs:comment "An object in the building that can be controlled by devices, such as a door or a window that can be automatically opened or closed by an actuator. (Definition taken from SAREF 1.0)"@en ;
                       rdfs:label "Building object"@en .
-
-
-###  https://w3id.org/def/saref4building#BuildingSpace
-s4bldg:BuildingSpace rdf:type owl:Class ;
-                     rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                       owl:onProperty s4bldg:contains ;
-                                       owl:someValuesFrom s4bldg:BuildingObject
-                                     ] ;
-                     rdfs:comment "An entity used to define the physical spaces of the building. A building space contains devices or building objects. (Definition taken from S4BLDG ontology)"@en ;
-                     rdfs:label "s4bldg:Space"@en .
 
 
 ###  https://w3id.org/def/saref4building#PhysicalObject

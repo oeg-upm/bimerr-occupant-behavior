@@ -796,8 +796,12 @@
 
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Building">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Building"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4building#Building"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4building#hasSpace"/>
+                <owl:someValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/occupancy-profile#buildingAddress"/>
@@ -820,8 +824,12 @@
 
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#BuildingSpace">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Space"/>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4building#BuildingSpace"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/saref4building#contains"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/saref4building#PhysicalObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasMeeting"/>
@@ -1752,40 +1760,6 @@
     
 
 
-    <!-- https://w3id.org/bot#Building -->
-
-
-    <owl:Class rdf:about="https://w3id.org/bot#Building">
-        <rdfs:label xml:lang="en">bot:Building</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/bot#Space -->
-
-
-    <owl:Class rdf:about="https://w3id.org/bot#Space">
-        <rdfs:label xml:lang="en">bot:Space</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/saref4building#Building -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/saref4building#Building">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/saref4building#hasSpace"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/def/saref4building#BuildingSpace"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space). (Definition taken from S4BLDG ontology)</rdfs:comment>
-        <rdfs:label xml:lang="en">s4bldg:Building</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://w3id.org/def/saref4building#BuildingObject -->
 
 
@@ -1793,22 +1767,6 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4building#PhysicalObject"/>
         <rdfs:comment xml:lang="en">An object in the building that can be controlled by devices, such as a door or a window that can be automatically opened or closed by an actuator. (Definition taken from SAREF 1.0)</rdfs:comment>
         <rdfs:label xml:lang="en">Building object</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/saref4building#BuildingSpace -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/saref4building#BuildingSpace">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/saref4building#contains"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/def/saref4building#BuildingObject"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">An entity used to define the physical spaces of the building. A building space contains devices or building objects. (Definition taken from S4BLDG ontology)</rdfs:comment>
-        <rdfs:label xml:lang="en">s4bldg:Space</rdfs:label>
     </owl:Class>
     
 
