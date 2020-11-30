@@ -26,7 +26,7 @@
                                                           dcterms:license "http://purl.org/NET/rdflicense/cc-by4.0"@en ;
                                                           vann:preferredNamespacePrefix "op"@en ;
                                                           vann:preferredNamespaceUri "http://bimerr.iot.linkeddata.es/def/occupancy-profile#" ;
-                                                          owl:versionInfo "0.0.5" .
+                                                          owl:versionInfo "0.1.1" .
 
 #################################################################
 #    Annotation properties
@@ -134,6 +134,8 @@ op:describesParameter rdf:type owl:ObjectProperty ,
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy
 op:detailedBy rdf:type owl:ObjectProperty ,
                        owl:FunctionalProperty ;
+              rdfs:domain op:Spatial ;
+              rdfs:range building:BuildingSpace ;
               rdfs:comment "Relates a spatial driver to an specific building space"@en ;
               rdfs:label "detailed by"@en .
 
@@ -240,6 +242,7 @@ op:hasTransitionType rdf:type owl:ObjectProperty ;
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasUnitOfMeasure
 op:hasUnitOfMeasure rdf:type owl:ObjectProperty ,
                              owl:FunctionalProperty ;
+                    rdfs:domain op:EnvironmentalParameter ;
                     rdfs:range <https://w3id.org/saref#UnitOfMeasure> ;
                     rdfs:comment "Relates an environmental parameter with a unit of measure."@en ;
                     rdfs:label "has unit of measure"@en .
@@ -265,12 +268,14 @@ op:interactsOver rdf:type owl:ObjectProperty ,
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#leadsTo
 op:leadsTo rdf:type owl:ObjectProperty ;
            rdfs:domain op:Behavior ;
+           rdfs:range op:Action ;
            rdfs:comment "Relationship to indicate the outcome of a behavior. It could lead to an action over a building system to recover comfort or to a passive acceptance of the environmental conditions."@en ;
            rdfs:label "leads to"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#relatedToSpace
 op:relatedToSpace rdf:type owl:ObjectProperty ;
+                  rdfs:domain op:SpaceOccupancy ;
                   rdfs:range building:BuildingSpace ;
                   rdfs:comment "Property that relates space occupancy events to an specific building space."@en ;
                   rdfs:label "related to space"@en .
@@ -278,6 +283,8 @@ op:relatedToSpace rdf:type owl:ObjectProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#specifiedBy
 op:specifiedBy rdf:type owl:ObjectProperty ;
+               rdfs:domain op:StatusTransition ;
+               rdfs:range op:MovementModel ;
                rdfs:comment "Relates a transition event to a movement model that describe this action."@en ;
                rdfs:label "specified by"@en .
 
@@ -286,6 +293,7 @@ op:specifiedBy rdf:type owl:ObjectProperty ;
 <http://www.w3.org/2004/02/skos/core#broader> rdf:type owl:ObjectProperty ;
                                               rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
                                               rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                              rdfs:comment "The property skos:broader is used to assert a direct hierarchical link between two SKOS concepts. A triple <A> skos:broader <B> asserts that <B>, the object of the triple, is a broader concept than <A>, the subject of the triple."@en ;
                                               rdfs:label "broader"@en .
 
 
@@ -293,6 +301,7 @@ op:specifiedBy rdf:type owl:ObjectProperty ;
 <http://www.w3.org/2004/02/skos/core#inScheme> rdf:type owl:ObjectProperty ;
                                                rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                rdfs:range <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                                               rdfs:comment "Property used to indicate that an SKOS concept in within an specific SKOS scheme."@en ;
                                                rdfs:label "in scheme"@en .
 
 
@@ -300,6 +309,7 @@ op:specifiedBy rdf:type owl:ObjectProperty ;
 <http://www.w3.org/2004/02/skos/core#narrower> rdf:type owl:ObjectProperty ;
                                                rdfs:domain <http://www.w3.org/2004/02/skos/core#Concept> ;
                                                rdfs:range <http://www.w3.org/2004/02/skos/core#Concept> ;
+                                               rdfs:comment "The property skos:narrower is used to assert a direct hierarchical link between two SKOS concepts. A triple <C> skos:narrower <D> asserts that <D>, the object of the triple, is a narrower concept than <C>, the subject of the triple."@en ;
                                                rdfs:label "narrower"@en .
 
 
@@ -321,6 +331,7 @@ s4bldg:hasSpace rdf:type owl:ObjectProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#buildingAddress
 op:buildingAddress rdf:type owl:DatatypeProperty ;
+                   rdfs:domain building:Building ;
                    rdfs:range xsd:string ;
                    rdfs:comment "A relationship indicating the address of a building"@en ;
                    rdfs:label "building address"@en .
@@ -328,6 +339,7 @@ op:buildingAddress rdf:type owl:DatatypeProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#coefficientValue
 op:coefficientValue rdf:type owl:DatatypeProperty ;
+                    rdfs:domain op:Coefficient ;
                     rdfs:range xsd:float ;
                     rdfs:comment "A relationship indicating the value of a coefficient."@en ;
                     rdfs:label "coefficient value"@en .
@@ -335,6 +347,7 @@ op:coefficientValue rdf:type owl:DatatypeProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#controlValue
 op:controlValue rdf:type owl:DatatypeProperty ;
+                rdfs:domain op:Interaction ;
                 rdfs:range xsd:float ;
                 rdfs:comment "A relationship indicating the magnitud of a control action over a building system."@en ;
                 rdfs:label "control value"@en .
@@ -379,6 +392,7 @@ op:identifier rdf:type owl:DatatypeProperty ,
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxNumberOccupants
 op:maxNumberOccupants rdf:type owl:DatatypeProperty ,
                                owl:FunctionalProperty ;
+                      rdfs:domain building:BuildingSpace ;
                       rdfs:range xsd:integer ;
                       rdfs:comment "Relationship that indicates the maximum number of occupants inside a space."@en ;
                       rdfs:label "max number occupants"@en .
@@ -387,6 +401,7 @@ op:maxNumberOccupants rdf:type owl:DatatypeProperty ,
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxRangeValue
 op:maxRangeValue rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
+                 rdfs:domain op:ParameterRange ;
                  rdfs:range xsd:float ;
                  rdfs:comment "Upper boundary of a parameter range description."@en ;
                  rdfs:label "max range value"@en .
@@ -395,6 +410,7 @@ op:maxRangeValue rdf:type owl:DatatypeProperty ,
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants
 op:minNumberOccupants rdf:type owl:DatatypeProperty ,
                                owl:FunctionalProperty ;
+                      rdfs:domain building:BuildingSpace ;
                       rdfs:range xsd:integer ;
                       rdfs:comment "Relationship that indicates the minimum number of occupants inside a space."@en ;
                       rdfs:label "min number occupants"@en .
@@ -403,16 +419,10 @@ op:minNumberOccupants rdf:type owl:DatatypeProperty ,
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue
 op:minRangeValue rdf:type owl:DatatypeProperty ,
                           owl:FunctionalProperty ;
+                 rdfs:domain op:ParameterRange ;
                  rdfs:range xsd:float ;
                  rdfs:comment "Lower boundary of a parameter range description."@en ;
                  rdfs:label "min range value"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#minimalDuration
-op:minimalDuration rdf:type owl:DatatypeProperty ;
-                   rdfs:range xsd:duration ;
-                   rdfs:comment "The minimal duration of an event."@en ;
-                   rdfs:label "minimal duration"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantAge
@@ -453,6 +463,7 @@ op:occupantLifestyle rdf:type owl:DatatypeProperty ,
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#onHolidays
 op:onHolidays rdf:type owl:DatatypeProperty ;
+              rdfs:domain op:Time ;
               rdfs:range xsd:date ;
               rdfs:comment "Indicates which days that act as time drivers are holidays."@en ;
               rdfs:label "on holidays"@en .
@@ -460,6 +471,7 @@ op:onHolidays rdf:type owl:DatatypeProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#percentTimePresence
 op:percentTimePresence rdf:type owl:DatatypeProperty ;
+                       rdfs:domain op:SpaceOccupancy ;
                        rdfs:range xsd:float ;
                        rdfs:comment "Percentage of occupancy time in a space."@en ;
                        rdfs:label "percent time presence"@en .
@@ -489,6 +501,7 @@ op:startTime rdf:type owl:DatatypeProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalDuration
 op:typicalDuration rdf:type owl:DatatypeProperty ;
+                   rdfs:domain op:SpaceOccupancy ;
                    rdfs:range xsd:duration ;
                    rdfs:comment "The typical duration of an event or activity."@en ;
                    rdfs:label "typical duration"@en .
@@ -801,7 +814,7 @@ op:Meeting rdf:type owl:Class ;
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Movement
 op:Movement rdf:type owl:Class ;
-            rdfs:subClassOf foaf:Person ;
+            rdfs:subClassOf op:Action ;
             rdfs:comment "The Movement class is used to represent the occupant's movements inside or between spaces."@en ;
             rdfs:label "Movement"@en .
 
@@ -992,10 +1005,6 @@ op:StatusTransition rdf:type owl:Class ;
                                       owl:someValuesFrom op:MovementModel
                                     ] ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty op:minimalDuration ;
-                                      owl:someValuesFrom xsd:duration
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
                                       owl:onProperty op:typicalDuration ;
                                       owl:someValuesFrom xsd:duration
                                     ] ;
@@ -1103,13 +1112,19 @@ op:Window rdf:type owl:Class ;
                                                                 owl:onProperty <http://www.w3.org/2004/02/skos/core#narrower> ;
                                                                 owl:someValuesFrom <http://www.w3.org/2004/02/skos/core#Concept>
                                                               ] ;
-                                              rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> ;
+                                              rdfs:comment """The class skos:Concept is the class of SKOS concepts. A SKOS concept can be viewed as an idea or notion; a unit of thought. However, what constitutes a unit of thought is subjective, and this definition is meant to be suggestive, rather than restrictive.
+
+The notion of a SKOS concept is useful when describing the conceptual or intellectual structure of a knowledge organization system, and when referring to specific ideas or meanings established within a KOS.
+
+Note that, because SKOS is designed to be a vehicle for representing semi-formal KOS, such as thesauri and classification schemes, a certain amount of flexibility has been built in to the formal definition of this class."""@en ;
                                               rdfs:label "Concept"@en .
 
 
 ###  http://www.w3.org/2004/02/skos/core#ConceptScheme
 <http://www.w3.org/2004/02/skos/core#ConceptScheme> rdf:type owl:Class ;
-                                                    rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#> ;
+                                                    rdfs:comment """A SKOS concept scheme can be viewed as an aggregation of one or more SKOS concepts. Semantic relationships (links) between those concepts may also be viewed as part of a concept scheme. This definition is, however, meant to be suggestive rather than restrictive, and there is some flexibility in the formal data model stated below.
+
+The notion of a concept scheme is useful when dealing with data from an unknown source, and when dealing with data that describes two or more different knowledge organization systems."""@en ;
                                                     rdfs:label "Concept Scheme"@en .
 
 

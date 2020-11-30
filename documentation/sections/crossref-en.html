@@ -156,7 +156,7 @@ This section provides details for each class and property defined by Occupancy P
             title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange">Parameter Range</a>
       </li>
       <li>
-         <a href="#http://xmlns.com/foaf/0.1/Person" title="http://xmlns.com/foaf/0.1/Person">Person</a>
+         <a href="#http://xmlns.com/foaf/0.1#Person" title="http://xmlns.com/foaf/0.1#Person">Person</a>
       </li>
       <li>
          <a href="#PhysicalNeed"
@@ -293,9 +293,17 @@ This section provides details for each class and property defined by Occupancy P
          <dd>
             <a href="#Interaction"
                title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#Interaction">Interaction</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Movement"
+               title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#Movement">Movement</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Report"
                title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#Report">Report</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#leadsTo"
+               title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#leadsTo">leads to</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -343,6 +351,12 @@ This section provides details for each class and property defined by Occupancy P
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#buildingAddress"
+               title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#buildingAddress">building address</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="https://w3id.org/def/saref4building#BuildingObject">
@@ -383,6 +397,12 @@ This section provides details for each class and property defined by Occupancy P
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#coefficientValue"
+               title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#coefficientValue">coefficient value</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasCoefficient"
@@ -398,12 +418,13 @@ This section provides details for each class and property defined by Occupancy P
       </h3>
       <p>
          <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#Concept</p>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#">http://www.w3.org/2004/02/skos/core#</a>
-         </dd>
-      </dl>
+      <div class="comment">
+         <span class="markdown">The class skos:Concept is the class of SKOS concepts. A SKOS concept can be viewed as an idea or notion; a unit of thought. However, what constitutes a unit of thought is subjective, and this definition is meant to be suggestive, rather than restrictive.
+
+The notion of a SKOS concept is useful when describing the conceptual or intellectual structure of a knowledge organization system, and when referring to specific ideas or meanings established within a KOS.
+
+Note that, because SKOS is designed to be a vehicle for representing semi-formal KOS, such as thesauri and classification schemes, a certain amount of flexibility has been built in to the formal definition of this class.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd/>
@@ -439,12 +460,11 @@ This section provides details for each class and property defined by Occupancy P
       </h3>
       <p>
          <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#ConceptScheme</p>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>
-            <a href="http://www.w3.org/2004/02/skos/core#">http://www.w3.org/2004/02/skos/core#</a>
-         </dd>
-      </dl>
+      <div class="comment">
+         <span class="markdown">A SKOS concept scheme can be viewed as an aggregation of one or more SKOS concepts. Semantic relationships (links) between those concepts may also be viewed as part of a concept scheme. This definition is, however, meant to be suggestive rather than restrictive, and there is some flexibility in the formal data model stated below.
+
+The notion of a concept scheme is useful when dealing with data from an unknown source, and when dealing with data that describes two or more different knowledge organization systems.</span>
+      </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
@@ -676,6 +696,12 @@ This section provides details for each class and property defined by Occupancy P
             <a href="#https://w3id.org/saref#Property" title="https://w3id.org/saref#Property">Property</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasUnitOfMeasure"
+               title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasUnitOfMeasure">has unit of measure</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasEnvironmentalParameter"
@@ -818,7 +844,9 @@ This section provides details for each class and property defined by Occupancy P
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#describedByFormula"
+            <a href="#controlValue"
+               title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#controlValue">control value</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#describedByFormula"
                title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#describedByFormula">described by formula</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#interactsOver"
                title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#interactsOver">interacts over</a>
@@ -1049,7 +1077,8 @@ This section provides details for each class and property defined by Occupancy P
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://xmlns.com/foaf/0.1/Person" title="http://xmlns.com/foaf/0.1/Person">Person</a>
+            <a href="#Action"
+               title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#Action">Action</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>has sub-classes</dt>
@@ -1082,6 +1111,12 @@ This section provides details for each class and property defined by Occupancy P
             <sup class="type-c" title="class">c</sup>, <a href="#NormalProbabilityModel"
                title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#NormalProbabilityModel">Normal probability model</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#specifiedBy"
+               title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#specifiedBy">specified by</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -1169,7 +1204,7 @@ This section provides details for each class and property defined by Occupancy P
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#http://xmlns.com/foaf/0.1/Person" title="http://xmlns.com/foaf/0.1/Person">Person</a>
+            <a href="#http://xmlns.com/foaf/0.1#Person" title="http://xmlns.com/foaf/0.1#Person">Person</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
@@ -1270,7 +1305,11 @@ This section provides details for each class and property defined by Occupancy P
          <dd>
             <a href="#describesParameter"
                title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#describesParameter">describes parameter</a>
-            <sup class="type-op" title="object property">op</sup>
+            <sup class="type-op" title="object property">op</sup>, <a href="#maxRangeValue"
+               title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxRangeValue">max range value</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#minRangeValue"
+               title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue">min range value</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -1282,22 +1321,20 @@ This section provides details for each class and property defined by Occupancy P
          </dd>
       </dl>
    </div>
-   <div class="entity" id="http://xmlns.com/foaf/0.1/Person">
+   <div class="entity" id="http://xmlns.com/foaf/0.1#Person">
       <h3>Person<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://xmlns.com/foaf/0.1/Person</p>
+         <strong>IRI:</strong> http://xmlns.com/foaf/0.1#Person</p>
       <div class="comment">
          <span class="markdown">The Person class represents people. Something is a Person if it is a person. We don't nitpic about whether they're alive, dead, real, or imaginary. (Definition taken from FOAF)</span>
       </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#Movement"
-               title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#Movement">Movement</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Occupant"
+            <a href="#Occupant"
                title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant">Occupant</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -1574,11 +1611,17 @@ This section provides details for each class and property defined by Occupancy P
                title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasMeeting">has meeting</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasOccupant"
                title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOccupant">has occupant</a>
-            <sup class="type-op" title="object property">op</sup>
+            <sup class="type-op" title="object property">op</sup>, <a href="#maxNumberOccupants"
+               title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxNumberOccupants">max number occupants</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#minNumberOccupants"
+               title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants">min number occupants</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#relatedToSpace"
+            <a href="#detailedBy"
+               title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy">detailed by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#relatedToSpace"
                title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#relatedToSpace">related to space</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -1601,6 +1644,16 @@ This section provides details for each class and property defined by Occupancy P
                title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#RandomMovement">Random movement</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#percentTimePresence"
+               title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#percentTimePresence">percent time presence</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#relatedToSpace"
+               title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#relatedToSpace">related to space</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#typicalDuration"
+               title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalDuration">typical duration</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="Spatial">
@@ -1619,6 +1672,12 @@ This section provides details for each class and property defined by Occupancy P
             <a href="#Driver"
                title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#Driver">Driver</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#detailedBy"
+               title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy">detailed by</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -1643,6 +1702,8 @@ This section provides details for each class and property defined by Occupancy P
          <dd>
             <a href="#hasTransitionType"
                title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasTransitionType">has transition type</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#specifiedBy"
+               title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#specifiedBy">specified by</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -1785,7 +1846,9 @@ This section provides details for each class and property defined by Occupancy P
                title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasSeason">has season</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#hasTimeOfDay"
                title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasTimeOfDay">has time of day</a>
-            <sup class="type-op" title="object property">op</sup>
+            <sup class="type-op" title="object property">op</sup>, <a href="#onHolidays"
+               title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#onHolidays">on holidays</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
    </div>
@@ -2066,6 +2129,9 @@ This section provides details for each class and property defined by Occupancy P
       </h3>
       <p>
          <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#broader</p>
+      <div class="comment">
+         <span class="markdown">The property skos:broader is used to assert a direct hierarchical link between two SKOS concepts. A triple &lt;A&gt; skos:broader &lt;B&gt; asserts that &lt;B&gt;, the object of the triple, is a broader concept than &lt;A&gt;, the subject of the triple.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -2215,6 +2281,24 @@ This section provides details for each class and property defined by Occupancy P
          <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy</p>
       <div class="comment">
          <span class="markdown">Relates a spatial driver to an specific building space</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Spatial"
+                  title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#Spatial">Spatial</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
+                  title="http://bimerr.iot.linkeddata.es/def/building#BuildingSpace">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="drivenBy">
@@ -2571,6 +2655,12 @@ This section provides details for each class and property defined by Occupancy P
          <p>
             <strong>has characteristics:</strong> functional</p>
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#EnvironmentalParameter"
+                  title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#EnvironmentalParameter">Environmental parameter</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of measure</a>
@@ -2586,6 +2676,9 @@ This section provides details for each class and property defined by Occupancy P
       </h3>
       <p>
          <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#inScheme</p>
+      <div class="comment">
+         <span class="markdown">Property used to indicate that an SKOS concept in within an specific SKOS scheme.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -2676,6 +2769,12 @@ This section provides details for each class and property defined by Occupancy P
                   title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#Behavior">Behavior</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Action"
+                  title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#Action">Action</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
          </dl>
       </div>
    </div>
@@ -2686,6 +2785,9 @@ This section provides details for each class and property defined by Occupancy P
       </h3>
       <p>
          <strong>IRI:</strong> http://www.w3.org/2004/02/skos/core#narrower</p>
+      <div class="comment">
+         <span class="markdown">The property skos:narrower is used to assert a direct hierarchical link between two SKOS concepts. A triple &lt;C&gt; skos:narrower &lt;D&gt; asserts that &lt;D&gt;, the object of the triple, is a narrower concept than &lt;C&gt;, the subject of the triple.</span>
+      </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -2713,6 +2815,12 @@ This section provides details for each class and property defined by Occupancy P
       </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpaceOccupancy"
+                  title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#SpaceOccupancy">Space occupancy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <a href="#http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
@@ -2731,6 +2839,22 @@ This section provides details for each class and property defined by Occupancy P
          <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/occupancy-profile#specifiedBy</p>
       <div class="comment">
          <span class="markdown">Relates a transition event to a movement model that describe this action.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#StatusTransition"
+                  title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransition">Status transition</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#MovementModel"
+                  title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#MovementModel">Movement Model</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
       </div>
    </div>
 </div><div id="dataproperties">
@@ -2783,10 +2907,6 @@ This section provides details for each class and property defined by Occupancy P
       <li>
          <a href="#minRangeValue"
             title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue">min range value</a>
-      </li>
-      <li>
-         <a href="#minimalDuration"
-            title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#minimalDuration">minimal duration</a>
       </li>
       <li>
          <a href="#occupantAge"
@@ -2845,6 +2965,12 @@ This section provides details for each class and property defined by Occupancy P
       </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://bimerr.iot.linkeddata.es/def/building#Building"
+                  title="http://bimerr.iot.linkeddata.es/def/building#Building">Building</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
@@ -2864,6 +2990,12 @@ This section provides details for each class and property defined by Occupancy P
       </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Coefficient"
+                  title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#Coefficient">Coefficient</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
@@ -2883,6 +3015,12 @@ This section provides details for each class and property defined by Occupancy P
       </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Interaction"
+                  title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#Interaction">Interaction</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
@@ -2997,6 +3135,12 @@ This section provides details for each class and property defined by Occupancy P
          <p>
             <strong>has characteristics:</strong> functional</p>
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
+                  title="http://bimerr.iot.linkeddata.es/def/building#BuildingSpace">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
@@ -3018,6 +3162,12 @@ This section provides details for each class and property defined by Occupancy P
          <p>
             <strong>has characteristics:</strong> functional</p>
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ParameterRange"
+                  title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange">Parameter Range</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
@@ -3039,6 +3189,12 @@ This section provides details for each class and property defined by Occupancy P
          <p>
             <strong>has characteristics:</strong> functional</p>
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
+                  title="http://bimerr.iot.linkeddata.es/def/building#BuildingSpace">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#integer">integer</span>
@@ -3060,28 +3216,15 @@ This section provides details for each class and property defined by Occupancy P
          <p>
             <strong>has characteristics:</strong> functional</p>
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ParameterRange"
+                  title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange">Parameter Range</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="minimalDuration">
-      <h3>minimal duration<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/occupancy-profile#minimalDuration</p>
-      <div class="comment">
-         <span class="markdown">The minimal duration of an event.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#duration">duration</span>
             </dd>
          </dl>
       </div>
@@ -3206,6 +3349,12 @@ This section provides details for each class and property defined by Occupancy P
       </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Time"
+                  title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#Time">Time</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#date">date</span>
@@ -3225,6 +3374,12 @@ This section provides details for each class and property defined by Occupancy P
       </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpaceOccupancy"
+                  title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#SpaceOccupancy">Space occupancy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
@@ -3307,6 +3462,12 @@ This section provides details for each class and property defined by Occupancy P
       </div>
       <div class="description">
          <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#SpaceOccupancy"
+                  title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#SpaceOccupancy">Space occupancy</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#duration">duration</span>
