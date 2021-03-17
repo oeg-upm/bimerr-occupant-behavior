@@ -319,19 +319,12 @@ s4bldg:contains rdf:type owl:ObjectProperty ;
                 rdfs:label "contains"@en .
 
 
-###  https://w3id.org/def/saref4building#hasSpace
-s4bldg:hasSpace rdf:type owl:ObjectProperty ;
-                rdfs:comment "Relation between a building or a building space and the spaces it can be divided into."@en ;
-                rdfs:label "has space"@en .
-
-
 #################################################################
 #    Data properties
 #################################################################
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#buildingAddress
 op:buildingAddress rdf:type owl:DatatypeProperty ;
-                   rdfs:domain building:Building ;
                    rdfs:range xsd:string ;
                    rdfs:comment "A relationship indicating the address of a building"@en ;
                    rdfs:label "building address"@en .
@@ -517,24 +510,6 @@ op:typicalTime rdf:type owl:DatatypeProperty ;
 #################################################################
 #    Classes
 #################################################################
-
-###  http://bimerr.iot.linkeddata.es/def/building#Building
-building:Building rdf:type owl:Class ;
-                  rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                    owl:onProperty s4bldg:hasSpace ;
-                                    owl:someValuesFrom building:BuildingSpace
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty op:buildingAddress ;
-                                    owl:someValuesFrom xsd:string
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty op:identifier ;
-                                    owl:someValuesFrom xsd:string
-                                  ] ;
-                  rdfs:comment "Building where the occupancy behaviors occur."@en ;
-                  rdfs:label "Building"@en .
-
 
 ###  http://bimerr.iot.linkeddata.es/def/building#BuildingSpace
 building:BuildingSpace rdf:type owl:Class ;

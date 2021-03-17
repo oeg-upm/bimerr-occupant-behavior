@@ -310,19 +310,12 @@ xsd:time rdf:type rdfs:Datatype .
                                                rdfs:label "contains"@en .
 
 
-###  https://w3id.org/def/saref4building#hasSpace
-<https://w3id.org/def/saref4building#hasSpace> rdf:type owl:ObjectProperty ;
-                                               rdfs:comment "Relation between a building or a building space and the spaces it can be divided into."@en ;
-                                               rdfs:label "has space"@en .
-
-
 #################################################################
 #    Data properties
 #################################################################
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#buildingAddress
 :buildingAddress rdf:type owl:DatatypeProperty ;
-                 rdfs:domain <http://bimerr.iot.linkeddata.es/def/building#Building> ;
                  rdfs:range xsd:string ;
                  rdfs:comment "A relationship indicating the address of a building"@en ;
                  rdfs:label "building address"@en .
@@ -508,24 +501,6 @@ xsd:time rdf:type rdfs:Datatype .
 #################################################################
 #    Classes
 #################################################################
-
-###  http://bimerr.iot.linkeddata.es/def/building#Building
-<http://bimerr.iot.linkeddata.es/def/building#Building> rdf:type owl:Class ;
-                                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty <https://w3id.org/def/saref4building#hasSpace> ;
-                                                                          owl:someValuesFrom <http://bimerr.iot.linkeddata.es/def/building#BuildingSpace>
-                                                                        ] ,
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty :buildingAddress ;
-                                                                          owl:someValuesFrom xsd:string
-                                                                        ] ,
-                                                                        [ rdf:type owl:Restriction ;
-                                                                          owl:onProperty :identifier ;
-                                                                          owl:someValuesFrom xsd:string
-                                                                        ] ;
-                                                        rdfs:comment "Building where the occupancy behaviors occur."@en ;
-                                                        rdfs:label "Building"@en .
-
 
 ###  http://bimerr.iot.linkeddata.es/def/building#BuildingSpace
 <http://bimerr.iot.linkeddata.es/def/building#BuildingSpace> rdf:type owl:Class ;
