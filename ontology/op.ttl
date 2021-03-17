@@ -135,7 +135,7 @@ op:describesParameter rdf:type owl:ObjectProperty ,
 op:detailedBy rdf:type owl:ObjectProperty ,
                        owl:FunctionalProperty ;
               rdfs:domain op:Spatial ;
-              rdfs:range building:BuildingSpace ;
+              rdfs:range building:Space ;
               rdfs:comment "Relates a spatial driver to an specific building space"@en ;
               rdfs:label "detailed by"@en .
 
@@ -191,7 +191,7 @@ op:hasIndependentVariable rdf:type owl:ObjectProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasMeeting
 op:hasMeeting rdf:type owl:ObjectProperty ;
-              rdfs:domain building:BuildingSpace ;
+              rdfs:domain building:Space ;
               rdfs:range op:Meeting ;
               rdfs:comment "Indicates that a meeting can occur within a space."@en ;
               rdfs:label "has meeting"@en .
@@ -199,7 +199,7 @@ op:hasMeeting rdf:type owl:ObjectProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOccupant
 op:hasOccupant rdf:type owl:ObjectProperty ;
-               rdfs:domain building:BuildingSpace ;
+               rdfs:domain building:Space ;
                rdfs:range op:Occupant ;
                rdfs:comment "Relationship that indicates that an space can have an occupant."@en ;
                rdfs:label "has occupant"@en .
@@ -276,7 +276,7 @@ op:leadsTo rdf:type owl:ObjectProperty ;
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#relatedToSpace
 op:relatedToSpace rdf:type owl:ObjectProperty ;
                   rdfs:domain op:SpaceOccupancy ;
-                  rdfs:range building:BuildingSpace ;
+                  rdfs:range building:Space ;
                   rdfs:comment "Property that relates space occupancy events to an specific building space."@en ;
                   rdfs:label "related to space"@en .
 
@@ -382,13 +382,13 @@ op:identifier rdf:type owl:DatatypeProperty ,
               rdfs:label "identifier"@en .
 
 
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxNumberOccupants
-op:maxNumberOccupants rdf:type owl:DatatypeProperty ,
-                               owl:FunctionalProperty ;
-                      rdfs:domain building:BuildingSpace ;
-                      rdfs:range xsd:integer ;
-                      rdfs:comment "Relationship that indicates the maximum number of occupants inside a space."@en ;
-                      rdfs:label "max number occupants"@en .
+###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxOccupants
+op:maxOccupants rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain building:Space ;
+                rdfs:range xsd:integer ;
+                rdfs:comment "Relationship that indicates the maximum number of occupants inside a space."@en ;
+                rdfs:label "max number occupants"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxRangeValue
@@ -400,13 +400,13 @@ op:maxRangeValue rdf:type owl:DatatypeProperty ,
                  rdfs:label "max range value"@en .
 
 
-###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants
-op:minNumberOccupants rdf:type owl:DatatypeProperty ,
-                               owl:FunctionalProperty ;
-                      rdfs:domain building:BuildingSpace ;
-                      rdfs:range xsd:integer ;
-                      rdfs:comment "Relationship that indicates the minimum number of occupants inside a space."@en ;
-                      rdfs:label "min number occupants"@en .
+###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#minOccupants
+op:minOccupants rdf:type owl:DatatypeProperty ,
+                         owl:FunctionalProperty ;
+                rdfs:domain building:Space ;
+                rdfs:range xsd:integer ;
+                rdfs:comment "Relationship that indicates the minimum number of occupants inside a space."@en ;
+                rdfs:label "min number occupants"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue
@@ -511,34 +511,34 @@ op:typicalTime rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  http://bimerr.iot.linkeddata.es/def/building#BuildingSpace
-building:BuildingSpace rdf:type owl:Class ;
-                       rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                         owl:onProperty s4bldg:contains ;
-                                         owl:someValuesFrom s4bldg:PhysicalObject
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty op:hasMeeting ;
-                                         owl:allValuesFrom op:Meeting
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty op:hasOccupant ;
-                                         owl:allValuesFrom op:Occupant
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty op:identifier ;
-                                         owl:someValuesFrom xsd:string
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty op:maxNumberOccupants ;
-                                         owl:allValuesFrom xsd:integer
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty op:minNumberOccupants ;
-                                         owl:allValuesFrom xsd:integer
-                                       ] ;
-                       rdfs:comment "Class to represent the different spaces the building have and where the occupant behaviors occur." ;
-                       rdfs:label "Space"@en .
+###  http://bimerr.iot.linkeddata.es/def/building#Space
+building:Space rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty s4bldg:contains ;
+                                 owl:someValuesFrom s4bldg:PhysicalObject
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty op:hasMeeting ;
+                                 owl:allValuesFrom op:Meeting
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty op:hasOccupant ;
+                                 owl:allValuesFrom op:Occupant
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty op:identifier ;
+                                 owl:someValuesFrom xsd:string
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty op:maxOccupants ;
+                                 owl:allValuesFrom xsd:integer
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty op:minOccupants ;
+                                 owl:allValuesFrom xsd:integer
+                               ] ;
+               rdfs:comment "Class to represent the different spaces the building have and where the occupant behaviors occur." ;
+               rdfs:label "Space"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#AccousticNeed
@@ -943,7 +943,7 @@ op:SpaceOccupancy rdf:type owl:Class ;
                   rdfs:subClassOf op:RandomMovement ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty op:relatedToSpace ;
-                                    owl:someValuesFrom building:BuildingSpace
+                                    owl:someValuesFrom building:Space
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty op:duration ;
@@ -962,7 +962,7 @@ op:Spatial rdf:type owl:Class ;
            rdfs:subClassOf op:Driver ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty op:detailedBy ;
-                             owl:someValuesFrom building:BuildingSpace
+                             owl:someValuesFrom building:Space
                            ] ;
            rdfs:comment "Driver related to spatial conditions that could be causing a behavior."@en ;
            rdfs:label "Spatial"@en .

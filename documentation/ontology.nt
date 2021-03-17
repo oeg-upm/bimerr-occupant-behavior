@@ -114,7 +114,7 @@
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Spatial> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/building#BuildingSpace> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/building#Space> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a spatial driver to an specific building space"@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy> <http://www.w3.org/2000/01/rdf-schema#label> "detailed by"@en .
 # 
@@ -163,14 +163,14 @@
 # 
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasMeeting
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasMeeting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasMeeting> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/building#BuildingSpace> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasMeeting> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/building#Space> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasMeeting> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Meeting> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasMeeting> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a meeting can occur within a space."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasMeeting> <http://www.w3.org/2000/01/rdf-schema#label> "has meeting"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOccupant
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOccupant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOccupant> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/building#BuildingSpace> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOccupant> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/building#Space> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOccupant> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOccupant> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that indicates that an space can have an occupant."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOccupant> <http://www.w3.org/2000/01/rdf-schema#label> "has occupant"@en .
@@ -238,7 +238,7 @@
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#relatedToSpace
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#relatedToSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#relatedToSpace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#SpaceOccupancy> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#relatedToSpace> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/building#BuildingSpace> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#relatedToSpace> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/building#Space> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#relatedToSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that relates space occupancy events to an specific building space."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#relatedToSpace> <http://www.w3.org/2000/01/rdf-schema#label> "related to space"@en .
 # 
@@ -335,13 +335,13 @@
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier of an element given in the obXML file. Attribute considered for backward compatibility."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier"@en .
 # 
-# http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxNumberOccupants
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxNumberOccupants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxNumberOccupants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxNumberOccupants> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/building#BuildingSpace> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxNumberOccupants> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxNumberOccupants> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that indicates the maximum number of occupants inside a space."@en .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxNumberOccupants> <http://www.w3.org/2000/01/rdf-schema#label> "max number occupants"@en .
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxOccupants
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxOccupants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxOccupants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxOccupants> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/building#Space> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxOccupants> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxOccupants> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that indicates the maximum number of occupants inside a space."@en .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxOccupants> <http://www.w3.org/2000/01/rdf-schema#label> "max number occupants"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxRangeValue
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxRangeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -351,13 +351,13 @@
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxRangeValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Upper boundary of a parameter range description."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxRangeValue> <http://www.w3.org/2000/01/rdf-schema#label> "max range value"@en .
 # 
-# http://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/building#BuildingSpace> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that indicates the minimum number of occupants inside a space."@en .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants> <http://www.w3.org/2000/01/rdf-schema#label> "min number occupants"@en .
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#minOccupants
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#minOccupants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#minOccupants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#minOccupants> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/building#Space> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#minOccupants> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#minOccupants> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that indicates the minimum number of occupants inside a space."@en .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#minOccupants> <http://www.w3.org/2000/01/rdf-schema#label> "min number occupants"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -454,34 +454,34 @@
 # #################################################################
 # 
 # 
-# http://bimerr.iot.linkeddata.es/def/building#BuildingSpace
-<http://bimerr.iot.linkeddata.es/def/building#BuildingSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+# http://bimerr.iot.linkeddata.es/def/building#Space
+<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4building#contains> .
 _:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4building#PhysicalObject> .
-<http://bimerr.iot.linkeddata.es/def/building#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasMeeting> .
 _:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Meeting> .
-<http://bimerr.iot.linkeddata.es/def/building#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOccupant> .
 _:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant> .
-<http://bimerr.iot.linkeddata.es/def/building#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#identifier> .
 _:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-<http://bimerr.iot.linkeddata.es/def/building#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxNumberOccupants> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxOccupants> .
 _:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
-<http://bimerr.iot.linkeddata.es/def/building#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#minOccupants> .
 _:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
-<http://bimerr.iot.linkeddata.es/def/building#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent the different spaces the building have and where the occupant behaviors occur." .
-<http://bimerr.iot.linkeddata.es/def/building#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Space"@en .
+<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent the different spaces the building have and where the occupant behaviors occur." .
+<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#label> "Space"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#AccousticNeed
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#AccousticNeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -852,7 +852,7 @@ _:genid44 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#SpaceOccupancy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
 _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid45 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#relatedToSpace> .
-_:genid45 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#BuildingSpace> .
+_:genid45 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Space> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#SpaceOccupancy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
 _:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#duration> .
@@ -870,7 +870,7 @@ _:genid47 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Spatial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
 _:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid48 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy> .
-_:genid48 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#BuildingSpace> .
+_:genid48 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Space> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Spatial> <http://www.w3.org/2000/01/rdf-schema#comment> "Driver related to spatial conditions that could be causing a behavior."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Spatial> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial"@en .
 # 

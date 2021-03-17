@@ -338,7 +338,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#relatedToSpace"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Space"
   } ]
 }, {
   "@id" : "_:genid46",
@@ -365,7 +365,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Space"
   } ]
 }, {
   "@id" : "_:genid49",
@@ -383,7 +383,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxNumberOccupants"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxOccupants"
   } ]
 }, {
   "@id" : "_:genid50",
@@ -482,7 +482,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#minOccupants"
   } ]
 }, {
   "@id" : "_:genid60",
@@ -573,7 +573,7 @@
     } ]
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Space",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@value" : "Class to represent the different spaces the building have and where the occupant behaviors occur."
@@ -1647,7 +1647,7 @@
     "@value" : "detailed by"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Space"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#drivenBy",
@@ -1818,7 +1818,7 @@
     "@value" : "Indicates that a meeting can occur within a space."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Space"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1835,7 +1835,7 @@
     "@value" : "Relationship that indicates that an space can have an occupant."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Space"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1992,14 +1992,14 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#Action"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxNumberOccupants",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxOccupants",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Relationship that indicates the maximum number of occupants inside a space."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Space"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2026,14 +2026,14 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#minOccupants",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Relationship that indicates the minimum number of occupants inside a space."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Space"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2190,7 +2190,7 @@
     "@value" : "related to space"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Space"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#specifiedBy",
