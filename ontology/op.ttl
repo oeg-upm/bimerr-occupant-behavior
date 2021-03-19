@@ -382,6 +382,13 @@ op:identifier rdf:type owl:DatatypeProperty ,
               rdfs:label "identifier"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#ifcIdentifier
+op:ifcIdentifier rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Guid of the entity in the IFC file"@en ;
+                 rdfs:label "ifc identifier"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxOccupants
 op:maxOccupants rdf:type owl:DatatypeProperty ,
                          owl:FunctionalProperty ;
@@ -526,16 +533,16 @@ building:Space rdf:type owl:Class ;
                                  owl:allValuesFrom op:Occupant
                                ] ,
                                [ rdf:type owl:Restriction ;
-                                 owl:onProperty op:identifier ;
-                                 owl:someValuesFrom xsd:string
-                               ] ,
-                               [ rdf:type owl:Restriction ;
                                  owl:onProperty op:maxOccupants ;
                                  owl:allValuesFrom xsd:integer
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty op:minOccupants ;
                                  owl:allValuesFrom xsd:integer
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty op:ifcIdentifier ;
+                                 owl:cardinality "1"^^xsd:nonNegativeInteger
                                ] ;
                rdfs:comment "Class to represent the different spaces the building have and where the occupant behaviors occur." ;
                rdfs:label "Space"@en .
@@ -603,6 +610,10 @@ op:CustomProbabilityModel rdf:type owl:Class ;
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty op:probability ;
                                             owl:someValuesFrom xsd:float
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty op:typicalTime ;
+                                            owl:cardinality "1"^^xsd:nonNegativeInteger
                                           ] ;
                           rdfs:comment "Class to represent instances of custom probabilistic models."@en ;
                           rdfs:label "Custom probability model"@en .

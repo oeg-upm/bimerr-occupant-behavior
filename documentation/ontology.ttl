@@ -373,6 +373,13 @@ xsd:time rdf:type rdfs:Datatype .
             rdfs:label "identifier"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#ifcIdentifier
+:ifcIdentifier rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:string ;
+               rdfs:comment "Guid of the entity in the IFC file"@en ;
+               rdfs:label "ifc identifier"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxOccupants
 :maxOccupants rdf:type owl:DatatypeProperty ,
                        owl:FunctionalProperty ;
@@ -517,16 +524,16 @@ xsd:time rdf:type rdfs:Datatype .
                                                                        owl:allValuesFrom :Occupant
                                                                      ] ,
                                                                      [ rdf:type owl:Restriction ;
-                                                                       owl:onProperty :identifier ;
-                                                                       owl:someValuesFrom xsd:string
-                                                                     ] ,
-                                                                     [ rdf:type owl:Restriction ;
                                                                        owl:onProperty :maxOccupants ;
                                                                        owl:allValuesFrom xsd:integer
                                                                      ] ,
                                                                      [ rdf:type owl:Restriction ;
                                                                        owl:onProperty :minOccupants ;
                                                                        owl:allValuesFrom xsd:integer
+                                                                     ] ,
+                                                                     [ rdf:type owl:Restriction ;
+                                                                       owl:onProperty :ifcIdentifier ;
+                                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
                                                                      ] ;
                                                      rdfs:comment "Class to represent the different spaces the building have and where the occupant behaviors occur." ;
                                                      rdfs:label "Space"@en .
@@ -594,6 +601,10 @@ xsd:time rdf:type rdfs:Datatype .
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty :probability ;
                                           owl:someValuesFrom xsd:float
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :typicalTime ;
+                                          owl:cardinality "1"^^xsd:nonNegativeInteger
                                         ] ;
                         rdfs:comment "Class to represent instances of custom probabilistic models."@en ;
                         rdfs:label "Custom probability model"@en .
