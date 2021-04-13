@@ -511,6 +511,12 @@ op:startTime rdf:type owl:DatatypeProperty ;
              rdfs:label "start time"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#type
+op:type rdf:type owl:DatatypeProperty ;
+        rdfs:comment "type of element"@en ;
+        rdfs:label "type"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalDuration
 op:typicalDuration rdf:type owl:DatatypeProperty ;
                    rdfs:domain op:SpaceOccupancy ;
@@ -553,6 +559,10 @@ building:Building rdf:type owl:Class ;
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty op:ifcIdentifier ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty op:type ;
+                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                   ] ;
                   rdfs:comment "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space)."@en ;
                   rdfs:label "Building"@en .
@@ -583,6 +593,10 @@ building:Space rdf:type owl:Class ;
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty op:ifcIdentifier ;
                                  owl:cardinality "1"^^xsd:nonNegativeInteger
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty op:type ;
+                                 owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                ] ;
                rdfs:comment "Class to represent the different spaces the building have and where the occupant behaviors occur." ;
                rdfs:label "Space"@en .
