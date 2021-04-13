@@ -518,6 +518,26 @@ op:typicalTime rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
+###  http://bimerr.iot.linkeddata.es/def/building#Apartment
+building:Apartment rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty op:ifcIdentifier ;
+                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                   ] ;
+                   rdfs:comment "An apartment is a group of spaces, partial spaces or other zones."@en ;
+                   rdfs:label "Apartment"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/building#Building
+building:Building rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty op:ifcIdentifier ;
+                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                  ] ;
+                  rdfs:comment "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space)."@en ;
+                  rdfs:label "Building"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/building#Space
 building:Space rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
