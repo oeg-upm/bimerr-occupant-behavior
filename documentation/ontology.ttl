@@ -87,6 +87,18 @@ xsd:time rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  http://bimerr.iot.linkeddata.es/def/building#hasApartment
+<http://bimerr.iot.linkeddata.es/def/building#hasApartment> rdf:type owl:ObjectProperty ;
+                                                            rdfs:comment "Relation between a storey and the apartments it is composed of."@en ;
+                                                            rdfs:label "has apartment"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/building#hasSpace
+<http://bimerr.iot.linkeddata.es/def/building#hasSpace> rdf:type owl:ObjectProperty ;
+                                                        rdfs:comment "Relation to spaces contained in a zone."@en ;
+                                                        rdfs:label "has space"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#composedOf
 :composedOf rdf:type owl:ObjectProperty ;
             rdfs:domain :DriverSet ;
@@ -512,6 +524,10 @@ xsd:time rdf:type rdfs:Datatype .
 ###  http://bimerr.iot.linkeddata.es/def/building#Apartment
 <http://bimerr.iot.linkeddata.es/def/building#Apartment> rdf:type owl:Class ;
                                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                           owl:onProperty <http://bimerr.iot.linkeddata.es/def/building#hasSpace> ;
+                                                                           owl:allValuesFrom <http://bimerr.iot.linkeddata.es/def/building#Space>
+                                                                         ] ,
+                                                                         [ rdf:type owl:Restriction ;
                                                                            owl:onProperty :ifcIdentifier ;
                                                                            owl:cardinality "1"^^xsd:nonNegativeInteger
                                                                          ] ;
@@ -522,6 +538,10 @@ xsd:time rdf:type rdfs:Datatype .
 ###  http://bimerr.iot.linkeddata.es/def/building#Building
 <http://bimerr.iot.linkeddata.es/def/building#Building> rdf:type owl:Class ;
                                                         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                          owl:onProperty <http://bimerr.iot.linkeddata.es/def/building#hasApartment> ;
+                                                                          owl:allValuesFrom <http://bimerr.iot.linkeddata.es/def/building#Apartment>
+                                                                        ] ,
+                                                                        [ rdf:type owl:Restriction ;
                                                                           owl:onProperty :ifcIdentifier ;
                                                                           owl:cardinality "1"^^xsd:nonNegativeInteger
                                                                         ] ;

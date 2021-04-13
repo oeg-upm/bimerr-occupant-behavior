@@ -159,6 +159,26 @@
     
 
 
+    <!-- http://bimerr.iot.linkeddata.es/def/building#hasApartment -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#hasApartment">
+        <rdfs:comment xml:lang="en">Relation between a storey and the apartments it is composed of.</rdfs:comment>
+        <rdfs:label xml:lang="en">has apartment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#hasSpace -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#hasSpace">
+        <rdfs:comment xml:lang="en">Relation to spaces contained in a zone.</rdfs:comment>
+        <rdfs:label xml:lang="en">has space</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://bimerr.iot.linkeddata.es/def/occupancy-profile#composedOf -->
 
 
@@ -807,6 +827,12 @@
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Apartment">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#hasSpace"/>
+                <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Space"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/occupancy-profile#ifcIdentifier"/>
                 <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
             </owl:Restriction>
@@ -821,6 +847,12 @@
 
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Building">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#hasApartment"/>
+                <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Apartment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/occupancy-profile#ifcIdentifier"/>

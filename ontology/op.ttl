@@ -96,6 +96,18 @@ xsd:time rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
+###  http://bimerr.iot.linkeddata.es/def/building#hasApartment
+building:hasApartment rdf:type owl:ObjectProperty ;
+                      rdfs:comment "Relation between a storey and the apartments it is composed of."@en ;
+                      rdfs:label "has apartment"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/building#hasSpace
+building:hasSpace rdf:type owl:ObjectProperty ;
+                  rdfs:comment "Relation to spaces contained in a zone."@en ;
+                  rdfs:label "has space"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#composedOf
 op:composedOf rdf:type owl:ObjectProperty ;
               rdfs:domain op:DriverSet ;
@@ -521,6 +533,10 @@ op:typicalTime rdf:type owl:DatatypeProperty ;
 ###  http://bimerr.iot.linkeddata.es/def/building#Apartment
 building:Apartment rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty building:hasSpace ;
+                                     owl:allValuesFrom building:Space
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
                                      owl:onProperty op:ifcIdentifier ;
                                      owl:cardinality "1"^^xsd:nonNegativeInteger
                                    ] ;
@@ -531,6 +547,10 @@ building:Apartment rdf:type owl:Class ;
 ###  http://bimerr.iot.linkeddata.es/def/building#Building
 building:Building rdf:type owl:Class ;
                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty building:hasApartment ;
+                                    owl:allValuesFrom building:Apartment
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty op:ifcIdentifier ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
                                   ] ;
