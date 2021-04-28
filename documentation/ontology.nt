@@ -142,6 +142,11 @@
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBehavior> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to indicate that an occupant has a behavior."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBehavior> <http://www.w3.org/2000/01/rdf-schema#label> "has behavior"@en .
 # 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBuilding
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBuilding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation from the occupant behavior concept to a building."@en .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBuilding> <http://www.w3.org/2000/01/rdf-schema#label> "has building"@en .
+# 
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasCoefficient
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasCoefficient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasCoefficient> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#InteractionFormula> .
@@ -314,6 +319,11 @@
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#controlValue> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship indicating the magnitud of a control action over a building system."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#controlValue> <http://www.w3.org/2000/01/rdf-schema#label> "control value"@en .
 # 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#description
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#description> <http://www.w3.org/2000/01/rdf-schema#label> "description"@en .
+# 
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#duration
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#duration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> .
@@ -382,6 +392,11 @@
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Lower boundary of a parameter range description."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue> <http://www.w3.org/2000/01/rdf-schema#label> "min range value"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#name
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantAge
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantAge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -465,6 +480,10 @@
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#time> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Typical occurrence time of an event."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalTime> <http://www.w3.org/2000/01/rdf-schema#label> "typical time"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#version
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#version> <http://www.w3.org/2000/01/rdf-schema#label> "version"@en .
 # 
 # 
 # 
@@ -835,6 +854,31 @@ _:genid45 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant> <http://www.w3.org/2000/01/rdf-schema#comment> "Occupants or residents of a building."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant> <http://www.w3.org/2000/01/rdf-schema#label> "Occupant"@en .
 # 
+# http://bimerr.iot.linkeddata.es/def/occupancy-profile#OccupantBehavior
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#OccupantBehavior> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#OccupantBehavior> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBehavior> .
+_:genid46 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Behavior> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#OccupantBehavior> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBuilding> .
+_:genid47 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Building> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#OccupantBehavior> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOccupant> .
+_:genid48 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#OccupantBehavior> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#identifier> .
+_:genid49 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#OccupantBehavior> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#version> .
+_:genid50 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#OccupantBehavior> <http://www.w3.org/2000/01/rdf-schema#comment> "Root node of the occupant behavior model."@en .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#OccupantBehavior> <http://www.w3.org/2000/01/rdf-schema#label> "Occupant behavior"@en .
+# 
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConcept
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConcept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
@@ -844,33 +888,41 @@ _:genid45 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConceptScheme
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConceptScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConceptScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#description> .
+_:genid51 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConceptScheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#name> .
+_:genid52 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConceptScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "An aggregation of SKOS concepts regarding the operational mode of space systems."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConceptScheme> <http://www.w3.org/2000/01/rdf-schema#label> "Operational mode scheme"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#describesParameter> .
-_:genid46 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#EnvironmentalParameter> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxRangeValue> .
-_:genid47 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue> .
-_:genid48 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#describesParameter> .
+_:genid53 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#EnvironmentalParameter> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxRangeValue> .
+_:genid54 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue> .
+_:genid55 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange> <http://www.w3.org/2000/01/rdf-schema#comment> "Class to represent the minimum and maximm comfort values with respect to an environmental parameter."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange> <http://www.w3.org/2000/01/rdf-schema#label> "Parameter Range"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#PhysicalNeed
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#PhysicalNeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#PhysicalNeed> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Need> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#PhysicalNeed> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#definedByRange> .
-_:genid49 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#PhysicalNeed> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#definedByRange> .
+_:genid56 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#ParameterRange> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#PhysicalNeed> <http://www.w3.org/2000/01/rdf-schema#comment> "Physical comfort need that could influence a behavior."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#PhysicalNeed> <http://www.w3.org/2000/01/rdf-schema#label> "Physical Need"@en .
 # 
@@ -883,6 +935,14 @@ _:genid49 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.link
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#RandomMovement
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#RandomMovement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#RandomMovement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Movement> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#RandomMovement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#description> .
+_:genid57 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#RandomMovement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#name> .
+_:genid58 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#RandomMovement> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of occupant movements inside a building or space."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#RandomMovement> <http://www.w3.org/2000/01/rdf-schema#label> "Random movement"@en .
 # 
@@ -894,60 +954,60 @@ _:genid49 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.link
 # 
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#Season
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Season> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Season> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#endSeason> .
-_:genid50 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#gMonthDay> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Season> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
-_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#startSeason> .
-_:genid51 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#gMonthDay> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Season> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#endSeason> .
+_:genid59 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#gMonthDay> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Season> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#startSeason> .
+_:genid60 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#gMonthDay> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Season> <http://www.w3.org/2000/01/rdf-schema#comment> "Season of the year."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Season> <http://www.w3.org/2000/01/rdf-schema#label> "Season"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#SpaceOccupancy
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#SpaceOccupancy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#SpaceOccupancy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#RandomMovement> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#SpaceOccupancy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#relatedToSpace> .
-_:genid52 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Space> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#SpaceOccupancy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#duration> .
-_:genid53 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#duration> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#SpaceOccupancy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
-_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#percentTimePresence> .
-_:genid54 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#SpaceOccupancy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid61 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#relatedToSpace> .
+_:genid61 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Space> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#SpaceOccupancy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid62 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#duration> .
+_:genid62 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#duration> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#SpaceOccupancy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid63 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#percentTimePresence> .
+_:genid63 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#SpaceOccupancy> <http://www.w3.org/2000/01/rdf-schema#comment> "Occupancy percentage of staying in a specific space category in a building."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#SpaceOccupancy> <http://www.w3.org/2000/01/rdf-schema#label> "Space occupancy"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#Spatial
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Spatial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Spatial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Driver> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Spatial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid55 .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy> .
-_:genid55 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Space> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Spatial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid64 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#detailedBy> .
+_:genid64 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Space> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Spatial> <http://www.w3.org/2000/01/rdf-schema#comment> "Driver related to spatial conditions that could be causing a behavior."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Spatial> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransition
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Movement> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid56 .
-_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasTransitionType> .
-_:genid56 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransitionTypeConcept> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid57 .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#specifiedBy> .
-_:genid57 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#MovementModel> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid58 .
-_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalDuration> .
-_:genid58 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#duration> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid65 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid65 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasTransitionType> .
+_:genid65 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransitionTypeConcept> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid66 .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid66 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#specifiedBy> .
+_:genid66 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#MovementModel> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid67 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid67 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalDuration> .
+_:genid67 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#duration> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransition> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of movements to represent transition events between spaces."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#StatusTransition> <http://www.w3.org/2000/01/rdf-schema#label> "Status transition"@en .
 # 
@@ -978,35 +1038,35 @@ _:genid58 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#Time
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Time> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Driver> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Time> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid59 .
-_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasDayOfWeek> .
-_:genid59 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2006/time#DayOfWeek> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Time> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid60 .
-_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasSeason> .
-_:genid60 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Season> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Time> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid61 .
-_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid61 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasTimeOfDay> .
-_:genid61 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#TimeOfDay> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Time> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid62 .
-_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid62 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#onHolidays> .
-_:genid62 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#date> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Time> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid68 .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid68 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasDayOfWeek> .
+_:genid68 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2006/time#DayOfWeek> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Time> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid69 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasSeason> .
+_:genid69 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Season> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Time> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid70 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid70 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasTimeOfDay> .
+_:genid70 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#TimeOfDay> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Time> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid71 .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid71 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#onHolidays> .
+_:genid71 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#date> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Time> <http://www.w3.org/2000/01/rdf-schema#comment> "Driver related to time conditions that could be causing a behavior. It also describes the time when another type of driver occur."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Time> <http://www.w3.org/2000/01/rdf-schema#label> "Time"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#TimeOfDay
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#TimeOfDay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#TimeOfDay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid63 .
-_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid63 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#endTime> .
-_:genid63 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#time> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#TimeOfDay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid64 .
-_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid64 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#startTime> .
-_:genid64 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#time> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#TimeOfDay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid72 .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid72 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#endTime> .
+_:genid72 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#time> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#TimeOfDay> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid73 .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid73 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#startTime> .
+_:genid73 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#time> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#TimeOfDay> <http://www.w3.org/2000/01/rdf-schema#comment> "Relative time of day."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#TimeOfDay> <http://www.w3.org/2000/01/rdf-schema#label> "Time Of Day"@en .
 # 
@@ -1030,18 +1090,18 @@ _:genid64 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001
 # 
 # http://www.w3.org/2004/02/skos/core#Concept
 <http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid65 .
-_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid65 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#broader> .
-_:genid65 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid66 .
-_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid66 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid66 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
-<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid67 .
-_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid67 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#narrower> .
-_:genid67 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid74 .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid74 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#broader> .
+_:genid74 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid75 .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid75 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid75 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid76 .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid76 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2004/02/skos/core#narrower> .
+_:genid76 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#comment> "The class skos:Concept is the class of SKOS concepts. A SKOS concept can be viewed as an idea or notion; a unit of thought. However, what constitutes a unit of thought is subjective, and this definition is meant to be suggestive, rather than restrictive.\n\nThe notion of a SKOS concept is useful when describing the conceptual or intellectual structure of a knowledge organization system, and when referring to specific ideas or meanings established within a KOS.\n\nNote that, because SKOS is designed to be a vehicle for representing semi-formal KOS, such as thesauri and classification schemes, a certain amount of flexibility has been built in to the formal definition of this class."@en .
 <http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#label> "Concept"@en .
 # 
@@ -1068,10 +1128,10 @@ _:genid67 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2004
 # 
 # https://w3id.org/def/saref4building#PhysicalObject
 <https://w3id.org/def/saref4building#PhysicalObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/saref4building#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid68 .
-_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid68 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOperationalMode> .
-_:genid68 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConcept> .
+<https://w3id.org/def/saref4building#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid77 .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid77 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOperationalMode> .
+_:genid77 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConcept> .
 <https://w3id.org/def/saref4building#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Any Object that has a proper space region. (Definition extracted from DUL ontology)"@en .
 <https://w3id.org/def/saref4building#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#label> "Physical object"@en .
 # 
@@ -1323,49 +1383,49 @@ _:genid68 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.link
 # #################################################################
 # 
 # 
-_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid69 <http://www.w3.org/2002/07/owl#members> _:genid73 .
-_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#AccousticNeed> .
-_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid72 .
-_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#IAQNeed> .
-_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid71 .
-_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#ThermalNeed> .
-_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid70 .
-_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#VisualNeed> .
-_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-# 
-_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid74 <http://www.w3.org/2002/07/owl#members> _:genid79 .
-_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#ConstantValueFormula> .
-_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid78 .
-_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#LinearFormula> .
-_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid77 .
-_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#LogitFormula> .
-_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid76 .
-_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#QuadraticFormula> .
-_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid75 .
-_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#WeibullFormula> .
-_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-# 
-_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
-_:genid80 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid83 .
-_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#ASHRAEAdaptiveComfort> .
-_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid82 .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid78 <http://www.w3.org/2002/07/owl#members> _:genid82 .
 _:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#ASHRAEComfortEnvelop> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#AccousticNeed> .
 _:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid81 .
 _:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#ISOAdaptiveComfort> .
-_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#IAQNeed> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid80 .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#ThermalNeed> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid79 .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#VisualNeed> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid83 <http://www.w3.org/2002/07/owl#members> _:genid88 .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#ConstantValueFormula> .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid87 .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#LinearFormula> .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid86 .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#LogitFormula> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid85 .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#QuadraticFormula> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid84 .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#WeibullFormula> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDifferent> .
+_:genid89 <http://www.w3.org/2002/07/owl#distinctMembers> _:genid92 .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#ASHRAEAdaptiveComfort> .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid91 .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#ASHRAEComfortEnvelop> .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid90 .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#ISOAdaptiveComfort> .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 # 
 # Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/

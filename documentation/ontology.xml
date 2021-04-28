@@ -267,6 +267,16 @@
     
 
 
+    <!-- http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBuilding -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBuilding">
+        <rdfs:comment xml:lang="en">Relation from the occupant behavior concept to a building.</rdfs:comment>
+        <rdfs:label xml:lang="en">has building</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasCoefficient -->
 
 
@@ -557,6 +567,16 @@
     
 
 
+    <!-- http://bimerr.iot.linkeddata.es/def/occupancy-profile#description -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/occupancy-profile#description">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://bimerr.iot.linkeddata.es/def/occupancy-profile#duration -->
 
 
@@ -672,6 +692,16 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment xml:lang="en">Lower boundary of a parameter range description.</rdfs:comment>
         <rdfs:label xml:lang="en">min range value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/occupancy-profile#name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/occupancy-profile#name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="en">name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -815,6 +845,15 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#time"/>
         <rdfs:comment xml:lang="en">Typical occurrence time of an event.</rdfs:comment>
         <rdfs:label xml:lang="en">typical time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/occupancy-profile#version -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/occupancy-profile#version">
+        <rdfs:label xml:lang="en">version</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1438,6 +1477,46 @@
     
 
 
+    <!-- http://bimerr.iot.linkeddata.es/def/occupancy-profile#OccupantBehavior -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/occupancy-profile#OccupantBehavior">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBehavior"/>
+                <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/occupancy-profile#Behavior"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBuilding"/>
+                <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasOccupant"/>
+                <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/occupancy-profile#identifier"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/occupancy-profile#version"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Root node of the occupant behavior model.</rdfs:comment>
+        <rdfs:label xml:lang="en">Occupant behavior</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConcept -->
 
 
@@ -1454,6 +1533,18 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConceptScheme">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/occupancy-profile#description"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/occupancy-profile#name"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An aggregation of SKOS concepts regarding the operational mode of space systems.</rdfs:comment>
         <rdfs:label xml:lang="en">Operational mode scheme</rdfs:label>
     </owl:Class>
@@ -1521,6 +1612,18 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/occupancy-profile#RandomMovement">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/occupancy-profile#Movement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/occupancy-profile#description"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/occupancy-profile#name"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Type of occupant movements inside a building or space.</rdfs:comment>
         <rdfs:label xml:lang="en">Random movement</rdfs:label>
     </owl:Class>

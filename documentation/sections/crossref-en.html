@@ -148,6 +148,10 @@ This section provides details for each class and property defined by Occupancy P
             title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant">Occupant</a>
       </li>
       <li>
+         <a href="#OccupantBehavior"
+            title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#OccupantBehavior">Occupant behavior</a>
+      </li>
+      <li>
          <a href="#OperationalModeConcept"
             title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConcept">Operational mode concept</a>
       </li>
@@ -1242,6 +1246,21 @@ The notion of a concept scheme is useful when dealing with data from an unknown 
          </dd>
       </dl>
    </div>
+   <div class="entity" id="OccupantBehavior">
+      <h3>Occupant behavior<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/occupancy-profile#OccupantBehavior</p>
+      <div class="comment">
+         <span class="markdown">Root node of the occupant behavior model.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+      </dl>
+   </div>
    <div class="entity" id="OperationalModeConcept">
       <h3>Operational mode concept<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -2066,6 +2085,10 @@ The notion of a concept scheme is useful when dealing with data from an unknown 
             title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBehavior">has behavior</a>
       </li>
       <li>
+         <a href="#hasBuilding"
+            title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBuilding">has building</a>
+      </li>
+      <li>
          <a href="#hasCoefficient"
             title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasCoefficient">has coefficient</a>
       </li>
@@ -2382,6 +2405,17 @@ The notion of a concept scheme is useful when dealing with data from an unknown 
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasBuilding">
+      <h3>has building<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBuilding</p>
+      <div class="comment">
+         <span class="markdown">Relation from the occupant behavior concept to a building.</span>
       </div>
    </div>
    <div class="entity" id="hasCoefficient">
@@ -2902,6 +2936,10 @@ The notion of a concept scheme is useful when dealing with data from an unknown 
             title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#controlValue">control value</a>
       </li>
       <li>
+         <a href="#description"
+            title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#description">description</a>
+      </li>
+      <li>
          <a href="#duration"
             title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#duration">duration</a>
       </li>
@@ -2940,6 +2978,10 @@ The notion of a concept scheme is useful when dealing with data from an unknown 
       <li>
          <a href="#minRangeValue"
             title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue">min range value</a>
+      </li>
+      <li>
+         <a href="#name"
+            title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#name">name</a>
       </li>
       <li>
          <a href="#occupantAge"
@@ -2988,6 +3030,10 @@ The notion of a concept scheme is useful when dealing with data from an unknown 
       <li>
          <a href="#typicalTime"
             title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#typicalTime">typical time</a>
+      </li>
+      <li>
+         <a href="#version"
+            title="http://bimerr.iot.linkeddata.es/def/occupancy-profile#version">version</a>
       </li>
    </ul>
    <div class="entity" id="buildingAddress">
@@ -3055,6 +3101,22 @@ The notion of a concept scheme is useful when dealing with data from an unknown 
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="description">
+      <h3>description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/occupancy-profile#description</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
             </dd>
          </dl>
       </div>
@@ -3275,6 +3337,22 @@ The notion of a concept scheme is useful when dealing with data from an unknown 
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="name">
+      <h3>name<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/occupancy-profile#name</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
             </dd>
          </dl>
       </div>
@@ -3554,6 +3632,14 @@ The notion of a concept scheme is useful when dealing with data from an unknown 
             </dd>
          </dl>
       </div>
+   </div>
+   <div class="entity" id="version">
+      <h3>version<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/occupancy-profile#version</p>
    </div>
 </div><div id="namedindividuals">
    <h3 id="namedindividuals" class="list">Named Individuals</h3>

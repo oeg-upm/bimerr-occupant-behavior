@@ -159,6 +159,12 @@ xsd:time rdf:type rdfs:Datatype .
              rdfs:label "has behavior"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBuilding
+:hasBuilding rdf:type owl:ObjectProperty ;
+             rdfs:comment "Relation from the occupant behavior concept to a building."@en ;
+             rdfs:label "has building"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasCoefficient
 :hasCoefficient rdf:type owl:ObjectProperty ;
                 rdfs:domain :InteractionFormula ;
@@ -349,6 +355,12 @@ xsd:time rdf:type rdfs:Datatype .
               rdfs:label "control value"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#description
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:label "description"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#duration
 :duration rdf:type owl:DatatypeProperty ;
           rdfs:range xsd:duration ;
@@ -426,6 +438,12 @@ xsd:time rdf:type rdfs:Datatype .
                rdfs:range xsd:float ;
                rdfs:comment "Lower boundary of a parameter range description."@en ;
                rdfs:label "min range value"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string ;
+      rdfs:label "name"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#occupantAge
@@ -521,6 +539,11 @@ xsd:time rdf:type rdfs:Datatype .
              rdfs:range xsd:time ;
              rdfs:comment "Typical occurrence time of an event."@en ;
              rdfs:label "typical time"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#version
+:version rdf:type owl:DatatypeProperty ;
+         rdfs:label "version"@en .
 
 
 #################################################################
@@ -916,6 +939,32 @@ xsd:time rdf:type rdfs:Datatype .
           rdfs:label "Occupant"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#OccupantBehavior
+:OccupantBehavior rdf:type owl:Class ;
+                  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasBehavior ;
+                                    owl:allValuesFrom :Behavior
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasBuilding ;
+                                    owl:allValuesFrom <http://bimerr.iot.linkeddata.es/def/building#Building>
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasOccupant ;
+                                    owl:allValuesFrom :Occupant
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :identifier ;
+                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :version ;
+                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                  ] ;
+                  rdfs:comment "Root node of the occupant behavior model."@en ;
+                  rdfs:label "Occupant behavior"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConcept
 :OperationalModeConcept rdf:type owl:Class ;
                         rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#Concept> ;
@@ -925,7 +974,15 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#OperationalModeConceptScheme
 :OperationalModeConceptScheme rdf:type owl:Class ;
-                              rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+                              rdfs:subClassOf <http://www.w3.org/2004/02/skos/core#ConceptScheme> ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :description ;
+                                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :name ;
+                                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                              ] ;
                               rdfs:comment "An aggregation of SKOS concepts regarding the operational mode of space systems."@en ;
                               rdfs:label "Operational mode scheme"@en .
 
@@ -968,7 +1025,15 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#RandomMovement
 :RandomMovement rdf:type owl:Class ;
-                rdfs:subClassOf :Movement ;
+                rdfs:subClassOf :Movement ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :description ;
+                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :name ;
+                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                ] ;
                 rdfs:comment "Type of occupant movements inside a building or space."@en ;
                 rdfs:label "Random movement"@en .
 
