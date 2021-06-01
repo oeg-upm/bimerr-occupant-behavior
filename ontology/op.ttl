@@ -26,7 +26,7 @@
                                                           dcterms:license "http://purl.org/NET/rdflicense/cc-by4.0"@en ;
                                                           vann:preferredNamespacePrefix "op"@en ;
                                                           vann:preferredNamespaceUri "http://bimerr.iot.linkeddata.es/def/occupancy-profile#" ;
-                                                          owl:versionInfo "0.1.1" .
+                                                          owl:versionInfo "0.1.2" .
 
 #################################################################
 #    Annotation properties
@@ -199,6 +199,13 @@ op:hasEnvironmentalParameter rdf:type owl:ObjectProperty ;
                              rdfs:label "has environmental parameter"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasFeedback
+op:hasFeedback rdf:type owl:ObjectProperty ;
+               rdfs:range op:Feedback ;
+               rdfs:comment "Relates a resident inside an apartment with a feedback."@en ;
+               rdfs:label "has feedback"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasIndependentVariable
 op:hasIndependentVariable rdf:type owl:ObjectProperty ;
                           rdfs:domain op:InteractionFormula ;
@@ -283,6 +290,13 @@ op:interactsOver rdf:type owl:ObjectProperty ,
                  rdfs:label "interacts over"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#isInsideSpace
+op:isInsideSpace rdf:type owl:ObjectProperty ;
+                 rdfs:range building:Space ;
+                 rdfs:comment "Inverse relationship to indicate the space location of a resident inside an apartment."@en ;
+                 rdfs:label "is inside space"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#leadsTo
 op:leadsTo rdf:type owl:ObjectProperty ;
            rdfs:domain op:Behavior ;
@@ -356,12 +370,25 @@ op:coefficientValue rdf:type owl:DatatypeProperty ;
                     rdfs:label "coefficient value"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#comfortState
+op:comfortState rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:string ;
+                rdfs:comment "Indicates whether the occupant is satisfied or not (based on a 5-scale) in the specific temperature conditions."@en ;
+                rdfs:label "comfort state"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#controlValue
 op:controlValue rdf:type owl:DatatypeProperty ;
                 rdfs:domain op:Interaction ;
                 rdfs:range xsd:float ;
                 rdfs:comment "A relationship indicating the magnitud of a control action over a building system."@en ;
                 rdfs:label "control value"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#creationDate
+op:creationDate rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:dateTime ;
+                rdfs:label "creation date"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#description
@@ -527,6 +554,13 @@ op:startTime rdf:type owl:DatatypeProperty ;
              rdfs:range xsd:dateTime ;
              rdfs:comment "The start time of an event or activity."@en ;
              rdfs:label "start time"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#tempConditions
+op:tempConditions rdf:type owl:DatatypeProperty ;
+                  rdfs:range xsd:double ;
+                  rdfs:comment "Temperature inside a space at the moment of giving the feedback."@en ;
+                  rdfs:label "temperature conditions"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#type
@@ -752,6 +786,24 @@ op:Event rdf:type owl:Class ;
          rdfs:label "Event"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Feedback
+op:Feedback rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty op:comfortState ;
+                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty op:creationDate ;
+                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty op:tempConditions ;
+                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                            ] ;
+            rdfs:comment "Feedback given by residents about environmental conditions and levels of comfort inside apartment spaces."@en ;
+            rdfs:label "Feedback"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Habit
 op:Habit rdf:type owl:Class ;
          rdfs:subClassOf op:Driver ;
@@ -923,6 +975,14 @@ op:Occupant rdf:type owl:Class ;
                             [ rdf:type owl:Restriction ;
                               owl:onProperty op:hasBehavior ;
                               owl:someValuesFrom op:Behavior
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty op:hasFeedback ;
+                              owl:allValuesFrom op:Feedback
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty op:isInsideSpace ;
+                              owl:allValuesFrom building:Space
                             ] ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty op:identifier ;
