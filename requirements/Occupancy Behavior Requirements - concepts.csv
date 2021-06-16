@@ -1,0 +1,45 @@
+Concept,Other names,Description
+Window,,Window (System)
+VisualNeed,,Visual need
+Thermostat,,Thermostat (System)
+ThermalNeed,,Thermal need
+Temperature Parameter,,Temperature condition of the driver envrionment
+System,,"The system the occupant interact with (Windows, HVAC’s, etc)"
+Spatial,,Space where the driver occurs
+SpaceOccupancy,,Occupancy characteristics in a space
+Space,,Internal space of the building
+SolarIrradiance Parameter,,Solar irradiance condition of the driver environment
+Shade,,Shade (System)
+Report,,Report of the conditions without action
+RelativeHumidity Parameter,,Relative humidity condition of the driver environment
+Raining Parameter,,Raining condition of the driver environment
+PhysicalNeed,,Physical need
+Occupant,,Occupants of the buildings
+NonPhysicalNeed,,Non physical need
+Noise Parameter,,Noise condition of the driver environment
+Need,,The comfort need of the occupant
+MovementModel,,Model to define ocuppants movements inside a space
+Movement,,Movement of occupants around the space
+Meeting,,Meeting information if the space is communal
+MarkovChainModel,,Type of model movement
+Light,,Light (System)
+InteractionFormula,,Formula to model the probability of interaction between ocupant and system
+InteractionCoefficient,,Coefficient of interaction formula
+Interaction,,Interaction between the occupant and the system
+Inaction,,Define the inaction of the occupant
+Illuminance Parameter,,Illuminance condition of the driver environment
+IAQNeed,,Air quality need
+IAQ Parameter,,Indoor air quality condition of the driver envrionment
+HVAC,,HVAC (System)
+Habit,,Type of driver related to person habits
+Glare Parameter,,Glare condition of the driver environment
+Event,,Event characteristics in a space
+Environment Parameter,,Parameters that define the surrounding environment.
+Environment,,Specific physical condition of the driver environment
+DriverTime,,Description of when the driver occured
+Driver,,Cause that motivates the behavior
+DaylightFactor Parameter,,Daily light condition of the driver environment
+Building,,Building where the behavior occurs
+Behavior,,Behaviors of the occupants
+Action,,The action the occupant does to satisfy its need
+AcousticNeed,,Acoustic need

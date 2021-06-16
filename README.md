@@ -96,7 +96,7 @@ The following table shows the ORSD (Ontological Requirements Specification Docum
   </tr>
   <tr>
     <td style="width:5%"></td>
-    <td>The whole set of functional requirements is located here</td>
+    <td>The whole set of functional requirements is located <a href="https://github.com/oeg-upm/bimerr-occupant-behavior/blob/master/requirements">here</a> </td>
   </tr>
   
 

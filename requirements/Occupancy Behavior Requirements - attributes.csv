@@ -1,0 +1,57 @@
+Concept,Attribute,Description,"Value type expected
+(integer, boolean, float, list of specific values, etc.)",Max cardinality,Ordering Needed (applicable for concepts with Max cardinality over 1),"Unit of measure
+(applicable only for ""measure"" data types)","Sensitive data (if applicable, e.g. personal data that need to be anonymized in BIF)",Timezone (applicable only for datetime data types),Related standard (if applicable)
+Building,buildingID,Identification of Building,Integer,1,,,,,obXML
+Building,buildingType,Type of building,"{Retail, Gymnasium, Hotel …}",1,,,,,obXML
+Building,buildingAddress,Address of the building,String,1,,,,,obXML
+Building,description,Description of the building,String,1,,,,,obXML
+Space,spaceID,Identification of the Building Space,Integer,1,,,,,obXML
+Space,spaceType,Type of space,"{MeetingRoom, Corridor, Outdoor, …}",1,,,,,obXML
+Space,description,Description of the space,String,1,,,,,obXML
+Space,maxNumberOccupants,Maximum number of occupants,Integer,1,,,,,obXML
+Space,minNumberOccupants,Minimum number of occupants,Integer,1,,,,,obXML
+Meeting,meetingDuration,Duration of meeting,Integer,1,,seconds,,,obXML
+Meeting,meetingStartTime,Start of the meeting,Date,1,,,,,obXML
+Meeting,meetingEndTime,End of the meeting,Date,1,,,,,obXML
+Meeting,meetingProbability,Probability of meeting occurrence,Float,1,,,,,obXML
+System,systemID,Identification of System,Integer,1,,,,,obXML
+System,description,Description of the system,String,1,,,,,obXML
+Window,windowControlType,Type of control for the window,"{operable, fixed}",1,,,,,obXML
+Shade,shadeControlType,Type of control for the shade,"{operable, fixed}",1,,,,,obXML
+Light,lightControlType,Type of control for the light,"{on/off, dimmable, two step, three step}",1,,,,,obXML
+Thermostat,thermostateControlType,Type of control for the thermostat,"{adjustable, none, fixed}",1,,,,,obXML
+HVAC,hvacControlType,Type of control for the HVAC,"{central, zonal controllable, zonal fixed}",1,,,,,obXML
+Occupant,occupantID,Identification of the occupant,Integer,1,,,,,obXML
+Occupant,occupantName,Name of the occupant,String,1,,,,,obXML
+Occupant,occupantAge,Age of the occupant,Integer,1,,,,,obXML
+Occupant,occupantGender,Gender of the occupant,String,1,,,,,obXML
+Occupant,occupantLifestyle,Lifestyle of the occupant,String,1,,,,,obXML
+Occupant,occupantJobtype,Jobtype of the occupant,String,1,,,,,obXML
+Behavior,behaviorID,Identification of the behavior,Integer,1,,,,,obXML
+Behavior,description,Desciption of the behavior,String,1,,,,,obXML
+DriverTime,timeOfDay,Time of the day,"{morning, noon, evening, midnight}",1,,,,,obXML
+DriverTime,dayOfWeek,Day of the week,"{Monday, Tuesday, …}",1,,,,,obXML
+DriverTime,seasonTime,Season,"{summer, winter, fall, spring}",1,,,,,obXML
+DriverEnvironment,environmentID,Identification of environment,Integer,1,,,,,obXML
+DriverEnvironment,environmentName,Name of the specific environment,String,1,,,,,obXML
+DriverEnvironment,environmentUnit,,,,,,,,obXML
+Driver,driverEventType,"Details the circumstances that may be
+driving occupant actions",String,1,,,,,obXML
+Driver,driverHabit,Personal enumeration traits such as smoking,String,1,,,,,obXML
+DriverSpatial,spatialFunctionalType,Type of space,"{residential, office}",1,,,,,obXML
+DriverSpatial,spatialOwnershipType,Type of space,"{owned, rented}",1,,,,,obXML
+DriverSpatial,spaceID,Identification of the Building Space,Integer,1,,,,,obXML
+PhysicalNeed,needID,Identification of the need,Integer,1,,,,,obXML
+PhysicalNeed,minConfortValue,Minimum value of the confort range,Float,1,,,,,obXML
+PhysicalNeed,maxConfortValue,Maximum value of the confort range,Float,1,,,,,obXML
+ThermalNeed,comfortOptions,Different type of thermal comfort options,"{ISO adaptive comfort standard, ASHRAE adaptive comfort standard, ASHRAE comfort envelop, user-defined comfort envelope}",1,,,,,obXML
+NonPhysicalNeed,nonPhysicalNeedType,"Different types of non physical needs such as privacy, view, safety , etc.",String,1,,,,,obXML
+InteractionFormula,description,Description of the formula,String,1,,,,,obXML
+InteractionParameter,environmentID,Identification of environment (parameter),Integer,1,,,,,obXML
+SpaceOccupancy,spaceCategory,,String,1,,,,,obXML
+SpaceOccupancy,percentTimePresence,,Float,1,,,,,obXML
+SpaceOccupancy,duration,,Float,1,,seconds,,,obXML
+Event,eventType,,String,1,,,,,obXML
+Event,eventTypicalTime,,Date,1,,,,,obXML
+Event,eventStartTime,,Date,1,,,,,obXML
+Event,eventEndTime,,Date,1,,,,,obXML
